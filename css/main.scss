@@ -1,0 +1,46 @@
+---
+---
+
+// Sass Utilities
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+
+// Sass Base
+@import 'resets';
+@import 'typography';
+
+// Layouts & Structure
+@import 'layout';
+
+// pages
+@import 'homemain';
+// @import 'gallery';
+@import 'about';
+@import 'blog';
+@import 'news';
+@import 'pricing';
+@import 'download';
+@import 'faq';
+@import 'basic';
+@import 'doc_page';
+
+@import 'blockchain-valuation-model';
+@import 'contact';
+@import 'post';
+@import 'profile';
+@import 'proof_of_space_competition';
+@import 'proof_of_time_contest';
+@import 'offers';
+@import 'terms';
+@import 'privacy';
+@import 'grants';
+@import 'team';
+@import 'intellectual-property';
+// components
+@import 'footer';
+@import 'navigation';
+@import 'video';
+@import 'email_box';
+@import 'icons';
+@import 'buttons';

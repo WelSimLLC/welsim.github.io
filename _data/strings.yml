@@ -1,0 +1,308 @@
+en: # English
+  faq_title: "FAQ"
+  news_title: "News"
+  news_see_more: "See more"
+  homemain_title: "WELSIM"
+  homemain_subtitle: "A new blockchain and smart transaction platform that is easier to use, more efficient, and secure."
+  homemain_announce: "<a href='https://www.chia.net/2021/07/07/official-pooling-launched.en.html'>Official pooling protocol is live!</a>"
+  homemain_button: "Download Beta Testnet"
+  homemain_description: |
+    Mainnet Release
+    --------------------
+
+    We believe that cryptocurrency should be easier to use than cash, harder to lose, and nearly impossible to steal. Anyone who wants to validate transactions should be able to farm without single-use hardware or a big electricity bill.
+
+    On February 9th we released our [Business Whitepaper](https://www.chia.net/2021/02/10/chia-businesss-whitepaper.html) and mainnet launched for farming rewards on Friday March 19, 2021. Transactions were enabled on May 3, 2021. You may also be interested in our [new consensus working document](/assets/Chia-New-Consensus-0.9.pdf) which was implemented first in Beta 19 on January 12, 2021.
+
+    Chia Network develops a blockchain and smart transaction platform created by the inventor of BitTorrent, [Bram Cohen](https://techcrunch.com/2018/03/28/chia-vs-bitcoin/). It implements the first new Nakamoto consensus algorithm since Bitcoin in 2008. Proofs of Space and Time replace energy intensive “proofs of work.”
+
+    [Chialisp](https://chialisp.com) is Chia’s new on chain programming language that is powerful, easy to audit, and secure. It will make cryptocurrency easier to use than cash. Reference smart transactions currently available are: [Coloured coins](https://www.chia.net/2020/04/29/coloured-coins-launch.en.html), [rate-limited wallets](https://github.com/Chia-Network/chia-blockchain/tree/main/chia/wallet/rl_wallet), and [distributed identity wallets](https://github.com/Chia-Network/chia-blockchain/tree/main/chia/wallet/did_wallet). Bram introduces [Chialisp](https://www.chia.net/2019/11/27/chialisp.en.html) on our [blog](/blog) and you can learn more at [Chialisp.com](https://chialisp.com).
+
+    You should review the [release notes](download/#release-notes) and then [install](/download) Chia blockchain.
+  homemain_addendum: |
+    Released under the open source [Apache License](https://www.apache.org/licenses/LICENSE-2.0).
+  homemain_box_title: "Download"
+  homemain_box_section_1: "Blockchain, Chialisp, and Chia Asset Tokens"
+  homemain_box_section_2: "Install"
+  homemain_box_latest_version: "Latest Version:"
+  homemain_chia_blockchain_no_releases: "1.0"
+  homemain_wallets_no_releases: "1.0"
+  homemain_box_button: "Download Source Code"
+  install_box_button: "Install Chia Blockchain"
+  homemain_downloads_link: "Release notes"
+  homemain_idc_title: "IDC on Chia"
+  homemain_idc_quote: |
+    “The Chia Network was developed and launched on the premise that HDD storage capacity is underutilized, and IDC's Global StorageSphere data confirms they are correct.”
+  homemain_idc_report: "Read the Report"
+  download_main_text: |
+    This is the official Chia installer download page. Any other installer download sources are unofficial and unsafe.
+  download_windows_text: |
+    Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.
+  download_macos_text: |
+    Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.
+  download_linux_text: |
+    Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.
+  download_windows_button: "Windows"
+  download_macosintel_button: "macOS Intel"
+  download_macosm1_button: "macOS Apple Silicon"
+  download_debian_button: "Ubuntu/Debian"
+  download_debianarm_button: "Ubuntu/Debian ARM"
+  download_centosfedora_button: "CentOS/Redhat"
+  download_wsl2_button: "Install WSL2"
+  download_amzlinux_button: "Install Amazon Linux"
+  about_title: "About Us"
+  about_description: |
+    WELSIM is building better engineering simulation software which are faster, more secure, and more affordable.
+
+    WelSimulation LLC (WelSim) is a dedicated and independent simulation technology provider. Founded in the Greater Pittsburgh, PA, by innovators. WelSim was born out of a vision to create a company that could successfully combine the disciplines of physics-based simulation, scientific computing, and software product.
+
+    WelSim has the uncommon advantages of being built by experts from the scientific computing and enginering simulation community. With over decades of professional experience across academia and industry, we dedicate to transforming innovative thinking and strategic analysis into actionable intelligence for improvement. The flagship product - WELSIM, general-purpose engineering simulation software has been released and long term supported. You are welcome to try and evaluate.
+
+    Our strengths and dedications are enterprise software development, engineering simulation, and scientific computing.
+
+  about_team_title: "Team"
+  about_team_description: |
+    Chia Network was founded by the creator of BitTorrent, [Bram Cohen](https://www.linkedin.com/in/cohenbram/). It also includes executive leadership from the former founder and CEO of eMusic.com and Vindicia, [Gene Hoffman](https://www.linkedin.com/in/gehoffman/). The Chia blockchain has an active open source developer community with many contributions to the codebase. Many individuals contribute towards the Chia blockchain in areas which include research, peer reviews, development, testing, documentation, and translation.
+  about_invest_investors_title: "Our Partners"
+  about_legal_title: "Legal"
+  about_legal_copyright:  "Chia's Copyright Policy"
+  about_legal_trademark: "Chia's Trademark Policy"
+  about_legal_guidlines: "Guidelines for Using Chia Network’s Trademarks & Copyrighted Materials on the Web"
+  careers_title: "Careers"
+  careers_description: |
+    **Chia is hiring!**
+
+    We believe that anyone should be able to farm and that cryptocurrency should be easier to use and more secure than cash. That means we need people who want to create internet class user experience on the most secure blockchain and smart transaction platform created so far.
+
+    Many on the Chia team are located in the SF Bay Area but remote is fine as we have people all over the world - Keybase, GitHub, and Zoom are how we work. Geographic restrictions, if any, will be noted in a job specification.
+
+    Please send your resume and cover letter to <a href="mailto:jobs@chia.net" target="_blank">jobs@chia.net</a>. Please put the role you are applying for as part of the subject line and include anything additionally required by a specific job posting.
+  blog_title: "Notes from WelSim"
+  download_title: "Release Notes"
+  download_loading_message: "Loading releases..."
+  green_paper_main_title: "Chia's Green Paper"
+  green_paper_download: "Download Green Paper"
+  green_paper_description: |
+    The Green Paper details a new consensus algorithm called Proofs of Space and Time, “PoST”. PoST replaces the Proof of Work which wastes massive amounts of energy and is less secure against mining centralization.
+  green_paper_addendum_title: "Learn more"
+  green_paper_addendum: |
+    We have academic papers and presentations that give detail about our new consensus algorithm and blockchain software. In 2019 we revealed our [Green Paper](https://www.chia.net/assets/ChiaGreenPaper.pdf) outlining the construction of Proofs of Space and Time and illustrating many of the design choices of Chia. There is also a [2019 talk from Mariano Sorgente](https://www.youtube.com/watch?v=_075bzQPooU) at MIT on how to achieve Nakamoto consensus with Proof of Space and VDFs.
+
+    Bram Cohen [presented](https://www.youtube.com/watch?v=2Zlcgt8FVz4) at Stanford on February 2018 on Proofs of Space. Our advisors, Dan Boneh, Benedikt Bünz, and Ben Fisch [published a survey of VDFs](https://eprint.iacr.org/2018/712.pdf) which are the underlying technology of Proof of Time. Lipa Long [published an explanation of class groups](https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf) that our [Proofs of Time](https://eprint.iacr.org/2018/627.pdf) is based on. Bram presented [Beyond Hellman’s Time-Memory Trade-Offs with Applications to Proofs of Space](https://www.youtube.com/watch?v=iqxkO7C-cyk) at BPASE ‘18 in January 2018 based on the [academic paper](https://eprint.iacr.org/2017/893) and these [slides](https://view.publitas.com/chia-network/pbase18slides/page/1) by Hamza Abusalah. Ben Fisch gave a [talk](https://www.youtube.com/watch?v=qUoagL7OZ1k) at BPASE 2018 in January 2018 on Verifiable Delay Functions. Bram [spoke at Blockchain at Berkeley](https://www.facebook.com/BlockchainatBerkeley/videos/2006069823011271/) (which starts about 20:00) in March 2018 with [slides](https://cyber.stanford.edu/sites/g/files/sbiybj9936/f/bramcohen.pdf). Bram gave a [talk at BPASE 2017](https://www.youtube.com/watch?v=aYG0NxoG7yw) in January 2017 on removing waste with Proofs of Space and Time ([slides](https://cyber.stanford.edu/sites/g/files/sbiybj9936/f/bramcohen.pdf)).
+
+    Bram gave a [talk](https://www.youtube.com/watch?v=zZaB4hM8SQ4) at SF Bitcoin Devs Seminar about data structures for scaling Bitcoin with [slides](https://view.publitas.com/chia-network/bitcoin_data_structures/) and [Merkle Set code](https://github.com/bramcohen/MerkleSet). Bram gave a [talk](https://www.youtube.com/watch?v=zZaB4hM8SQ4) at SF Bitcoin Devs Seminar about removing waste from cryptocurrencies.
+  trademarks_title: "Trademarks"
+  trademarks_description: |
+    The Chia® brand is a promise of standard in innovation and quality.
+
+    When you are authorized to use the Chia® brand and respect the Chia® brand guidelines, you help us ensure the strength of the brand, while protecting the entire community from being misled, confused or mistreated.
+
+    Please read over the following guidelines carefully, and never hesitate to reach out with questions or permission requests at <a href='mailto:chiaip@chia.net' target='_blank'>chiaip@chia.net</a>.
+
+    Happy Farming!
+  trademarks_team_title: "Guidelines"
+  trademarks_team_description: |
+    * [Chia Trademark Policy](/assets/legal/Chia-Trademark-Policy.pdf)
+    * [Chia Copyright Policy](/assets/legal/Chia-Copyright-Policy.pdf)
+    * [Guidelines for Using Chia Network’s Trademarks and Copyrighted Materials on the Web](/assets/legal/Guidelines-for-Using-Chia-Network.pdf)
+  terms_title: "Terms of Use"
+  
+  footer_copyright_year: "© 2022 WelSimulation LLC"
+  navigation:
+    download: "Download"
+    pricing: "Pricing"
+    about: "About"
+    blog: "Blog"
+    news: "News"
+    faq: "FAQ"
+    careers: "Careers"
+    contact: "Contact"
+  contact_title: "Contact Us"
+  contact_join_keybase: "Join our Keybase group"
+  contact_email_title: "Never miss news. Subscribe today."
+  contact_live_feed_title: "Keybase Live Feed"
+  contact_email: "Email"
+  contact_signup: "Submit"
+  grants_title: "Chia Cultivation Grant Program"
+  grants_description: "Chia Networks is committed to growing and nurturing the Chia ecosystem in as many ways as possible, not only via applications and functionality we develop, but via encouraging our highly engaged community to unleash its creativity within the ecosystem."
+  grants_why_1: "We know that members of the community will create amazing open source projects of their own, and that some of those projects will very likely stand as pillars of the community and ecosystem."
+  grants_why_2: "To that end, in an effort to further support high-potential projects and teams, Chia Networks is excited to announce the launch of the Chia Cultivation Grant program!"
+  grants_who: "People or teams who have caught the eye of Chia’s senior leadership and present a compelling proposal as to why they feel their vision, talent, and expertise are uniquely positioned to add material value to the community are provided modest financial support via grants."
+  grants_detail_1: "We know that members of the community will create amazing open source projects of their own, and that some of those projects will very likely stand as pillars of the community and ecosystem."
+  grants_detail_2: "To that end, in an effort to further support high-potential projects and teams, Chia Networks is excited to announce the launch of the Chia Cultivation Grant program!"
+  grants_detail_3: "People or teams who have caught the eye of Chia’s senior leadership and present a compelling proposal as to why they feel their vision, talent, and expertise are uniquely positioned to add material value to the community are provided modest financial support via this grant program."
+  grants_cultivation_title: "Cultivation Grant Winners"
+  grants_cultivation_winner_1_description: "Hashgreen is the first decentralized exchange on the Chia Blockchain. The platform enables users to exchange Chia (XCH) and Chia Asset Tokens (CATs) in a secure and anonymous manner. We aggregate open offers in an order book to improve efficiency and provide trade histories for price transparency. By integrating with the official Chia light wallet, Hashgreen offers you a seamless experience where trading only takes a mere few clicks."
+  grants_cultivation_winner_2_description: "Nucle is the world’s first open source based, fully decentralized Chia blockchain “SPV” type wallet. Nucle gives you instant access to your XCH via your Recovery Phrases, instead of waiting days to sync to the Chia blockchain to access your funds or storing your crypto on a centralized exchange. Your Recovery Phrases are never at risk because they are stored locally on your device and never on our servers (because it’s decentralized!)."
+  grants_cultivation_title: "Cultivation Grant Winners"
+  grants_who_2: "Chia Networks is committed to helping those teams realize their vision and highlighting the potential value Chia feels they bring to the ecosystem with promotional assets and support."
+  grants_when: "In the coming weeks, we will add further information on the program to this page. We will provide full details of the program, as well as profile current recipients of Grants and more. Until then, watch this space for more updates, and if you have a team with a project vision you think would be a potential candidate for a Grant, you can reach out to us at <a href='mailto:cultivation@chia.net' target='_blank'>cultivation@chia.net</a>."
+  grants_disclaimer: "Please note at this time, due to the potential volume of applications and interest, we cannot guarantee we will be able to individually follow up with all applicants, and will be prioritizing those who present a fully fleshed out in-depth proposal that incorporates not only a solid idea, but milestones, fiscal and resource budgets, team information, etc."
+  grants_faq_title: "FAQ"
+  proof_of_space_competition_header: "Win $100K in total prize money with Chia's Proof of Space Competition."
+  proof_of_space_competition_about_competition_header: "About the Competition"
+  proof_of_space_competition_about_competition_text: "Chia is having a competition for best implementation of our proof of space construct. $100k in total prize money will be awarded."
+  proof_of_space_competition_about_competition_dates_text: "The contest ends October 9th, 2019."
+  proof_of_space_competition_about_competition_github_text: "Learn more on [Github](https://github.com/Chia-Network/proofofspace)."
+  proof_of_space_competition_about_competition_keybase_text: "Join our public [Keybase](https://keybase.io/team/chia_network.public) channel."
+  proof_of_space_competition_about_competition_entry_form_text: "Complete the [entry form](https://github.com/Chia-Network/proofofspace/blob/master/2019%20CHIA%20NETWORK%20CHALLENGE%20APPLICATION%20FORM.pdf)."
+  proof_of_space_competition_footer: "Win $100K in total prize money."
+  proof_of_space_competition_sign_up: "Sign Up"
+  proof_of_time_contest:
+    header:
+      heading: "The 2nd Proof of Time Challenge"
+      subtext: "A global competition to speed up the Verifiable Delay Function"
+      info_text_prize: "$100,000 in total prize money"
+      info_text_time: "April 19 - July 19"
+      join_now: "Join Now"
+    body_section_1:
+      heading: "The VDF Challenge"
+      paragraph_1: "A few months ago we wrapped up our initial VDF implementation competition and were amazed by the excellent quality of the submissions.  The top three contenders each came in at under one minute (the reference implementation was 169 seconds).  Five other teams also submitted implementations which were faster than the reference.  All of the submissions were open-source, and can be found [here](https://www.chia.net/2019/07/18/chia-vdf-competition-round-2-results-and-announcements.en.html).  The award total was originally $100,000, but because of the hard work that ll the teams put into the competition, we decided to award $2,000 to each team who submitted an entry, bringing the total prize money awarded to $116,000."
+      paragraph_2: "We are proud to announce a second competition, challenging entrants to improve on our new reference implementation."
+    body_section_2:
+      heading: "Two Tracks"
+      line_1: "The second VDF competition will be split into two tracks:"
+      line_2: "1. SIMD and GPU optimization allowed"
+      line_3: "2. SIMD and GPU optimization not allowed"
+      paragraph: "This is to help us separate the different kinds of optimization. We expect that the entries which use the optimizations allowed in track 1 will be faster, however there is no requirement for track 1 submission to use those techniques. This means that all track 2 submissions are also eligible for submissions to track 1. The winners of each track will receive $50,000. Individuals and teams are invited to join. Entrants will all have access to the specialized computers in Chia’s laboratory. Specifications of the reference hardware and further technical details are available on our GitHub. You can view our pre-commitment [here](https://github.com/Chia-Network/vdf-competition). Contestants will be able to communicate with Chia during the competition via a secure Keybase channel."
+    body_section_3:
+      heading: "$100,000 in total prize money"
+      time_caption: "3 months: April, 2019 - July 2019"
+      point_1: "SIMD and GPU optimization allowed"
+      point_2: "SIMD and GPU optimization not allowed"
+    body_section_4:
+      heading: "Docs and Support"
+      entry_form: "Entry Form"
+    footer:
+      heading: "Win $100K in total prize money"
+      sign_up: "Sign Up"
+cn: # Chinese
+  faq_title: "常问问题"
+  news_title: "新闻"
+  news_see_more: "查看更多"
+  homemain_title: "正大网络"
+  homemain_subtitle: "更好的區塊鍊和智能交易平台，更加分散，更高效，更安全。"
+  homemain_button: "下载Beta Testnet"
+  homemain_description: |
+    Chia的Beta测试网
+    -------------
+
+    Chia Network是由BitTorrent的創始人[Bram Cohen](https://techcrunch.com/2018/03/28/chia-vs-bitcoin/)創建的區塊鍊和智能交易平台。它的灵感与比特币区块链相似，但是在Chia中，资源不是计算能力，而是磁盘空间。为此，将能源密集型“工作量证明”替换为“空间量证明”，因此磁盘空间成为验证交易而非能源的主要资源。
+
+    Beta测试网推出了Chialisp的第一个版本，即Chia的智能事务编程语言。当前可用的智能交易有：[原子交换](https://github.com/Chia-Network/wallets/blob/master/docs/atomic_swaps.md)，[授权收款人](https://github.com/Chia-Network/wallets/blob/master/docs/authorised_pa​​yees.md)，[可恢复的钱包](https://github.com/Chia-Network/wallets/blob/master/docs/recoverable_wallet.md)，[multisig钱包](https://github.com/Chia-Network/wallets/blob/master/multisig/README.org)和[限价钱包](https://github.com/Chia-Network/wallets/blob/master/docs/rate_limited_wallet.md)。 Chia Network的创始人和BitTorrent的前创始人在[Chialisp](https://www.chia.net/2019/11/27/chialisp.en.html)上有更多内容。
+
+    Beta测试网还引入了Chia的区块链共识层，其中包括一个完整的节点，农民和时间主。
+
+    由于这是Beta版本，因此您可能需要查看[release notes](download/#release-notes)。
+
+    区块链
+    ---
+
+    Chia的区块链包括一个完整的节点，农民和时间领主。在[GitHub](https://github.com/Chia-Network/chia-blockchain)上下载源代码。
+
+    Chialisp和LedgerSim
+    ------------------
+
+    LedgerSim支持在账本而非区块链上进行Chialisp智能交易，以进行测试和开发。 Chia的钱包展示了我们的新编程语言Chialisp。在[GitHub](https://github.com/Chia-Network/wallets)上下载源代码。
+  homemain_addendum: |
+    在開源[Apache許可證]（https://www.apache.org/licenses/LICENSE-2.0）下發布。
+  homemain_box_title: "资料下载"
+  homemain_box_section_1: "区块链"
+  homemain_box_section_2: "Chialisp和LedgerSim"
+  homemain_box_latest_version: "最新版本："
+  homemain_chia_blockchain_no_releases: "1.0"
+  homemain_wallets_no_releases: "1.0"
+  homemain_box_button: "下载源代码"
+  homemain_downloads_link: "查看发行说明"
+  homemain_idc_title: "IDC on Chia"
+  homemain_idc_quote: |
+    “The Chia Network was developed and launched on the premise that HDD storage capacity is underutilized, and IDC's Global StorageSphere data confirms they are correct.”
+  homemain_idc_report: "Read the Report"
+  about_title: "关于我们"
+  about_description: |
+    Chia Network是一个去中心化的开源全球区块链，与传统的工作量证明加密货币相比，其浪费更少，去中心化程度更高，更安全。它的灵感与比特币区块链相似，但是在Chia中，资源不是计算能力，而是磁盘空间。为了实现这一目标，比特币中使用的“工作证明”被“空间证明”代替，因此磁盘空间成为达成分散式“中本聪式”共识以验证交易的主要资源和时间证明。
+
+    Chia网络还是一家智能交易平台公司。
+  about_team_title: "球队"
+  about_team_description: |
+    Chia Network由BitTorrent的创建者[Bram Cohen](https://www.linkedin.com/in/cohenbram/)创立。它包括eMusic.com和Vindicia的前创始人兼首席执行官[Gene Hoffman](https://www.linkedin.com/in/gehoffman/), 以及Overstock.com的前代理首席执行官[Mitch Edwards](https://www.linkedin.com/in/mitchelledwards/). Chia区块链拥有活跃的开源开发者社区，对代码库做出了许多贡献。许多人在包括研究，同行评审，开发，测试，文档和翻译在内的领域为Chia区块链做出贡献。
+  about_invest_investors_title: "我们的合作伙伴"
+  about_legal_title: "Legal"
+  about_legal_copyright:  "Chia's Copyright Policy"
+  about_legal_trademark: "Chia's Trademark Policy"
+  about_legal_guidlines: "Guidelines for Using Chia Network’s Trademarks & Copyrighted Materials on the Web"
+  blog_title: "直接来自WelSim"
+  download_title: "发行说明"
+  download_loading_message: "正在加载发行版..."
+  download_windows_button: "Windows"
+  download_macosintel_button: "macOS Intel"
+  download_macosm1_button: "macOS M1"
+  download_debian_button: "Ubuntu/Debian"
+  download_debianarm_button: "Ubuntu/Debian ARM"
+  download_centosfedora_button: "CentOS/Redhat"
+  download_wsl2_button: "Install WSL2"
+  download_amzlinux_button: "Install Amazon Linux"
+  green_paper_main_title: "嘉的绿皮书"
+  green_paper_download: "下载绿皮书"
+  green_paper_description: |
+    绿皮书详细介绍了一种新的共识算法，称为空间和时间证明，即“ PoST”。 PoST取代了比特币采矿中的工作量证明，后者浪费了大量能源，并且对采矿集中化的安全性较低。
+  green_paper_addendum_title: "学到更多"
+  green_paper_addendum: |
+    我们有学术论文和演讲，详细介绍了我们的新共识算法和区块链软件。在2019年，我们发布了《绿皮书》（https://www.chia.net/assets/ChiaGreenPaper.pdf），概述了空间和时间证明的构造，并说明了Chia的许多设计选择。麻省理工学院也有[2019年Mariano Sorgente的演讲]（https://www.youtube.com/watch?v=_075bzQPooU），内容涉及如何通过空间证明和VDF实现Nakamoto共识。
+
+    布拉姆·科恩（Bram Cohen）于2018年2月在斯坦福大学（太空证明）上演讲（https://www.youtube.com/watch?v=2Zlcgt8FVz4）。我们的顾问Dan Boneh，BenediktBünz和Ben Fisch [发布了VDF调查]（https://eprint.iacr.org/2018/712.pdf），这是时间证明的基础技术。 Lipa Long [发布了有关班级分组的说明]（https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf），我们的《时间证明》（https://eprint.iacr.org/2018/627.pdf）。根据[学术论文]，布拉姆于2018年1月在BPASE '18上展示了[超越Hellman的时间记忆权衡与空间证明的应用]（https://www.youtube.com/watch?v=iqxkO7C-cyk） ]（https://eprint.iacr.org/2017/893）和Hamza Abusalah的这些[幻灯片]（https://view.publitas.com/chia-network/pbase18slides/page/1）。 Ben Fisch在2018年1月的BPASE 2018上就可验证延迟功能进行了[演讲]（https://www.youtube.com/watch?v=qUoagL7OZ1k）。 Bram [在伯克利的Blockchain发言人]（https://www.facebook.com/BlockchainatBerkeley/videos/2006069823011271/）（大约20:00开始）于2018年3月发布，带有[幻灯片]（https://cyber.stanford.com）。 edu / sites / g / files / sbiybj9936 / f / bramcohen.pdf）。布拉姆（Bram）在2017年1月发表了[在BPASE 2017上的演讲]（https://www.youtube.com/watch?v=aYG0NxoG7yw），内容涉及用时空证明（[幻灯片]（https：//cyber.stanford .edu / sites / g / files / sbiybj9936 / f / bramcohen.pdf））。
+
+    Bram在SF Bitcoin Devs Seminar上进行了[演讲]（https://www.youtube.com/watch?v=zZaB4hM8SQ4），讨论了使用[幻灯片]扩展比特币的数据结构（https://view.publitas.com/chia -network / bitcoin_data_structures /）和[Merkle Set代码]（https://github.com/bramcohen/MerkleSet）。布拉姆（Bram）在SF比特币开发者研讨会上发表了有关消除加密货币浪费的演讲[https://www.youtube.com/watch?v=zZaB4hM8SQ4]。
+  footer_copyright_year: "©Chia Network 2022"
+  navigation:
+    download: "下载"
+    pricing: "购买"
+    about: "关于"
+    blog: "博客"
+    news: "新闻"
+    faq: "常问问题"
+    contact: "联系"
+  contact_title: "联系我们"
+  contact_join_keybase: "加入我们的Keybase组"
+  contact_email_title: "永远不要错过新闻。立即订阅。"
+  contact_live_feed_title: "动态信息"
+  contact_email: "电子邮件"
+  contact_signup: "提交"
+  proof_of_space_competition_header: "通过Chia的太空竞赛证明，将赢得10万美元的总奖金。"
+  proof_of_space_competition_about_competition_header: "关于比赛"
+  proof_of_space_competition_about_competition_text: "Chia正在竞争我们的空间构造证明的最佳实现。总奖金为10万美元。"
+  proof_of_space_competition_about_competition_dates_text: "比赛将于2019年10月9日结束。"
+  proof_of_space_competition_about_competition_github_text: "在[Github](https://github.com/Chia-Network/proofofspace)上了解更多信息。"
+  proof_of_space_competition_about_competition_keybase_text: "加入我们的公共[Keybase](https://keybase.io/team/chia_network.public)频道。"
+  proof_of_space_competition_about_competition_entry_form_text: "完成[参赛表格](https://github.com/Chia-Network/proofofspace/blob/master/2019%20CHIA%20NETWORK%20CHALLENGE%20APPLICATION%20FORM.pdf)。"
+  proof_of_space_competition_footer: "赢得$ 100K的总奖金。"
+  proof_of_space_competition_sign_up: "注册"
+  proof_of_time_contest:
+    header:
+      heading: "第二次时间证明挑战"
+      subtext: "加快可验证延迟功能的全球竞争"
+      info_text_prize: "总奖金$ 100,000"
+      info_text_time: "4月19日至7月19日"
+      join_now: "现在加入"
+    body_section_1:
+      heading: "VDF挑战"
+      paragraph_1: "几个月前，我们结束了最初的VDF实施竞赛，并为提交的出色质量感到惊讶。前三名竞争者每人不到一分钟就进入了（参考实现是169秒）。另外五个小组还提交了比参考文献更快的实施方案。所有提交的内容都是开源的，可以在[此处](https://www.chia.net/2019/07/18/chia-vdf-competition-round-2-results-and-announcements.en.html)。最初的总奖金为100,000美元，但由于各团队在比赛中的辛勤工作，我们决定向提交参赛作品的每支团队奖励2,000美元，使总奖金达到116,000美元。"
+      paragraph_2: "我们很自豪地宣布第二次竞赛，挑战参赛者以改进我们的新参考实施。"
+    body_section_2:
+      heading: "两条轨道"
+      line_1: "第二届VDF比赛将分为两个阶段："
+      line_2: "1.允许SIMD和GPU优化"
+      line_3: "2.不允许SIMD和GPU优化"
+      paragraph: "这是为了帮助我们区分不同种类的优化。我们希望使用轨道1中允许的优化的条目会更快，但是并不需要轨道1提交使用这些技术。这意味着，所有第2条轨道的提交也有资格获得第1条轨道的提交。每个轨道的获胜者将获得50,000美元。邀请个人和团队参加。参赛者都可以使用Chia实验室的专用计算机。参考硬件的规范和更多技术细节可在我们的GitHub上获得。您可以在此处查看我们的预承诺(https://github.com/Chia-Network/vdf-competition)。比赛期间，参赛者将能够通过安全的Keybase渠道与Chia进行交流。"
+    body_section_3:
+      heading: "总奖金$ 100,000"
+      time_caption: "3个月：2019年4月-2019年7月"
+      point_1: "允许SIMD和GPU优化"
+      point_2: "不允许SIMD和GPU优化"
+    body_section_4:
+      heading: "文件与支援"
+      entry_form: "报名表"
+    footer:
+      heading: "赢得$ 100,000的总奖金"
+      sign_up: "注册"
+

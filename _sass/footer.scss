@@ -1,0 +1,221 @@
+
+/*--------------------------------------------------------------
+# Site Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+    background-color: #333333;
+    // background-image: url(/img/bg/tiling-abstract-shapes.png);
+    background-position: -(rem(342)) 0;
+    background-repeat: no-repeat;
+    color: $white;
+    padding: rem(36) 3.125%;
+    a, a:visited {
+        color: $white;
+        &:hover, &:active {
+            color: rgba($white, 0.4);
+        }
+    }
+    @include breakpoint(460) {
+        background-position: -(rem(257)) 0;
+        padding: rem(60) 3.125%;
+    }
+    @include breakpoint(900) {
+        background-position: -(rem(171)) 0;
+    }
+    @include breakpoint(1200) {
+        background-position: 0 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Footer Content Container
+--------------------------------------------------------------*/
+
+.footer-content-container {
+    @include breakpoint(460) {
+        margin-left: rem(100);
+    }
+    @include breakpoint(768) {
+        margin-left: 15%;
+    }
+    @include breakpoint(900) {
+        margin-left: 20%;
+        margin-right: 8.4722%;
+    }
+    @include breakpoint(1200) {
+        margin-left: 33.89%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Logo
+--------------------------------------------------------------*/
+
+.footer-logo {
+    margin-bottom: rem(36);
+}
+
+/*--------------------------------------------------------------
+# Company Links
+--------------------------------------------------------------*/
+
+.footer-company-links {
+    // background-color:#000000;
+    display: grid;
+    gap: rem(24) rem(24);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    @include breakpoint(576) {
+        grid-template-columns: 1.5fr 0.5fr 1fr 1fr;
+    }
+}
+
+/*--------------------------------------------------------------
+# Footer Columns
+--------------------------------------------------------------*/
+
+.footer-col {
+    ul {
+        @include reset-list;
+        @include typeset($responsive-body-font-size, 21);
+        @include breakpoint(768) {
+            @include typeset($body-font-size, 21);
+        }
+    }
+    li {
+        margin-bottom: rem(8);
+    }
+}
+
+/*--------------------------------------------------------------
+# Social Icons
+--------------------------------------------------------------*/
+.social-icon {
+    max-width: 24px;
+    margin-right: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-container {
+    margin-top: 50px
+}
+.section-title {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #F3AB10;
+}
+.section-title hr {
+    border-width: 2px;
+    width: 30px;
+    border-color:#cbcbcd;
+    margin:20px auto;
+}
+.section-title h4 {
+    padding:0;
+    margin:0;
+    font-weight: 400 !important;
+    font-size: 25px;
+}
+.section-title p {
+    color: #6f7478;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.footer,
+	.section-grey,
+	.section-white {
+		background-color: #ffffff;
+		padding:90px 0;
+		position: relative;
+		display: block;
+		z-index: 1;
+	}
+	.makepadding{
+		padding-top: 300px !important
+	}
+	.section-grey {
+		background-color: #f6f6f6;
+	}
+	.footer {
+		background-color: #333333; /*lcheng #2c2f3c*/
+		padding:30px 0; /*lcheng 60px 0*/
+	}
+	.copyrights {
+		background-color: #000000; /*lcheng #262934*/
+		padding: 20px 0 15px; /*lcheng 25px 0 15px*/
+	}
+
+	.copyrights p {
+		padding:0;
+	}
+
+	.footer .widget {
+		margin-bottom: 20px;
+	}
+
+	.footer .widget-title h4 {
+		color:#ffffff !important;
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	.footer-menu li a {
+		font-size: 12px;
+		color:#6f7478 !important;
+		text-transform: uppercase;
+	}
+
+	.post-meta .social li,
+	.widget .social li {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 3px;
+        text-align: center;
+		margin-right: 2px;
+        padding-top: 0%;
+	}
+
+	.footer .widget-title {
+		margin-bottom: 0;
+	}
+
+	.tagcloud a {
+		color:#a9a9ab !important;
+		font-size: 12px;
+		line-height: 28px;
+	}
+
+	.footer .tagcloud a {
+		color:#a9a9ab !important;
+	}
+	.footer .tagcloud a:hover {
+		color:#ffffff !important;
+	}
+
+	.footer p,
+	.copyrights p {
+		color:#cbcbcd;
+	}
+	.copyrights a {
+		color:#6f7478;
+	}

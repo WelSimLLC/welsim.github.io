@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.article-header {
+    border-bottom: rem(4) solid $gray;
+    margin-bottom: rem(36);
+    padding-bottom: rem(24);
+    p {
+        display: inline;
+        margin: 0;
+    }
+    .date {
+        @include typeset($responsive-body-font-size, $responsive-body-line-height);
+        @include breakpoint(768) {
+            @include typeset($body-font-size, $body-line-height);
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+.article-content {
+    img {
+        margin: rem(24) 0;
+    }
+    h2 + h3,
+    p + h1,
+    p + h2,
+    p + h3,
+    p + h4 {
+        margin-top: rem(36);
+    }
+}

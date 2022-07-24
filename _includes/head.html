@@ -1,0 +1,58 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="google" value="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="fragment" content="!">
+
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="WELSIM, innovation, reduced prototype, predict product behavior, optimize product, time to market, modeling, physics, multiphysics, thermal, electromagnetic, structural, fluid dynamics, smart product, product development, simulation driven product development, early product development, product life cycle, R&D, engineering simulation, engineering analysis, computing, finite element, CAE, FEM, FEA, CFD, CEM, HPC, fem software, free fea software, free fem software">
+  <meta name="description" content="WELSIM finite element analysis software helps engineers and researchers conduct simulation studies and prototype virtual products.">
+  <meta name="author" content="https://welsim.com">
+  <meta name="robots" content="follow, index" />
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="//unpkg.com/rangeable@latest/dist/rangeable.min.css"/>
+  <script type="text/javascript" src="//unpkg.com/rangeable@latest/dist/rangeable.min.js"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <script src="https://kit.fontawesome.com/292945d7b4.js" crossorigin="anonymous"></script> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <meta itemprop="name" content="WELSIM&reg; | Finite Element Analysis Software" />
+  <meta itemprop="description" content="WELSIM finite element analysis software helps engineers and researchers conduct simulation studies and prototype virtual products." />
+  <meta itemprop="image" content="https://welsim.com/img/res/image/overview_welsim.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ "/css/main.css?version=1.0.1" | prepend: site.baseurl }}">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+    href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  {% if page.image %}
+  <meta name="twitter:image" content="{{ page.image }}" />{% endif %}
+  {% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">{% endif %}
+  {% if page.excerpt %}
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}">{% endif %}
+  {% seo %}
+  {{ site.google_analytics_snippet }}
+</head>

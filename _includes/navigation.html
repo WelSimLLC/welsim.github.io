@@ -1,0 +1,103 @@
+{% assign strings = site.data.strings[page.lang] %}
+{% if page.lang == "en" %}
+{% assign site_prefix = "" %}
+{% else %}
+{% assign site_prefix = page.lang | prepend:"/" %}
+{% endif %}
+
+
+<header role="menubar" class="main-header">
+    <nav class="main-menu" role="navigation">
+        <div class="site-branding">
+            <a class="site-logo" href="{{ site_prefix }}/"><img src="/img/res/logo/welsim_logo_r.png"
+                    alt="WelSim Logo"></a>
+        </div>
+        <ul class="site-nav main-menu-links" role="menu">
+            <li class="nav-item{% if include.active == "producs" %} active{% endif %}">
+                <a href="{{ site_prefix }}/products">Products</a>
+            </li>
+            <li class="nav-item{% if include.active == " gallery" %} active{% endif %}">
+                <a href="{{ site_prefix }}/gallery">Gallery</a>
+            </li>
+            <li class="nav-item{% if include.active == " documentation" %} active{% endif %}">
+                <a href="https://docs.welsim.com" target="_blank">Documentation</a>
+            </li>
+            <li class="nav-item{% if include.active == " blog" %} active{% endif %}">
+                <a href="{{ site_prefix }}/blog">{{ strings.navigation.blog }}</a>
+            </li>
+            <li class="nav-item{% if include.active == " news" %} active{% endif %}">
+                <a href="{{ site_prefix }}/news">{{ strings.navigation.news }}</a>
+            </li>
+            <li class="nav-item{% if include.active == " pricing" %} active{% endif %}">
+                <a href="{{ site_prefix }}/pricing">{{ strings.navigation.pricing }}</a>
+            </li>
+            <li class="nav-item{% if include.active == " about" %} active{% endif %}">
+                <a href="{{ site_prefix }}/about">{{ strings.navigation.about }}</a>
+            </li>
+            <li class="nav-item{% if include.active == " download" %} active{% endif %} main-menu-button">
+                <a href="{{ site_prefix }}/download">{{ strings.navigation.download }}</a>
+            </li>
+        </ul>
+        <a class="menu-icon toggle-menu" href="#">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+            <span class="line-3"></span>
+        </a>
+    </nav>
+</header>
+
+<script type="text/javascript">
+    $('.toggle-menu').click(function () {
+        $('.site-nav').slideToggle({
+            speed: 250
+        });
+        $(this).toggleClass('close');
+        return false;
+    });
+</script>
+
+{% comment %}
+<div class="nav-divider px-2 px-xl-5">
+    <div></div>
+</div>
+
+{% assign current_lang_prefix = '\n' | append:site_prefix | append:'/' %}
+{% assign current_page_url = page.url | prepend:'\n' | remove:current_lang_prefix %}
+<div class="dropdown d-none d-lg-block pr-xl-3">
+    {% assign page_lang = site.data.languages | where: "code", page.lang | first %}
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="languageMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">{{ page_lang.name }}</a>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageMenuLink">
+        {% for lang in site.data.languages %}<a class="dropdown-item" href="{{ lang.path }}/{{ current_page_url }}">{{
+            lang.name }}</a>{% endfor %}
+    </div>
+</div>
+<div class="dropup d-lg-none py-3">
+    {% assign page_lang = site.data.languages | where: "code", page.lang | first %}
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="languageMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">{{ page_lang.name }}</a>
+    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="languageMenuLink">
+        {% for lang in site.data.languages %}<a class="dropdown-item" href="{{ lang.path }}/{{ current_page_url }}">{{
+            lang.name }}</a>{% endfor %}
+    </div>
+</div>
+{% endcomment %}
+
+
+
+
+<script type="text/javascript">
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function (e) {
+        if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+            }
+        }
+    }
+</script>
+

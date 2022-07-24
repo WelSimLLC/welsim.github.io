@@ -1,0 +1,191 @@
+/*--------------------------------------------------------------
+# Main Menu
+--------------------------------------------------------------*/
+
+.main-header {
+    // @include grid-width($col-12-width);
+    @include center-block;
+    background-color: $black;
+    padding: rem(16) 0 0;
+
+    @include breakpoint(992) {
+        padding-bottom: rem(16);
+    }
+}
+
+.main-menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint(992) {
+        flex-direction: row;
+    }
+}
+
+.site-branding {
+    margin-bottom: rem(16);
+    padding-left: 3.125%;
+    width: 100%;
+    @include breakpoint(992) {
+        margin: 0 0 0 rem(24);
+        padding: 0;
+        width: rem(150);
+    }
+}
+
+.site-logo {
+    width: rem(150);
+    display: block !important;
+}
+
+.main-menu-links {
+    @include typeset($responsive-body-font-size, 21);
+    @include reset-list;
+    background-color: $dark-gray2; // dropdown background
+    display: none;
+    width: 100%;
+
+    @include breakpoint(768) {
+        @include typeset($body-font-size, 21);
+    }
+
+    @include breakpoint(992) {
+        background-color: transparent;
+        display: block !important;
+        margin-right: rem(24);
+        width: auto;
+    }
+}
+
+.main-menu-links {
+    li {
+        margin-bottom: 0;
+
+        @include breakpoint(992) {
+            display: inline-block;
+            margin-left: rem(24);
+        }
+
+        a {
+            color: $white;
+            display: block;
+            padding: rem(16) 3.125%;
+
+            &:visited {
+                color: $white;
+            }
+
+            &:hover,
+            &:active {
+                background-color: rgba($black, 0.25);
+                color: $link-color;
+            }
+
+            @include breakpoint(992) {
+                color: $white;
+                padding: rem(12) 0;
+
+                &:visited {
+                    color: $white;
+                }
+
+                &:hover,
+                &:active {
+                    background-color: transparent;
+                    color: $welsim-yellow;
+                }
+            }
+        }
+    }
+
+    li.main-menu-button {
+
+        a,
+        a:visited {
+            background-color: $primary-button-color;
+            color: $;
+
+            &:hover,
+            &:active {
+                background-color: $welsim-yellow;
+                color: $black;
+            }
+
+            @include breakpoint(992) {
+                border-radius: rem(4);
+                color: $white;
+                padding-left: rem(48);
+                padding-right: rem(48);
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Main Menu Icon
+--------------------------------------------------------------*/
+
+.menu-icon {
+    display: grid;
+    height: rem(30);
+    place-items: center;
+    position: absolute;
+    right: 3.125%;
+    top: rem(4);
+    width: rem(30);
+
+    @include breakpoint(992) {
+        display: none;
+    }
+
+    span {
+        background-color: $dark-yellow; // right top icon
+        border-radius: rem(2);
+        display: block;
+        height: rem(3);
+        transition: all 0.25s ease-in-out 0s;
+        width: rem(30);
+    }
+
+    span.line-1 {
+        justify-self: start;
+        width: 84%;
+    }
+
+    span.line-2 {
+        justify-self: start;
+        width: 60%;
+    }
+
+    &:hover {
+        span {
+            background-color: $link-color;
+
+            &:nth-child(1) {
+                width: 40%;
+            }
+
+            &:nth-child(2) {
+                width: 80%;
+            }
+        }
+    }
+}
+
+.menu-icon.close {
+    span {
+        background-color: $link-color;
+
+        &:nth-child(1) {
+            width: 40%;
+        }
+
+        &:nth-child(2) {
+            width: 80%;
+        }
+    }
+}
+
+

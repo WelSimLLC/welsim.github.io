@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% include navigation.html active="download" %}
+{% assign strings = site.data.strings[page.lang] %}
+
+<div class="light-bg">
+    <div class="white-bg col-8-container content-padding">
+        <article class="col-6-container" itemscope itemtype="http://schema.org/BlogPosting">
+            <header class="article-header">
+                <h1>How to Verify Checksum</h1>
+            </header>
+            <div class="article-content">
+                <p>Use the instructions below to verify Chia download integrity in a command line.</p>
+                
+                <h3>Windows - Verify Checksum</h3>
+                
+                <p>Run the following command:</p>
+                <p><code>certutil -hashfile [location of file] SHA256</code></p>
+                <p>For example:</p>
+                <p><code>certutil -hashfile C:\Users\%USERNAME%\Downloads\Setup-Win64.exe SHA256</code></p>
+                
+                <hr>
+                
+                <h3>macOS - Verify Checksum</h3>
+                
+                <p>Run the following command:</p>
+                <p><code>shasum -a 256 [location of file]</code></p>
+                <p>For example:</p>
+                <p><code>shasum -a 256 ~/Downloads/Setup-MacOS.dmg</code></p>
+                
+                <hr>
+                
+                <h3>Linux - Verify Checksum</h3>
+                
+                <p>Run the following command:</p>
+                <p><code>shasum -a 256 [location of file]</code></p>
+                <p>For example:</p>
+                <p><code>shasum -a 256 ~/Downloads/chia-blockchain_1.1.7_amd64.deb</code></p>
+                
+                <hr>
+                
+                <p>Return to the <a href="/download">Download</a> page.</p>
+            </div>
+        </article>
+    </div>
+</div>

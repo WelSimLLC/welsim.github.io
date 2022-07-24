@@ -1,0 +1,60 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://welsim.com" # the base hostname & protocol for your site
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+# SEO settings
+title: WELSIM
+description: > # this means to ignore newlines until "baseurl:"
+  A better engineering simulation application which is faster, more affordable, and more secure.
+twitter:
+  username: getWELSIM
+  card: summary
+facebook:
+  publisher: https://www.facebook.com/getwelsim
+logo: /img/chia_logo.svg
+social:
+  links:
+    - https://twitter.com/getWELSIM
+    - https://www.facebook.com/getwelsim
+    - https://www.linkedin.com/company/welsim/
+    - https://github.com/WelSimLLC
+    - https://medium.com/@getwelsim
+google_analytics_snippet: |
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90183333-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-90183333-1');
+  </script>
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: https://welsim.com/android-chrome-512x512.png
+
+collections_dir: collections
+collections:
+  news:
+    output: false
+  investor_pics:
+    output: false
+  faq:
+    output: false
+  job_descriptions:
+    output: false
+
+# Build settings
+markdown: kramdown

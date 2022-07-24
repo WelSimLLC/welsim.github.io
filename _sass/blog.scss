@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# Blog Posts Grid
+--------------------------------------------------------------*/
+
+.blog-posts-grid {
+    @include breakpoint(768) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: rem(24) rem(24);
+    }
+}
+
+/*--------------------------------------------------------------
+# Post
+--------------------------------------------------------------*/
+
+.post {
+    flex-direction: column;
+    border: 1px solid $gray;
+    border-radius: rem(8);
+    margin-bottom: rem(24);
+    padding: rem(24) 24 / 464 * 100% rem(24);
+    .date {
+        @include typeset($small-font-size, $small-line-height);
+        display: block;
+        margin-bottom: rem(8);
+    }
+    @include breakpoint(460) {
+        padding: 32 / 464 * 100%;
+    }
+    @include breakpoint(768) {
+        margin-bottom: 0;
+    }
+}

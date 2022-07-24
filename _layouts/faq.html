@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+{% include navigation.html active="faq" %}
+
+{% assign strings = site.data.strings[page.lang] %}
+{% assign faq = site.faq | where:"lang",page.lang | sort:"order" %}
+
+<div class="light-bg">
+    <div class="white-bg col-8-container content-padding">
+        <article class="col-6-container">
+            <div class="article-content">
+                <h1>{{ strings.faq_title }}</h1>
+                
+                <div class="chia-accordion">
+                    {% for entry in faq %}
+                    <div class="chia-accordion-item">
+                        <div class="faq-entry" id="faq-{{ entry.order }}">
+                            <h3 class="accordion-trigger">
+                                <a href="#">
+                                    {{ entry.title }}
+                                    <span class="accordion-button"></span>
+                                </a>
+                            </h3>
+                            <div class="chia-accordion-details">
+                                {{ entry.content | markdownify }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.chia-accordion-details').not(':first').hide();
+    var allPanels = $('.chia-accordion-details');
+    var allLabels = $('.chia-accordion-item h3 a');
+    $('.chia-accordion-item h3 a').click(function() {
+        var thisLabel  = $(this);
+        var targetItem =  thisLabel.parent().next('.chia-accordion-details');
+        if(!targetItem.hasClass('active')){
+            allPanels.removeClass('active').slideUp();
+            targetItem.addClass('active').slideDown();
+            allLabels.removeClass('active-accordion');
+            thisLabel.addClass('active-accordion');
+        }
+        return false;
+    });
+</script>
