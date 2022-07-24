@@ -61,13 +61,12 @@
 --------------------------------------------------------------*/
 
 .footer-company-links {
-    // background-color:#000000;
     display: grid;
     gap: rem(24) rem(24);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     @include breakpoint(576) {
-        grid-template-columns: 1.5fr 0.5fr 1fr 1fr;
+        grid-template-columns: 1.5fr 0.1fr 1fr 1fr;
     }
 }
 
