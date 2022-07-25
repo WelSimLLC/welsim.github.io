@@ -1,0 +1,152 @@
+---
+layout: default
+---
+
+{% include navigation.html active="grants" %}
+
+{% assign strings = site.data.strings[page.lang] %}
+<div class="grants-container">
+    <div class="pg-title">
+        <div class="col-10-container">
+            <h1>Service</h1>
+        </div>
+    </div>
+
+    <div class="white-bg content-padding">
+        <div class="col-8-container txt-col-blocks">
+            <div class="full-width-col">
+                <p>WelSim is committed to providing the best software development services to our distinguished clients.
+                </p>
+                <p>
+                    WelSimulation LLC (WelSim) provides
+                    a wide range of engineering simulation service specializing in product re-invention
+                    and optimization, computer-aided analysis, enterprise application software development,
+                    and simulation-oriented training and education. At WelSim, we appreciate that every
+                    clientele is unique. We understand that what might be right for one client is not
+                    necessarily
+                    right for all others, and we dedicate to every single project to our client's specific
+                    demand.
+                </p>
+                <p>
+                    Privacy and discretion are our top priorities. We have strict protocols in managing
+                    contracts and securing client's data. All of our work are conducted in
+                    the United States, no outsourcing/subcontracting occurs
+                    without an agreement with our customer. Further, the information of clients and projects
+                    will not be released to any third-party agency.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="light-bg">
+        <div class="white-bg col-10-container content-padding">
+            <article class="col-8-container">
+                <div class="article-content">
+
+                    <h2 id="faq">Services</h2>
+                    <p>Our services include but not limited to:</p>
+                    <ul>
+                        <i class="fa fa-check-square-o"></i>
+                        Enterprise-grade software development.
+                    </ul>
+                    <ul>
+                        <i class="fa fa-check-square-o"></i>
+                        Numerical methods and applications, e.g. finite element method, finite volume method,
+                        spectral methods, continuous and discontinuous Galerkin methods, molecular
+                        dynamics, etc.
+                    </ul>
+                    <ul>
+                        <i class="fa fa-check-square-o"></i>
+                        Consulting for scientific computing and engineering simulation subjects, e.g. computational
+                        solid mechanics, computational electromagnetics (CEM), computational fluid dynamics (CFD), etc.
+                    </ul>
+                </div>
+            </article>
+            <p align="center"><a class="button primary-button apply-button"
+                    href="https://us15.list-manage.com/contact-form?u=90ac76843a62679589273ff26&form_id=f0bf197ab18ebb8a81cfae29896b0ecb">Contact
+                    us</a></p>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="light-bg">
+        <a id="grant-winners"></a>
+        <div class="col-10-container featured-content soft-shadow white-bg grant-winner-container">
+            <h3>
+                Cultivation Grant Winners
+            </h3>
+            <div class="download-extras">
+                <div class="download-extra-option grant-winner-box tab d-flex">
+                    <img class="grant-winner-icon" src="/img/hashgreen-icon.svg">
+                    <div class="grant-winner-description">
+                        <h4><a id="how-to-apply"></a>Decentralized Exchange (DEX)</h4>
+                        <span class="grant-winner-name">by Hashgreen</span>
+                        <a href="#">hashgreen.net</a>
+                    </div>
+                </div>
+                <div class="backdrop d-none">
+                    <div class="modal white-bg modal-content d-flex">
+                        <div class="modal-description">
+                            <h2>Hashgreen DEX</h2>
+                            <h4>Hashgreen Inc.</h4>
+                            <a href="https://www.hashgreen.net" target="_blank">hashgreen.net</a>
+                            <p>
+                                {{strings.grants_cultivation_winner_1_description | markdownify}}
+                            </p>
+                        </div>
+                        <div class="modal-image-container">
+                            <img class="modal-image" src="/img/nucle-client.png">
+                            <a href="https://hash.green/" class="d-flex modal-link" target="_blank">
+                                <img class="link-icon" src="/assets/icons/link_icon_green.svg">
+                                hash.green
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-extra-option grant-winner-box tab d-flex">
+                    <img class="grant-winner-icon" src="/img/nucle-icon.svg">
+                    <div class="grant-winner-description">
+                        <h4><a id="how-to-apply"></a>Chia DeFi Wallet</h4>
+                        <span class="grant-winner-name">by Emergent Coin</span>
+                        <a href="#">nucle.io</a>
+                    </div>
+                </div>
+                <div class="backdrop d-none">
+                    <div class="modal white-bg modal-content d-flex">
+                        <div class="modal-description">
+                            <h2>nucle.io</h2>
+                            <h4>Emergent Coin Inc.</h4>
+                            <a href="https://www.nucle.io" target="_blank">nucle.io</a>
+                            <p>
+                                {{strings.grants_cultivation_winner_2_description | markdownify}}
+                            </p>
+                        </div>
+                        <div class="modal-image-container">
+                            <img class="modal-image" src="/img/nucle-client.png">
+                            <a href="https://www.nucle.io" class="d-flex modal-link" target="_blank">
+                                <img class="link-icon" src="/assets/icons/link_icon_green.svg">
+                                nucle.io
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("div.tab").on("click", function () {
+            $(this).next().removeClass("d-none");
+            $(this).next().addClass("d-flex");
+        });
+        $("div.backdrop").on("click", function () {
+            $(this).addClass("d-none");
+            $(this).removeClass("d-flex");
+        });
+    });
+</script>
