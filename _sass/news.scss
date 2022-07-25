@@ -1,0 +1,117 @@
+/*--------------------------------------------------------------
+# Jumbotron
+--------------------------------------------------------------*/
+
+.jumbotron {
+    border: 0px solid $gray;
+    border-radius: rem(8);
+    margin-bottom: rem(24);
+    .news-jumbotron-thumbnail {
+        border-radius: rem(8) rem(8) 0 0;
+        height: rem(290);
+        object-fit: cover;
+        width: 100%;
+        @include breakpoint(768) {
+            height: rem(594);
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Jumbotron Content
+--------------------------------------------------------------*/
+
+.jumbotron-content {
+    border-top: 1px solid $gray;
+    padding: rem(24) 24 / 464 * 100% rem(24);
+    .date {
+        @include typeset($small-font-size, $small-line-height);
+        display: block;
+        margin-bottom: rem(8);
+    }
+    h2 {
+        a, a:visited {
+            color: $text-color;
+            &:hover, &:active {
+                color: $chia-green;
+            }
+        }
+    }
+    @include breakpoint(460) {
+        padding: 32 / 464 * 100%;
+    }
+}
+
+/*--------------------------------------------------------------
+# News Post
+--------------------------------------------------------------*/
+
+.news-post {
+    border: 1px solid $gray;
+    border-radius: rem(8);
+    margin-bottom: rem(24);
+    .news-small-thumbnail {
+        border-radius: rem(8) rem(8) 0 0;
+        height: rem(290);
+        object-fit: cover;
+        width: 100%;
+    }
+    @include breakpoint(768) {
+        margin-bottom: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# News Content
+--------------------------------------------------------------*/
+
+.news-content {
+    border-top: 1px solid $gray;
+    padding: rem(24) 24 / 464 * 100% rem(24);
+    .date {
+        @include typeset($small-font-size, $small-line-height);
+        display: block;
+        margin-bottom: rem(8);
+    }
+    h3 {
+        a, a:visited {
+            color: $text-color;
+            &:hover, &:active {
+                color: $chia-green;
+            }
+        }
+    }
+    @include breakpoint(460) {
+        padding: 32 / 464 * 100%;
+    }
+}
+
+.news-content-padding {
+    padding: rem(24) 3.125%;
+}
+    
+/*--------------------------------------------------------------
+# See More
+--------------------------------------------------------------*/
+
+.see-more {
+    margin-top: rem(24);
+    text-align: center;
+    @include breakpoint(460) {
+        margin-top: rem(36);
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Notice
+--------------------------------------------------------------*/
+
+.notice {
+    text-align: center;
+    color:$dark-gray
+}
+

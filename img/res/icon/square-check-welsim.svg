@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 38.308239 38.308239"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="square-check-welsim.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   width="38.308239"
+   height="38.308239"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="6.5390624"
+     inkscape:cx="-17.663083"
+     inkscape:cy="56.659499"
+     inkscape:window-width="1350"
+     inkscape:window-height="1040"
+     inkscape:window-x="365"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4" />
+  <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path
+     d="m 18.110903,26.319811 c -0.932053,0.932054 -2.454121,0.932054 -3.386173,0 L 9.2521225,20.847207 c -0.9346167,-0.932053 -0.9346167,-2.454121 0,-3.386175 0.9320545,-0.932053 2.4541225,-0.932053 3.3861765,0 l 3.779518,3.779518 9.252126,-9.252124 c 0.932051,-0.932053 2.454119,-0.932053 3.386172,0 0.932051,0.932054 0.932051,2.454122 0,3.386175 z M 0,5.4726054 C 0,2.449846 2.449846,0 5.4726054,0 H 32.835632 c 3.018484,0 5.472607,2.449846 5.472607,5.4726054 V 32.835632 c 0,3.018484 -2.454123,5.472607 -5.472607,5.472607 H 5.4726054 C 2.449846,38.308239 0,35.854116 0,32.835632 Z m 4.104454,0 V 32.835632 c 0,0.752484 0.612248,1.368153 1.3681514,1.368153 H 32.835632 c 0.752484,0 1.368153,-0.615669 1.368153,-1.368153 V 5.4726054 c 0,-0.7559034 -0.615669,-1.3681514 -1.368153,-1.3681514 H 5.4726054 c -0.7559034,0 -1.3681514,0.612248 -1.3681514,1.3681514 z"
+     id="path2"
+     style="fill:#fcb630;fill-opacity:1;stroke-width:0.0855101" />
+</svg>

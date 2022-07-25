@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+{% include navigation.html active="news" %}
+
+{% assign strings = site.data.strings[page.lang] %}
+{% assign page_size = 6 %}
+
+<div class="pg-title">
+  <div class="col-10-container">
+      <h1>{{ strings.news_title }}</h1>
+  </div>
+</div>
+<div class="white-bg notice">
+  <p>Media Inquiries: <a href="mailto:info@welsim.com" targetr="_blank">info@welsim.com</a></p>
+</div>
+<div class="white-bg news-content-padding chia-blog-posts">
+  <div class="col-8-container">
+    <div class="jumbotron bg-white d-none d-md-block">
+        {% assign jumbo_news = site.news | where:"jumbotron","true" %}
+        {% for entry in jumbo_news %}
+          <a href="{{ entry.weblink }}" title="{{ entry.title }}" target="_blank" rel="noreferrer noopener">
+            <img class="news-jumbotron-thumbnail" src="{{ entry.thumbnail }}">
+          </a>
+          <div class="jumbotron-content">
+            <span class="date">{{ entry.date | date:"%B %-d, %Y" }}</span>
+            <h2 class="headline">
+              <a class="news-article" href="{{ entry.weblink }}" title="{{ entry.title }}" target="_blank" rel="noreferrer noopener">
+                {{ entry.title | truncate: 60 }}
+              </a>
+            </h2>
+            <div class="tagline">{{ entry.content }}</div>
+            <p class="chia-cta">
+              <a href="{{ entry.weblink }}" title="{{ entry.title }}" target="_blank" rel="noreferrer noopener">
+                {{ entry.source }} <img src="/img/ui-icons/external-link.svg" class="chia-icon ui-icon baseline-icon">
+              </a>
+            </p>
+          </div>
+        {% endfor %}
+    </div>
+    <div class="blog-posts-grid">
+        {% assign news = site.news | where:"jumbotron","false" | reverse %}
+        {% for entry in news %}
+            <div class="news-post article{% if forloop.index > page_size %} d-none{% endif %}">
+              <a class="news-article" href="{{ entry.weblink }}" title="{{ entry.title }}" target="_blank" rel="noreferrer noopener">
+                <img class="w-100 news-small-thumbnail" src="{{ entry.thumbnail }}">
+              </a>
+              <div class="news-content">
+                <span class="date">{{ entry.date | date:"%B %-d, %Y" }}</span>
+                <h3 class="headline">
+                  <a class="news-article" href="{{ entry.weblink }}" title="{{ entry.title }}" target="_blank" rel="noreferrer noopener">
+                    {{ entry.title | truncate: 60 }}
+                  </a>
+                </h3>
+                <p class="chia-cta">
+                  <a href="{{ entry.weblink }}" title="{{ entry.title }}" target="_blank" rel="noreferrer noopener">
+                    {{ entry.source }} <img src="/img/ui-icons/external-link.svg" class="chia-icon ui-icon baseline-icon">
+                  </a>
+                </p>
+              </div>                 
+            </div>
+        {% endfor %}
+    </div>
+    {% if news.size > page_size %}
+        <div class="see-more">
+            <a id="see-more-button" class="button outline-yellow-button">{{ strings.news_see_more }}</a>
+        </div>
+    {% endif %}
+  </div>
+</div>
+
+<script type="text/javascript">
+  var seeMore = document.getElementById('see-more-button');
+  if (seeMore) {
+      seeMore.addEventListener('click', function() {
+          Array.from(document.querySelectorAll('.article')).forEach(function(article) {
+              article.classList.remove('d-none');
+          });
+          seeMore.classList.add('d-none');
+      });
+  }
+</script>

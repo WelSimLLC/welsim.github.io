@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% assign strings = site.data.strings[page.lang] %}
+{% assign posts = site.posts | where:"lang",page.lang %}
+
+{% include navigation.html active="blog" %}
+
+<div class="pg-title">
+    <div class="col-10-container">
+        <h1>{{ strings.blog_title }}</h1>
+    </div>
+</div>
+
+<div class="white-bg content-padding chia-blog-posts">
+    <div class="col-8-container">
+        <div class="blog-posts-grid">
+            {% for post in posts %}
+                {% assign year = post.date | date: "%Y" %}
+                <div class="post d-flex{% if year != prev_year %} first-of-year{% endif %}">
+                    <span class="date">{{ post.date | date:"%B %-d, %Y" }}</span>
+                    <h3 class="headline"><a href="{{ post.url }}" class="content">{{ post.title }}</a></h3>
+                    <p class="preview">{{ post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
+                </div>
+                {% assign prev_year = year %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

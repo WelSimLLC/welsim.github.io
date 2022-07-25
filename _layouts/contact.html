@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+{% include navigation.html active="contact" %}
+
+{% assign strings = site.data.strings[page.lang] %}
+
+<div class="pg-title">
+    <div class="col-10-container">
+        <h1>{{ strings.contact_title }}</h1>
+    </div>
+</div>
+
+<div class="light-bg">
+    <div class="col-10-container featured-content soft-shadow">
+        <div class="featured-content-txt-container contact">
+            <div class="featured-content-txt">
+                <h3>{{ site.data.contact.name }}</h3>
+                <ul class="contact-links">
+                    <li>
+                        <a class="contact-email" href="mailto:{{ site.data.contact.email }}">
+                            <img class="chia-icon ui-icon-left" src="/img/ui-icons/email.svg" alt="Email">
+                            {{ site.data.contact.email }}
+                        </a>
+                    </li>
+                </ul>
+                
+                <h3>Media Inquiries</h3>
+                <ul class="contact-links">
+                    <li>
+                        <a href='mailto: info@welsim.com'>
+                            <img class="chia-icon ui-icon-left" src="/img/ui-icons/email.svg" alt="Email">
+                            info@welsim.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href='tel:+16282225925'>
+                            <img class="chia-icon ui-icon-left" src="/img/ui-icons/phone.svg" alt="Phone">
+                            +1-724-914-8722
+                        </a>
+                    </li>
+                </ul>
+                
+                <h3>Social Media</h3>
+                <ul class="contact-links">
+                    <li>
+                        <a href="https://www.linkedin.com/company/chia-network/" target="_blank" target="_blank" rel="noreferrer noopener">
+                            <img class="chia-icon social-icon" src="/img/social/linkedin-green.svg" alt="Linkedin">
+                            Linkedin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/{{ site.data.contact.github_username }}" target="_blank" rel="noreferrer noopener">
+                            <img class="chia-icon social-icon" src="/img/social/github-green.svg" alt="Github">
+                            Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/{{ site.data.contact.twitter_username }}" target="_blank" rel="noreferrer noopener">
+                            <img class="chia-icon social-icon" src="/img/social/twitter-green.svg" alt="Twitter">
+                            Twitter
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://www.facebook.com/{{ site.data.contact.facebook_username }}" target="_blank" rel="noreferrer noopener">
+                            <img class="chia-icon social-icon" src="/img/social/facebook-green.svg" alt="Facebook">
+                            Facebook
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="https://instagram.com/{{ site.data.contact.instagram_username }}" target="_blank" rel="noreferrer noopener">
+                            <img class="chia-icon social-icon" src="/img/social/instagram-green.svg" alt="Facebook">
+                            Instagram
+                        </a>
+                    </li> -->
+                </ul>
+                
+                <p><a href="{{ site.data.contact.keybase_team_page }}" target="_blank" rel="noreferrer noopener" class="join-keybase button outline-green-button">{{ strings.contact_join_keybase }}</a></p>
+                
+            <hr>
+                
+            <h3>Mailing Lists</h3>
+            <div class="mc_forms_x">
+            <p>TODO</p>
+             
+            </div>
+            </div>
+        </div>
+        <div class="featured-content-img">
+            <img src="/img/abstract/abstract-geometric-pattern-01-02_@2x.png" alt="Abstract Geometric Pattern">
+        </div>
+    </div>
+</div>

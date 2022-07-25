@@ -1,0 +1,6 @@
+- code: en
+  name: English
+  path: ""
+- code: cn
+  name: 中文
+  path: "/cn"

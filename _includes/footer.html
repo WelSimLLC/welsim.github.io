@@ -1,0 +1,94 @@
+{% assign strings = site.data.strings[page.lang] %}
+
+
+<footer class="site-footer" role="contentinfo">
+    <div class="col-10-container">
+        <!-- <div class="footer-content-container"> -->
+        <!-- <div class="footer-logo">
+                <img src="/img/branding/chia-logo-white.svg" alt="WelSim Logo">
+            </div> -->
+        <div class="footer-company-links">
+            <div class="footer-col">
+                <h4>About us</h4>
+                <p>WELSIM<sup>&reg;</sup> engineering simulation software helps
+                    engineers and researchers conduct simulation studies and prototype virtual products.</p>
+                <ul class="contact-details">
+                    <li><i class="fa fa-wpforms"></i>&nbsp;&nbsp;<a
+                            href="https://us15.list-manage.com/contact-form?u=90ac76843a62679589273ff26&form_id=f0bf197ab18ebb8a81cfae29896b0ecb" target="_blank">Contact
+                            form</a></li>
+                    <li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:info@welsim.com">info@welsim.com</a>
+                    </li>
+                    <li><i class="fa fa-phone"></i>&nbsp;&nbsp;+1 (724) 914-8722</li>
+                </ul>
+            </div>
+                        <div class="footer-col"></div>
+            <div class="footer-col social-links">
+                <h4>Let's connect</h4>
+                <p />
+                <ul>
+                    <li>
+                        <img class="chia-icon social-icon" src="/img/social/github-white.svg" alt="Github">
+                        <a href="https://github.com/{{ site.data.contact.github_username }}" target="_blank"
+                            rel="noreferrer noopener">Github</a>
+                    </li>
+                    <li>
+                        <img class="chia-icon social-icon" src="/img/social/medium-white.svg" alt="Medium">
+                        <a href="https://medium.com/@getwelsim" target="_blank" rel="noreferrer noopener">Medium</a>
+                    </li>
+                    <li>
+                        <img class="chia-icon social-icon" src="/img/social/youtube-white.svg" alt="YouTube">
+                        <a href="https://www.youtube.com/channel/UCoBcsm1OwSinQCnyFiXLDog" target="_blank"
+                            rel="noreferrer noopener">YouTube</a>
+                    </li>
+                    <li>
+                        <img class="chia-icon social-icon" src="/img/social/twitter-white.svg" alt="Twitter">
+                        <a href="https://twitter.com/{{ site.data.contact.twitter_username }}" target="_blank"
+                            rel="noreferrer noopener">Twitter</a>
+                    </li>
+                    <li>
+                        <img class="chia-icon social-icon" src="/img/social/linkedin-white.svg" alt="LinkedIn">
+                        <a href="https://www.linkedin.com/company/{{ site.data.contact.linkedin_username }}"
+                            target="_blank" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+                    </li>
+                    <li>
+                        <img class="chia-icon social-icon" src="/img/social/reddit-white.svg" alt="Reddit">
+                        <a href="https://reddit.com/user/welsim" target="_blank" rel="noreferrer noopener">Reddit</a>
+                    </li>
+                    <!-- <li>
+                            <img class="chia-icon social-icon" src="/img/social/facebook-white.svg" alt="Facebook">
+                            <a href="https://www.facebook.com/{{ site.data.contact.facebook_username }}" target="_blank" rel="noreferrer noopener">Facebook</a>
+                        </li> -->
+                    <!-- <li>
+                            <img class="chia-icon social-icon" src="/img/social/instagram-white.svg" alt="Instagram">
+                            <a href="https://instagram.com/{{ site.data.contact.instagram_username }}" target="_blank" rel="noreferrer noopener">Instagram</a>
+                        </li> -->
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <p />
+                <ul>
+                    <li><a href="https://docs.welsim.com/" target="_blank">Docs</a></li>
+                    <!-- <li><a
+                            href="https://us15.list-manage.com/contact-form?u=90ac76843a62679589273ff26&form_id=f0bf197ab18ebb8a81cfae29896b0ecb">Contact
+                            us</a></li> -->
+                    <li><a href="https://github.com/WelSimLLC/WelSim-App/issues">Report an issue</a></li>
+                    <li><a href="/public/welsim19_brochure.pdf">Brochure</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/terms">Terms of Use</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="/warrant-canary">Warrant canary</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+<section class="copyrights">
+    <div class="col-md-12 col-footer" align="center">
+        <p>All Rights Reserved &copy;2017-{{ site.time | date: '%Y' }} WelSimulation, LLC</p>
+    </div>
+</section>

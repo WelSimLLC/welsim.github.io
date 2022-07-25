@@ -1,0 +1,184 @@
+---
+layout: default
+---
+
+{% assign strings = site.data.strings[page.lang] %}
+
+{% include navigation.html %}
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide" style="background-image:url(/img/res/slider/banner6_1680x650.jpg)" id="slider_white">
+            <div class="title" data-swiper-parallax="-100">WELSIM R2.3 is available now</div>
+            <div class="subtitle" data-swiper-parallax="-200">Fast, affordable, & secure engineering simulation
+                solutions</div>
+            <div class="text" data-swiper-parallax="-300">
+                <br />
+                <p class="chia-cta"><a href="/download" class="button outline-black-button">Download Now</a></p>
+            </div>
+            <div id="banner" style="float: right; margin-top:30px">
+                <a href="/productOverview">
+                    <img id="mlp" src="/img/res/slider/welsim_in_computer2.png" style="width:450px; float: right" />
+                </a>
+            </div>
+        </div>
+
+        <!-- <div class="swiper-slide" style="background-image:url(/img/res/slider/framewire_1680x650.jpg)">
+            <div class="title" data-swiper-parallax="-100">Support Windows and Linux OS</div>
+            <div class="subtitle" data-swiper-parallax="-200">Microsoft Windows 7 to 11</div>
+            <div class="subtitle" data-swiper-parallax="-200">Linux Ubuntu 16.04 LTS and later</div>
+            <div class="text" data-swiper-parallax="-300">
+                <br />
+                <p class="chia-cta"><a href="/download" class="button outline-white-button">Download Now</a></p>
+            </div>
+            <div id="banner" style="float: right; margin-top:30px">
+                <a href="/productOverview">
+                    <img id="mlp" src="/img/res/slider/windowsLinux_welsim_laptop.gif"
+                        style="width:450px; float: right" />
+                </a>
+            </div>
+        </div> -->
+
+        <div class="swiper-slide" style="background-image:url(/img/res/slider/banner7_earth.jpg)" id="slider_white">
+            <div class="title" data-swiper-parallax="-100">Material Editor</div>
+            <div class="subtitle" data-swiper-parallax="-200">Free material editing tool for engineering analysis
+            </div>
+            <div class="subtitle" data-swiper-parallax="-200">63 material properties are supported, and more are to be
+                added.</div>
+            <div class="text" data-swiper-parallax="-300">
+                <p class="chia-cta"><a href="/mateditor" class="button outline-black-button">Learn More</a></p>
+            </div>
+            <div id="banner" style="float: left; margin-top:50px">
+                <a href="/mateditor">
+                    <img id="mlp" src="/img/res/slider/mateditor_slide.PNG" style="width:480px; float: left" />
+                </a>
+            </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image:url(/img/res/slider/banner8_1680x650.jpg)">
+            <div class="title" data-swiper-parallax="-100">Curve Fitter</div>
+            <div class="subtitle" data-swiper-parallax="-200">A free curve fitting tool for engineering and science
+            </div>
+            <div class="subtitle" data-swiper-parallax="-200">Supports linear, polynomial, nonlinear, hyperelastic,
+                core loss models, etc.
+            </div>
+            <div class="text" data-swiper-parallax="-300">
+                <br />
+                <p class="chia-cta"><a href="/curvefitter" class="button outline-white-button">Learn More</a></p>
+            </div>
+
+            <div id="banner" style="float: right; margin-top:0px">
+                <a href="/curvefitter">
+                    <img id="mlp" src="/img/res/slider/curvefitter_slide.png" style="width:480px; float: right" />
+                </a>
+            </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image:url(/img/res/slider/banner4_1680x650.jpg)">
+            <div class="title" data-swiper-parallax="-100">Unit Converter</div>
+            <div class="subtitle" data-swiper-parallax="-200">Free unit conversion software for engineers</div>
+            <div class="subtitle" data-swiper-parallax="-200">It supports 15 unit systems and 36 quantities</div>
+            <div class="text" data-swiper-parallax="-300">
+                <br />
+                <p class="chia-cta"><a href="/unitconverter" class="button outline-white-button">Learn More</a></p>
+            </div>
+            <div id="banner" style="float: right; margin-top:40px">
+                <a href="/unitconverter">
+                    <img id="mlp" src="/img/res/slider/unitconverter_slide.PNG" style="width:480px; float: left" />
+                </a>
+            </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image:url(/img/res/slider/banner3.jpg)" id="slider_white">
+            <div class="title" data-swiper-parallax="-100">Beam Cross-Section</div>
+            <div class="subtitle" data-swiper-parallax="-200">A free cross-section property calculator for various
+                beams</div>
+            <div class="subtitle" data-swiper-parallax="-200">Supports 9 types of beams, and more.</div>
+            <div class="text" data-swiper-parallax="-300">
+                <br />
+                <p class="chia-cta"><a href="/beamsection" class="button outline-black-button">Learn More</a></p>
+            </div>
+            <div id="banner" style="float: right; margin-top:0px">
+                <a href="/beamsection">
+                    <img id="mlp" src="/img/res/slider/beamsection_slide.png" style="width:480px; float: left" />
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev" style="color:white"></div>
+    <div class="swiper-button-next" style="color:white"></div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                hideOnClick: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            speed: 600,
+            spaceBetween: 15,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true
+            },
+            loop: true
+        });
+    }
+</script>
+
+
+
+<div class="white-bg content-padding chia-value-props">
+    <div class="col-10-container">
+        <div class="value-props-grid">
+
+            <div class="value-prop">
+                <h2>Authentically secure, fast and affordable.</h2>
+            </div>
+
+            <div class="value-prop soft-shadow">
+                <img src="/img/res/icon/gears-solid-welsim.svg" class="value-prop-icon" alt="Gear Icon">
+                <h3>Products</h3>
+                <p>Our products are developed for engineering, science, and education communities. The flagship
+                    simulation software WELSIM
+                    comes with an all-in-one graphical user interface and self-integrated features. It is a
+                    long-term-support product that aims to accurately and quickly solve engineering and science problems
+                    using the
+                    finite element and advanced numerical methods. We also shiped free engineering tools such as
+                    MatEditor, CurveFitter, UnitConverter, etc.</p>
+                <p class="chia-cta"><a href="/products">Learn More <img src="/img/ui-icons/arrow-right-yellow.svg"
+                            class="chia-icon ui-icon"></a></p>
+            </div>
+            <div class="value-prop soft-shadow">
+                <img src="/img/res/icon/computer-solid-welsim.svg" class="value-prop-icon" alt="Computer Icon">
+                <h3>Service</h3>
+                <p>We provide a wide range of enterprise-grade software development services specializing in scientific
+                    computing, numerical methods, and engineering simulation. With the decades' experience in the field,
+                    we can quickly deliver your customized software with superior quality.</p>
+                <p class="chia-cta"><a href="/service">Learn More <img src="/img/ui-icons/arrow-right-yellow.svg"
+                            class="chia-icon ui-icon"></a></p>
+            </div>
+            <div class="value-prop soft-shadow">
+                <img src="/img/res/icon/square-check-welsim.svg" class="value-prop-icon" alt="Check Icon">
+                <h3>About</h3>
+                <p>WelSimulation LLC (WelSim) is a unique and independent simulation technology provider.
+                    Founded in the Greater Pittsburgh, PA, in 2017, WelSim was born out of a vision to
+                    create a company that could successfully combine the disciplines of engineering simulation,
+                    scientific computing, and software production.</p>
+                <p class="chia-cta"><a href="/about">Read More <img src="/img/ui-icons/arrow-right-yellow.svg"
+                            class="chia-icon ui-icon"></a></p>
+            </div>
+        </div>
+    </div>
+</div>

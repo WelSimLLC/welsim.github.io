@@ -1,0 +1,563 @@
+---
+layout: default
+---
+
+{% include navigation.html %}
+
+{% assign strings = site.data.strings[page.lang] %}
+
+<div class="pg-title">
+    <div class="col-10-container">
+        <h1>Interactive Blockchain Valuation Model</h1>
+    </div>
+</div>
+
+<div class="white-bg content-padding">
+    <div class="col-8-container txt-col-blocks">
+        <div class="full-width-col">
+            <p class="lrg-txt">
+                Cryptocurrencies do have a value, and they can be valued using traditional economic tools.
+            </p>
+            <p>
+                We built a model to demonstrate our thesis, taking into account three core elements of blockchain technology: <a href="https://vitalik.ca/general/2021/04/07/sharding.html#the-scalability-trilemma">The Trilemma</a>, <a href="https://www.truthcoin.info/blog/security-budget/">Security Budget</a>, and Real-World application. Try our model below to explore the fundamental value of a cryptocurrency and its blockchain. For the full context behind this model and how we approached it, check out <a href="https://www.chia.net/2022/06/08/valuing-blockchains.en.html">this blog post</a>.
+            </p>
+            <p>
+                As Niels Bohr (and not Yogi Berra) said, “prediction is difficult, especially if it’s about the future.” We think our assumptions as to the Chia Blockchain are reasonable, and conservative, and our capital cost estimate captures our risk. However, reasonable minds will differ. This is a tool to create estimates and not a specific prediction.
+            </p>
+        </div>
+    </div>
+
+    <!-- GROSS REVENUE SECTION -->
+    <div class="col-10-container section-calculations">
+        <div class="download-extra-option calculation-box soft-shadow">
+            <h1 id='totalGlobalRevenue'>$ 915 Billion</h1>
+            <h5>
+                Total Global Transaction Fee Revenue
+            </h5>
+        </div>
+        <div class="download-extra-option soft-shadow input-container">
+            <div class="slide-spacing">
+                <div class="slide-spacing">Total Gross Transaction Fee Revenue
+                </div>
+                <div>
+                    <input type="number" class="input" id="totalRevenue" placeholder="$ Amount in Billions" inputmode="numeric" value='915'/>
+                    <span> Billion</span>
+                </div>
+                <div class="note-text">
+                    (Default value is dervied by removing interest revenue from the $2tn in payments fees annually per the <a href="https://www.mckinsey.com/~/media/mckinsey/industries/financial%20services/our%20insights/the%202021%20mckinsey%20global%20payments%20report/2021-mckinsey-global-payments-report.pdf">McKinsey 2021 Payments Report</a>)
+                </div>
+            </div>
+            <div class="slide-spacing no-percentage">
+                <div class="slide-spacing slide-label">Time Horizon For Model</div>
+                <input type="range" id='timeHorizonSlider'>
+                <div class="slider-range">
+                    <div>
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            3 Years
+                        </div>
+                    </div>
+                    <div class="slider-number">
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            20 Years
+                        </div>
+                    </div>
+                </div>
+                <div class="note-text">
+                    Over what time period do you expect this scenario to play out - Year X below.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layer fees -->
+    <div class="col-10-container section-calculations">
+        <div class="download-extra-option calculation-box soft-shadow">
+            <h1 id='blockchainPaymentRevenues'>$ 192.10</h1>
+            <h5>
+                Total Blockchain Annual Payment Market Size ($bn)
+            </h5>
+        </div>
+        <div class="download-extra-option soft-shadow input-container">
+            <div class="slide-spacing">
+                <div class="slide-spacing slide-label">% Fee Reduction in Blockchain Adoption
+                </div>
+                <input type="range" id='feeReductionSlider'>
+                <div class="slider-range">
+                    <div>
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            10 %
+                        </div>
+                    </div>
+                    <div class="slider-number">
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            70 %
+                        </div>
+                    </div>
+                </div>
+                <div class="note-text">How much do payment fees need to reduce to move payments to Blockchains?
+                </div>
+            </div>
+            <div class="slide-spacing">
+                <div class="slide-spacing slide-label">Total Blockchain Annual Market Size after Fee Reduction
+                </div>
+                <input type="range" id='marketShareSlider'>
+                <div class="slider-range">
+                    <div>
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            10 %
+                        </div>
+                    </div>
+                    <div class="slider-number">
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            70 %
+                        </div>
+                    </div>
+                </div>
+                <div class="note-text">Market Share of Transaction Fee Revenue Taken by all Blockchains in X Years.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layer 1 -->
+    <div class="col-10-container section-calculations">
+        <div class="download-extra-option calculation-box soft-shadow">
+            <h1 id='costPerTransactionL1'>$ 9.61 </h1>
+            <h5>
+                Total Layer 1 Transaction Fees For Blockchain Under Analysis ($bn)
+            </h5>
+            <h1 id='percentageFeeL1'>1.05 %</h1>
+            <h5>
+                Percentage of total transaction fee revenue on Layer 1 of Blockchain Under Analysis
+            </h5>
+        </div>
+        <div class="download-extra-option soft-shadow input-container">
+            <div class="slide-spacing">
+                <div class="slide-spacing slide-label">Estimated Market Share of the Blockchain under analysis                </div>
+                <input type="range" id='xChainMarketShareSlider'>
+                <div class="slider-range">
+                    <div>
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            5 %
+                        </div>
+                    </div>
+                    <div class="slider-number">
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            50 %
+                        </div>
+                    </div>
+                </div>
+                <div class="note-text">Share of only the Total Blockchain Annual Payment Market Size
+                </div>
+            </div>
+            <div class="slide-spacing">
+                <div class="slide-spacing slide-label">% of TX Fees Moving to Layer 2
+                </div>
+                <input type="range" id='shareFeeSlider'>
+                <div class="slider-range">
+                    <div>
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            50 %
+                        </div>
+                    </div>
+                    <div class="slider-number">
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            90 %
+                        </div>
+                    </div>
+                </div>
+                <div class="note-text">Estimated Proportion of All Transaction Fees On This Blockchain that migrate to Layer 2
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TPS -->
+    <div class="col-10-container section-calculations">
+        <div class="download-extra-option calculation-box soft-shadow">
+            <h1 id='averageTps'>$ 10.15</h1>
+            <h5>
+                Average Transaction Cost at TPS of Blockchain Under Analysis
+            </h5>
+        </div>
+        <div class="download-extra-option soft-shadow input-container">
+            <div class="slide-spacing">
+                <div class="slide-spacing">Blockchain X transactions per second (TPS)</div>
+                <div>
+                    <input type="number" class="input" id="blockchainTPS" placeholder="number" inputmode="numeric" value='30'/>
+                    <span> TPS </span>
+                </div>
+                <div class="note-text"> TPS of this Blockchain. Chia is 20-40 TPS.</div>
+            </div>
+        </div>
+    </div>
+
+      <!-- velocity -->
+      <div class="col-10-container section-calculations">
+        <div class="download-extra-option calculation-box soft-shadow">
+            <h1 id='totalCoinValue'>$ 384.21</h1>
+            <h5>
+                Total Coin Value $(bn)
+            </h5>
+            <div class="note-text"> Total Estimated Coin Market Capitalization
+            </div>
+        </div>
+        <div class="download-extra-option soft-shadow input-container">
+            <div class="slide-spacing">
+                <div class="slide-spacing">Velocity</div>
+                <div>
+                    <input type="number" class="input" id="velocity" placeholder="number" inputmode="numeric" value='.025'/>
+                </div>
+                <div class="note-text"> Transaction Fee Velocity: the amount of transaction fees paid (in coins) in one year divided by the average coins oustanding. Default Velocity is ETH Velocity Over 12 Months Ending May 2022.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Coin -->
+    <div class="col-10-container section-calculations">
+        <div class="download-extra-option calculation-box soft-shadow">
+            <h1 id='valuePerCoin'>$ 9,726.78 </h1>
+            <h5>
+                Value Per Coin
+            </h5>
+            <div class="note-text"> Total Coin Capitalization divided by coins outstanding in Year X
+            </div>
+        </div>
+        <div class="download-extra-option soft-shadow input-container">
+            <div class="slide-spacing">
+                <div class="slide-spacing">Total Coins, Year X
+                </div>
+                <div>
+                    <input type="number" class="input" id="totalCoins" placeholder="number" inputmode="numeric" value='39500000'/>
+                    <span> Coins </span>
+                </div>
+                <div class="note-text">Total Coins Oustanding for this Blockchain in year X. (Default number is the fully diluted approximate number of Chia Coins 10 Years From Today--Year 11 though the market may exclude coins that are not in the circulating supply. The chia emission schedule can be found on pages 22-23 of our <a href="https://www.chia.net/whitepaper/">business whitepaper 2.0</a>)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Steady state -->
+    <div class="col-10-container section-calculations">
+        <div class="download-extra-option calculation-box soft-shadow">
+            <h1 id='discountedCoinValue'>$ 168.68</h1>
+            <h5>
+                Discounted Coin Value
+            </h5>
+            <div class="note-text">Present Value of Future Estimated Coin Price Discounted at the Required Rate of Return for X years.
+            </div>
+        </div>
+        <div class="download-extra-option soft-shadow input-container">
+            <div class="slide-spacing">
+                <div class="slide-spacing slide-label">Required Rate of Return
+                </div>
+                <input type="range" id='rateOfReturnSlider'>
+                <div class="slider-range">
+                    <div>
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            15 %
+                        </div>
+                    </div>
+                    <div class="slider-number">
+                        <div>
+                            |
+                        </div>
+                        <div>
+                            60 %
+                        </div>
+                    </div>
+                </div>
+                <div class="note-text">Required Rate of Return that correctly compensates investors for the risk related to the blockchain industry and this particular Blockchain
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="col-10-container section-calculations">
+        <div class="download-extra-option soft-shadow input-container">
+            <div>
+                <div>
+                    <h1>Summary</h1>
+                </div>
+                <div class="summary-section summary-header-value">
+                    <h3 id='discountedCoinValueSummary' class="summary-subsection coin-value">$ 168.68</h3>
+                    <div class="summary-subsection-text">
+                        Present Value of Future Estimated Coin Price Discounted at the Required Rate of Return for X years.
+                    </div>
+                </div>
+                <div class="summary-results">
+                    <div class="summary-section">
+                        <h3 id='totalGlobalRevenueSummary' class="summary-subsection">$ 915 Billion</h3>
+                        <div class="summary-subsection-text">
+                            Total Global Transaction Fee Revenue
+                        </div>
+                    </div>
+                    <div class="summary-section">
+                        <h3 id='blockchainPaymentRevenuesSummary' class="summary-subsection">$ 192.10</h3>
+                        <div class="summary-subsection-text">
+                            Total Annual Blockchain Payments Market Size ($bn)
+                        </div>
+                    </div>
+                    <div class="summary-section">
+                        <h3 id='costPerTransactionL1Summary' class="summary-subsection">$ 9.61 </h3>
+                        <div class="summary-subsection-text">
+                            Total Layer 1 Transaction Fees For This Blockchain ($bn)
+                        </div>
+                    </div>
+                    <div class="summary-section">
+                        <h3 id='percentageFeeL1Summary' class="summary-subsection">1.05 %</h3>
+                        <div class="summary-subsection-text">
+                            Percentage of Fees on Layer 1 of Blockchain
+                        </div>
+                    </div>
+                    <div class="summary-section">
+                        <h3 id='averageTpsSummary' class="summary-subsection">$ 10.15</h3>
+                        <div class="summary-subsection-text">
+                            Average Transaction Cost at Layer 1 TPS
+                        </div>
+                    </div>
+                    <div class="summary-section">
+                        <h3 id='totalCoinValueSummary' class="summary-subsection">$ 384.21</h3>
+                        <div class="summary-subsection-text">
+                            Total Coin Value $(bn)
+                        </div>
+                    </div>
+                    <div class="summary-section">
+                        <h3 id='valuePerCoinSummary' class="summary-subsection">$ 9,726.78 </h3>
+                        <div class="summary-subsection-text">
+                            Value Per Coin
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+
+    <div class="col-8-container featured-section">
+        <div class="full-width-col" style="padding-left: 60px;">
+            <h2>Resources</h2>
+                <ul>
+                    <li>Federal Reserve Payments Study 2019</li>
+                    <li>Paper or Plastic? The Definitive List of Cash Versus Credit Card Spending Statistics</li>
+                    <li>World GDP</li>
+                    <li>US GDP</li>
+                    <li>Credit Card Processing</li>
+                    <li>Debit Card Processing</li>
+                    <li>ACH Fee</li>
+                    <li>McKinsey 2020 Global payment report</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+
+<script type="text/javascript">
+    let totalRevenue = 915
+    let timeHorizon = 10
+    let feeReduction = 30
+    let blockchainMarketShare = 30
+    let xChainMarketShare = 25
+    let shareFees = 80
+    let xL1FeeRelativeTotal = .38
+    let blockchainTPS = 30
+    let annualInterest = 7
+    let longTermRate = 3
+    let totalCoins = 39500000
+    let capitalCost = 40
+    let steadyState = 10
+    let velocity = .025
+    let rateOfReturn = 50
+    let grossRevFeeReduc = (totalRevenue * (1 - (feeReduction / 100))) // grossRevFeeReduc for actual calculations
+    let blockchainPaymentRevenues = grossRevFeeReduc * (blockchainMarketShare/100)
+    let grossRevFeeReducPres = Math.round(grossRevFeeReduc)   // grossRevFeeReducPres for clean presentation on site
+    let costPerTransactionL1 = (blockchainPaymentRevenues * (xChainMarketShare/100)) * (1-(shareFees/100))
+    let percentageFeeL1 = (costPerTransactionL1 / totalRevenue) * 100
+    let averageTps = (costPerTransactionL1 * 1000000000) / (blockchainTPS *60*60*24*365)
+    let totalCoinValue = costPerTransactionL1 / velocity
+    let valuePerCoin = (totalCoinValue * 1000000000) / totalCoins
+    let perpValue = (grossRevFeeReduc * blockchainMarketShare / 100 * xChainMarketShare / 100 * shareFees/100) / ((annualInterest - longTermRate) / 100)
+    let xSteadyStatePrice = perpValue / (totalCoins / 1000000000)
+    let currentCoinValue = xSteadyStatePrice / ((1 + (capitalCost / 100)) ** (steadyState))
+    let discountedCoinValue = valuePerCoin / Math.pow(1 + (rateOfReturn/100), timeHorizon)
+
+    const updateNumbers = () => {
+        // This will refresh all the numbers on the
+        $("#totalGlobalRevenue").text(`$ ${Math.round(totalRevenue)} Billion`)
+        $("#layerPercentage").text(`${xL1FeeRelativeTotal.toFixed(2)} %`)
+        $("#costPerTransactionL1").text(`$ ${costPerTransactionL1.toFixed(2)}`)
+        $("#perpValue").text(`$ ${Math.round(perpValue)} Billion`)
+        $("#xSteadyStatePrice").text(`$ ${xSteadyStatePrice.toFixed(2)}`)
+        $("#currentCoinValue").text(`$ ${(currentCoinValue).toFixed(2)}`)
+        $("#discountedCoinValue").text(`$ ${(discountedCoinValue).toFixed(2)}`)
+        $("#blockchainPaymentRevenues").text(`$ ${(blockchainPaymentRevenues).toFixed(2)}`)
+        $("#percentageFeeL1").text(`${(percentageFeeL1).toFixed(2)} %`)
+        $("#averageTps").text(`$ ${(averageTps).toFixed(2)}`)
+        $("#totalCoinValue").text(`$ ${(totalCoinValue).toFixed(2)} Billion`)
+        $("#valuePerCoin").text(`$ ${(valuePerCoin).toFixed(2)}`)
+
+        $("#discountedCoinValueSummary").text(`$ ${(discountedCoinValue).toFixed(2)}`)
+        $("#totalGlobalRevenueSummary").text(`$ ${Math.round(totalRevenue)} Billion`)
+        $("#blockchainPaymentRevenuesSummary").text(`$ ${(blockchainPaymentRevenues).toFixed(2)}`)
+        $("#costPerTransactionL1Summary").text(`$ ${costPerTransactionL1.toFixed(2)}`)
+        $("#percentageFeeL1Summary").text(`${(percentageFeeL1).toFixed(2)} %`)
+        $("#averageTpsSummary").text(`$ ${(averageTps).toFixed(2)}`)
+        $("#totalCoinValueSummary").text(`$ ${(totalCoinValue).toFixed(2)} Billion`)
+        $("#valuePerCoinSummary").text(`$ ${(valuePerCoin).toFixed(2)}`)
+    }
+
+    const updateCalculations = () => {
+        totalRevenue = totalRevenue
+        grossRevFeeReduc =  (totalRevenue * (1 - (feeReduction / 100)))
+        costPerTransactionL1 = (blockchainPaymentRevenues * (xChainMarketShare/100)) * (1-(shareFees/100))
+        perpValue = (grossRevFeeReduc * blockchainMarketShare / 100 * xChainMarketShare / 100 * shareFees/100) / ((annualInterest - longTermRate) / 100)
+        xSteadyStatePrice = perpValue / (totalCoins / 1000000000)
+        currentCoinValue = xSteadyStatePrice / ((1 + (capitalCost / 100)) ** (steadyState))
+        grossRevFeeReducPres = Math.round((totalRevenue * (1 - (feeReduction / 100))) )
+        blockchainPaymentRevenues = grossRevFeeReduc * (blockchainMarketShare/100)
+        percentageFeeL1 = (costPerTransactionL1 / totalRevenue) * 100
+        averageTps = (costPerTransactionL1 * 1000000000)/ (blockchainTPS *60*60*24*365)
+        totalCoinValue = costPerTransactionL1 / velocity
+        valuePerCoin = (totalCoinValue * 1000000000) / totalCoins
+        discountedCoinValue = valuePerCoin / Math.pow(1 + (rateOfReturn/100), timeHorizon)
+    }
+
+    $( "#totalRevenue" ).change(function() {
+        totalRevenue = $( "#totalRevenue" ).val()
+        updateCalculations()
+        updateNumbers()
+    });
+
+    $( "#blockchainTPS" ).change(function() {
+        blockchainTPS = $( "#blockchainTPS" ).val() > 0 ? $( "#blockchainTPS" ).val(): 1
+        $( "#blockchainTPS" ).val(blockchainTPS)
+        updateCalculations()
+        updateNumbers()
+    });
+
+    $( "#totalCoins" ).change(function() {
+        totalCoins = $( "#totalCoins" ).val() > 0 ? $( "#totalCoins" ).val() : 1
+        $( "#totalCoins" ).val(totalCoins)
+        updateCalculations()
+        updateNumbers()
+    });
+
+    $( "#steadyState" ).change(function() {
+        steadyState = $( "#steadyState" ).val() > 0 ? Math.round($( "#steadyState" ).val()) : 1
+        $( "#steadyState" ).val(steadyState)
+        updateCalculations()
+        updateNumbers()
+    });
+
+    $( "#velocity" ).change(function() {
+        velocity = $( "#velocity" ).val() > 0 ? $( "#velocity" ).val() : 1
+        $( "#velocity" ).val(velocity)
+        updateCalculations()
+        updateNumbers()
+    });
+
+    const timeHorizonSlider = new Rangeable("#timeHorizonSlider", {
+        value: 10,
+        min: 3,
+        max: 20,
+        onChange: (value) => {
+            timeHorizon = value
+            updateNumbers()
+            updateCalculations()
+        },
+    });
+
+    const feeReductionSlider = new Rangeable("#feeReductionSlider", {
+        value: 30,
+        min: 10,
+        max: 70,
+        onChange: (value) => {
+            feeReduction = value
+            updateNumbers()
+            updateCalculations()
+        },
+    });
+
+    const marketShareSlider = new Rangeable("#marketShareSlider", {
+        value: 30,
+        min: 10,
+        max: 70,
+        onChange: (value) => {
+            blockchainMarketShare = value
+            updateNumbers()
+            updateCalculations()
+        },
+    });
+
+    const xChainMarketShareSlider = new Rangeable("#xChainMarketShareSlider", {
+        value: 25,
+        min: 5,
+        max: 50,
+        onChange: (value) => {
+            xChainMarketShare = value
+            updateNumbers()
+            updateCalculations()
+        },
+    });
+
+    const shareFeeSlider = new Rangeable("#shareFeeSlider", {
+        value: 80,
+        min: 50,
+        max: 90,
+        onChange: (value) => {
+            shareFees = value
+            updateNumbers()
+            updateCalculations()
+        },
+    });
+
+    const rateOfReturnSlider = new Rangeable("#rateOfReturnSlider", {
+        value: 50,
+        min: 15,
+        max: 60,
+        onChange: (value) => {
+            rateOfReturn = value
+            updateNumbers()
+            updateCalculations()
+        },
+    });
+
+</script>

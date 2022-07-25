@@ -1,0 +1,181 @@
+/*--------------------------------------------------------------
+# Download Options
+--------------------------------------------------------------*/
+
+.download-options {
+    padding-bottom: rem(24);
+    padding-top: rem(24);
+}
+
+/*--------------------------------------------------------------
+# Download Option
+--------------------------------------------------------------*/
+
+.download-option {
+    @include clearfix;
+    border-bottom: 1px solid $gray;
+    margin-bottom: rem(24);
+    padding-bottom: rem(24);
+    h6 {
+        margin-bottom: rem(4);
+        margin-top: 0;
+    }
+    span {
+        word-wrap: break-word;
+    }
+}
+
+/*--------------------------------------------------------------
+# Download Option Details
+--------------------------------------------------------------*/
+
+.download-option-details {
+    float: left;
+}
+
+.admonition-note {
+    font-weight: 400;
+    background-color: #EFFDF0
+}
+
+/*--------------------------------------------------------------
+# Download Option Button
+--------------------------------------------------------------*/
+
+.download-option-button {
+    margin-bottom: rem(24);
+    width: 100%;
+    a {
+        margin-top:1px; 
+        margin-bottom:1px;
+    }
+    @include breakpoint(900) {
+        margin-bottom: 0;
+        margin-right: $col-gutter-width / $col-8-width * 100%;
+        width: $col-2-width / $col-8-width * 100%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Download Option Version
+--------------------------------------------------------------*/
+
+.download-option-ver {
+    margin-bottom: rem(24);
+    @include breakpoint(576) {
+        margin-bottom: 0;
+        width: 50%;
+    }
+    @include breakpoint(900) {
+        margin-right: $col-gutter-width / $col-8-width * 100%;
+        padding-left: $col-gutter-width / $col-8-width * 100%;
+        width: $col-3-width / $col-5-width * 100%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Download Option Checksum
+--------------------------------------------------------------*/
+
+.download-option-check {
+    width: 100%;
+    @include breakpoint(576) {
+        width: 20%;
+    }
+    @include breakpoint(900) {
+        width: $col-1-width / $col-8-width * 100%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Verify Checksum
+--------------------------------------------------------------*/
+
+.verify-check {
+    border-bottom: none;
+    .chia-cta {
+        margin: 0;
+        @include breakpoint(576) {
+            float: right;
+            width: 50%;
+        }
+        @include breakpoint(900) {
+            width: $col-3-width / $col-8-width * 100%;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Download Extras
+--------------------------------------------------------------*/
+
+.download-extras {
+    @include breakpoint(900) {
+        display: grid;
+        gap: rem(24) rem(24);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+/*--------------------------------------------------------------
+# Download Extra Option
+--------------------------------------------------------------*/
+
+.download-extra-option {
+    border-radius: rem(8);
+    margin-bottom: rem(24);
+    padding: rem(24) 24 / 586 * 100% rem(24);
+    &:nth-child(2) {
+        margin-bottom: 0;
+    }
+    li {
+        margin-bottom: rem(4);
+    }
+    @include breakpoint(460) {
+        padding: 32 / $col-4-width * 100%;
+    }
+    @include breakpoint(900) {
+        margin-bottom: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Release Notes Options
+--------------------------------------------------------------*/
+
+.release-notes-options {
+    h2 {
+        text-align: center;
+    }
+}
+
+/*--------------------------------------------------------------
+# Release Notes Grid
+--------------------------------------------------------------*/
+
+.release-notes-grid {
+    @include breakpoint(576) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: rem(24) rem(24);
+    }
+}
+
+/*--------------------------------------------------------------
+# Release
+--------------------------------------------------------------*/
+
+.release {
+    border: 1px solid $gray;
+    border-radius: rem(8);
+    margin-bottom: rem(24);
+    padding: rem(16) 24 / 464 * 100%;
+    .release-date {
+        @include typeset($small-font-size, $small-line-height);
+    }
+    @include breakpoint(576) {
+        margin-bottom: 0;
+    }
+}

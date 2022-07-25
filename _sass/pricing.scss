@@ -1,0 +1,104 @@
+.text-center {
+    text-align: center;
+}
+  
+.pricing {
+    border:1px solid #dadadc;
+    padding:0;
+    margin-bottom: 30px;
+}
+
+.pricing:hover .pricing-header h4,
+.pricing:hover .pricing-header small {
+    color:#ffffff !important;
+}
+
+.pricing-header {
+    background-color: #f6f6f6;
+    padding:50px 25px !important;
+    font-size: 50px;
+    color:#000000;
+    font-weight: 400;
+}
+
+.pricing-header p{
+    padding:0 !important;
+    margin:0;
+    font-size: 50px !important;
+}
+
+.pricing-header small {
+    font-size: 13px;
+    vertical-align: top;
+    color:#afb0b4;
+}
+
+.pricing-header h4 {
+    font-size: 30px;
+    padding:10px 0 0 !important;
+    margin-bottom:  0!important; 
+    font-weight: bold;
+}
+
+.pricing-body {
+    text-align: left;
+    padding:25px;
+}
+
+.pricing-body ul {
+    list-style: none;
+    padding:0;
+}
+
+.pricing-body ul li {
+    border-bottom: 1px solid #e5e5e5;
+    padding:10px 0;
+}
+
+.pricing-body li:last-child {
+    border-bottom: 0;
+}
+
+.pricing-body span {
+    display: inline-block;
+    width: 130px !important;
+}
+
+.pricing .btn {
+    font-size: 13px !important;
+    font-weight: 400;
+    margin-top:20px;
+}
+
+.pricing-header h4 {
+    color:#F3AB10 !important;
+}
+
+.pricing:hover .pricing-header {
+  background: #F3AB10 !important;
+}
+
+.pricing:hover .btn{
+  background: #F3AB10 !important;
+  border-color: #F3AB10 !important;
+}
+
+
+.pricing-button {
+    a, a:visited {
+        // display: block;
+        padding: rem(12) 1.125%;
+        background-color: $primary-button-color;
+        color: $primary-button-text-color;
+        &:hover, &:active {
+            background-color: $welsim-yellow;
+            color: $black;
+        }
+        @include breakpoint(992) {
+            border-radius: rem(4);
+            color: $white;
+            padding-left: rem(48);
+            padding-right: rem(48);
+        }
+    }
+}
