@@ -1,7 +1,7 @@
 Welsim.com
 ========
 
-Website for the [WelSim](https://www.welsim.com/) simulation software.
+Official website for the [WelSim](https://www.welsim.com/) - engineering simulation software.
 
 Development
 -----------
