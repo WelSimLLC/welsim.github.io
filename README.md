@@ -73,12 +73,6 @@ description: "This is a blog post on WelSim's blog."
 lang: en
 ```
 
-### Contact Info
-
-Edit `collections/_data/contact.yml` - address, phone number, email, and social media profiles are located here.
-
-See comments inside the file for more details.
-
 ### Frequently Asked Questions
 
 To add a new FAQ entry, create a new file at `collections/_faq/<ORDER_WITHIN_PAGE>-<IDENTIFIER>.<LANGUAGE_CODE>.md` with the following form:
@@ -174,69 +168,7 @@ order: 2                     # this is the second entry in the investors list
 
 To edit an existing Investor entry, edit the corresponding file at `collections/_investor_pics/<ORDER_WITHIN_PAGE>-<IDENTIFIER>.md`.
 
-Internationalization
+Notes
 --------------------
-
-This website is localized in several languages, each having the same basic structure under their own directories:
-
-* English: `en` (under `./`)
-* French: `fr` (under `./fr`)
-* Chinese: `cn` (under `./cn`)
-* Japanese: `jp` (under `./jp`)
-* Dutch: `nl` (under `./nl`)
-* German: `de` (under `./de`)
-* Spanish: `es` (under `./es`)
-* Serbian: `sr` (under `./sr`)
-* Portuguese: `pt` (under `./pt`)
-* Turkish: `tr` (under `./tr`)
-
-To add a language, let's say Esperanto:
-
-```bash
-LANGUAGE="eo" # ISO 639-1 language code
-cp -r fr $LANGUAGE
-find $LANGUAGE -type f -exec sed -i "s/lang: fr/lang: $LANGUAGE/g" {} \;
-```
-
-Now, new strings need to be created in `_data/strings.yml`. This is a YAML file containing language codes, mapped to string identifiers, mapped to translations of each string:
-
-```yaml
-SOME_LANGUAGE_CODE:
-  SOME_STRING_1_IDENTIFIER: "VALUE OF STRING 1, TRANSLATED INTO SOME_LANGUAGE_CODE"
-  SOME_STRING_2_IDENTIFIER: "VALUE OF STRING 2, TRANSLATED INTO SOME_LANGUAGE_CODE"
-  ...
-
-SOME_OTHER_LANGUAGE_CODE:
-  SOME_STRING_1_IDENTIFIER: "VALUE OF STRING 1, TRANSLATED INTO SOME_OTHER_LANGUAGE_CODE"
-  SOME_STRING_2_IDENTIFIER: "VALUE OF STRING 2, TRANSLATED INTO SOME_OTHER_LANGUAGE_CODE"
-  ...
-```
-
-Then, let Jekyll know about this new language by editing `_data/languages.yml`
-
-This may seem inefficient, but GitHub Pages' Jekyll setup currently has no internationalization plugin, so this is currently the simplest way. To minimise code duplication, each file in the language folders is simply a placeholder containing only what it's supposed to represent. For example, the French homepage, `./fr/index.md`, has the following contents:
-
-```
----
-layout: homepage
-lang: fr
-title: Accueil - WelSim
----
-```
-
-To internationalize content (e.g., blog posts), we use `lang: SOME_LANGUAGE_CODE` in the YAML front matter to specify which language's site the page should show up on. For example, here's a French FAQ entry, `./collections/_faq/p01-04-what-is-proof-of-space.fr.md`:
-
-```markdown
----
-lang: fr
-page: 1
-order: 4
----
-
-Qu'est-ce qu'une "preuve d'espace"?
--------------------------
-
-La «preuve d'espace» ne doit pas être confondue avec le stockage. [...]
-```
-
-To ensure this FAQ entry is available in all languages, make sure you have one `./collections/_faq/p01-04-what-is-proof-of-space.<LANGUAGE_CODE>.md` translated file for every `<LANGUAGE_CODE>`.
+This repository a hard fork from [
+chia-network.github.io](https://github.com/Chia-Network/chia-network.github.io).
