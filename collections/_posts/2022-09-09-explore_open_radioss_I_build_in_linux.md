@@ -1,8 +1,8 @@
 ---
 lang: en
 layout: post
-title:  "Explore OpenRadioss, the world's first enterprise-grade open-source explicit dynamics solver (I)"
-date:   2022-09-10
+title:  "Explore the enterprise-grade open-source solver OpenRadioss I : build in Linux"
+date:   2022-09-09
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
@@ -92,7 +92,7 @@ Overall my impression about OpenRadioss is:
 1. As a public company, Altair's ambitions to open source a part of the core code ahead of other peers is commendable. Maybe it will bring an open source trend to the entire industry. A more open environment will undoubtedly promote the adaption of simulation technology and the progress of human civilization.
 2. Compiling OpenRadioss in Ubuntu Linux is generally smooth. It should be noted that the git-lfs environment must be properly installed and configured, otherwise there may be some link problems at compiling.
 3. The hm_reader library is still enclosed. This library should contain a large number of finite element mesh data structures and reading features.
-4. At present, native compilation using VS+ifort under Windows is not supported, which may be troublesome for debugging. Software developer knows that debugging large code under Linux can be a challenge.
+4. At present, native compilation using VS+ifort in Windows is not supported, which may be troublesome for debugging. Software developer knows that debugging large code in Linux can be a challenge.
 5. Although the AGPL license is not very friendly, it should be enough for personal study and research.
 
 In the next article, the author will keep exploring OpenRadioss with you. What do you want to discuss? Leave a message in the comments section.
