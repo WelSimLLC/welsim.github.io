@@ -6,7 +6,7 @@ date:   2022-11-15
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
-With the development of simulation technology, engineers and scientists are more and more interested in the damage, fracture, failure, destruction and other phenomena on the top of conventional analysis. For example, in shock and dynamics, the ideal failure model can predict the elements that should be deleted or propagate cracks, and show the results of the analysis objects under extraordinary loads. Combined with post-processing tools, the simulation results can be not only accurate, but also vivid. We have often seen the application of failure models in the crash analysis of automobiles and aircraft.
+With the development of simulation technology, engineers and scientists are more and more interested in damage, fracture, failure, destruction, and other phenomena on top of conventional analysis. For example, in shock and dynamics, the ideal failure model can predict the elements that should be deleted or propagate cracks, and show the results of the analysis of objects under extraordinary loads. Combined with post-processing tools, the simulation results can be not only accurate but also vivid. We have often seen the application of failure models in the crash analysis of automobiles and aircraft.
 
 <p align="center">
   <img src="\assets\blog\20221115\demo_failure2.jpg" alt="car_crash" />
@@ -22,23 +22,21 @@ In actual engineering, mechanical failure can occur in various conditions. Such 
 ## Quantities in Failure Models
 There are many damage models, including general-purpose models and fine models for specific materials or working conditions. In general, these models are represented by calculating the damage quantity, which is usually represented by the letter D in the math formula. When D is greater than a certain value, it is considered that the material damage reaches a certain level and begins to fail. Most models define D to be a value between 0 and 1. When D is less than 1, the structure is free. When D is greater than or equal to 1, it is determined that the material fails.
 
-The calculation of D value is the key to distinguish different failure models, and it is generally obtained through the results on the elemental integration points such as strain, stress, and strain energy density. The most common basic quantity of failure model is strain, such as plastic strain, total strain, etc., because the strain quantity is easy to obtain and is less influenced by other physical quantities, it is widely used in failure models. There are also some failure models based on stress, such as some brittle materials. Failure models based on strain energy density are often used in metal forming process. Some failure models also take fatigue as the basic quantity, and this kind of model often has an integral form to measure the accumulated damage. In addition, some models take thermal effects into account, allowing the models to be used in scenarios where there are temperature variations.
+The calculation of the D value is the key to distinguishing different failure models, and it is generally obtained through the results on the elemental integration points such as strain, stress, and strain energy density. The most common basic quantity of failure model is strain, such as plastic strain, total strain, etc., because the strain quantity is easy to obtain and is less influenced by other physical quantities, it is widely used in failure models. There are also some failure models based on stress, such as some brittle materials. Failure models based on strain energy density are often used in the metal forming process. Some failure models also take fatigue as the basic quantity, and this kind of model often has an integral form to measure the accumulated damage. In addition, some models take thermal effects into account, allowing the models to be used in scenarios where there are temperature variations.
 
 ## Numerical Processing after Failure
 In modern engineering simulation software, when the algorithm determines that the element is failed, it will make corresponding numerical processing. Common processing methods are:
 
 1. Delete the element. Since the part has failed, the local element is deleted for subsequent computation.
-
-2. Crack propagation. If it is a small local failure, XFEM and other methods can be used to expand the crack and convey influence of the failed element on the surrounding elements.
+2. Crack propagation. If it is a small local failure, XFEM and other methods can be used to expand the crack and convey the influence of the failed element on the surrounding elements.
 
 <p align="center">
   <img src="\assets\blog\20221115\demo_xfem.png" alt="xfem" />
 </p>
 
-3. Stress elimilation and softening. Make the stress of the current element to zero or reduce it artificially. Comparing to element deletion and crack propagation, it consumes less computational resources and is easy to implement in development. Among them, stress softening is a method often used in the failure of hyperelastic materials.
+3. Stress elimination and softening. Make the stress of the current element zero or reduce it artificially. Compared to element deletion and crack propagation, it consumes less computational resources and is easy to implement in development. Among them, stress softening is a method often used in the failure of hyperelastic materials.
 
-For solid elements, you can decide whether to process the element according to a single integration point or multiple integration points. For shell elements, the element can be processed based on a single layeror multiple layers.
-
+For solid elements, you can decide whether to process the element according to a single integration point or multiple integration points. For shell elements, the element can be processed based on a single layer or multiple layers.
 
 ## Failure Models
 Now introduce some commonly used failure models, the current version of material editing software MatEditor has supported these models.
@@ -73,7 +71,6 @@ The input parameters are
 
 ### Connect Failure
 A failure model for connecting materials in structural simulation, based on displacement and strain energy quantities. The input parameters are
-
 <p align="center">
   <img src="\assets\blog\20221115\welsim_mateditor_failure_connect.png" alt="welsim_mateditor_failure_connect" />
 </p>
@@ -98,12 +95,10 @@ A criterion based on strain energy density. The damage calculation formula is
   <img src="\assets\blog\20221115\welsim_mateditor_failure_energy_d.png" alt="welsim_mateditor_failure_energy_d" />
 </p>
 
-
 The input parameters are
 <p align="center">
   <img src="\assets\blog\20221115\welsim_mateditor_failure_energy.png" alt="welsim_mateditor_failure_energy" />
 </p>
-
 
 
 ### Fabric Failure
@@ -118,9 +113,8 @@ The input parameters are
 </p>
 
 
-
 ### Forming Limit Diagram Failure
-Enter the maximum and minimum strain curves to control the failure model. Commonly used to simulate metal forming. The input parameters are
+Enter the maximum and minimum strain curves to control the failure model. It is commonly used to simulate metal forming. The input parameters are
 <p align="center">
   <img src="\assets\blog\20221115\welsim_mateditor_failure_fld.png" alt="welsim_mateditor_failure_fld" />
 </p>
@@ -159,8 +153,6 @@ The input parameters are
 </p>
 
 
-
-
 ### Johnson-Cook Failure
 The damage calculation formula is
 <p align="center">
@@ -181,7 +173,7 @@ The input parameters are
 
 
 ### Ladeveze Delamination Failure
-Used to describe the delamination of composite . Commonly used for composite materials. The damage calculation formula is
+This model is used to describe the delamination of composite. It is commonly used for composite materials. The damage calculation formula is
 <p align="center">
   <img src="\assets\blog\20221115\welsim_mateditor_failure_lad_dama_d.png" alt="welsim_mateditor_failure_lad_dama_d" />
 </p>
@@ -194,7 +186,7 @@ The input parameters are
 
 
 ### Mullins Effect
-Stress softening methods for hyperelastic materials. The failure algorithm is not invoked. During unloading or reloading, the stress takes into account the softening and is defined as
+It is a stress softening method for hyperelastic materials. The failure algorithm is not invoked. During unloading or reloading, the stress takes into account the softening and is defined as
 <p align="center">
   <img src="\assets\blog\20221115\welsim_mateditor_failure_mullins_d.png" alt="welsim_mateditor_failure_mullins_d" />
 </p>
@@ -207,7 +199,7 @@ The input parameters are
   <img src="\assets\blog\20221115\welsim_mateditor_failure_mullins.png" alt="welsim_mateditor_failure_mullins" />
 </p>
 
-Among them, the larger the R value, the smaller the damage. The smaller the value of m, the larger the damage under small strain. When the value of m is large, the damage is smaller at small strains. The smaller the beta value, the greater the damage.
+Among them, the larger the R value, the smaller the damage. The smaller the value of m, the larger the damage under a small strain. When the value of m is large, the damage is smaller at small strains. The smaller the beta value, the greater the damage.
 
 ### NXT Failure
 Similar to Forming Limit Diagram, this is a stress-based model. Commonly used in metal forming processes. The damage calculation formula is
@@ -270,7 +262,7 @@ The input parameters are
 
 
 ### Tensile Strain Failure
-This is a strain-based failure criterion. Strain can be equivalent strain or maximum principal tensile strain. This failure criterion gives the solutions close to the real fracture behavior. It commonly used for failure after plastic deformation of metals. The damage calculation formula is
+This is a strain-based failure criterion. Strain can be an equivalent strain or maximum principal tensile strain. This failure criterion gives solutions close to the real fracture behavior. It commonly used for failure after the plastic deformation of metals. The damage calculation formula is
 <p align="center">
   <img src="\assets\blog\20221115\welsim_mateditor_failure_tensstrain_d.png" alt="welsim_mateditor_failure_tensstrain_d" />
 </p>
@@ -293,7 +285,7 @@ The input parameters are shown in the figure below
 
 
 ### Wilkins Failure
-is a model based on effective plastic strain, commonly used for ductile metals. The damage calculation formula is
+This is a model based on effective plastic strain, commonly used for ductile metals. The damage calculation formula is
 <p align="center">
   <img src="\assets\blog\20221115\welsim_mateditor_failure_wilkins_d.png" alt="welsim_mateditor_failure_wilkins_d" />
 </p>
