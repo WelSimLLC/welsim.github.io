@@ -2,7 +2,7 @@
 lang: en
 layout: post
 title:  "A Free Material Editing Tool - MatEditor"
-date:   2019-06-25
+date:   2019-09-25
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 

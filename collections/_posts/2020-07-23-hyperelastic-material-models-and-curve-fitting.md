@@ -2,7 +2,7 @@
 lang: en
 layout: post
 title:  "Hyperelastic Material Models and Curve Fitting"
-date:   2021-07-07
+date:   2020-07-23
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
