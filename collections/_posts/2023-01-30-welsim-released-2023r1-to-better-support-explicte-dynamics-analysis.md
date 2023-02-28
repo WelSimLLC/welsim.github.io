@@ -38,7 +38,7 @@ The 2023R1 adds the automatic contact search function for the assemblies. Users 
 ## Supports for explicit dynamics and OpenRadioss
 2023R1 sets the default solver for explicit dynamics to OpenRadioss. Users only need a simple configuration to directly call OpenRadioss to solve. For the configuration method, please refer to the article “[Run OpenRadioss solver for explicit dynamics analysis using WELSIM](/2023/01/04/run-openradioss-solver-for-explicit-dynamics-analysis-using-welsim.html)”. At present, OpenRadioss has been generally supported from the pre/post-processing aspects, and WELSIM will continue to enhance the OpenRadioss-related workflow in the next version 2023R2.
 
-In addition, users can only use WELSIM as an input script generator for the OpenRadioss solver. As shown in the figure below, using WELSIM to quickly generate solver input scripts greatly reduces the learning curve for OpenRadioss.
+In addition, users can use WELSIM as an input script generator for the OpenRadioss solver. As shown in the figure below, using WELSIM to quickly generate solver input scripts greatly reduces the learning curve for OpenRadioss.
 <p align="center">
   <img src="\assets\blog\20230130\welsim_export_openradioss.png" alt="welsim_export_openradioss" />
 </p>
