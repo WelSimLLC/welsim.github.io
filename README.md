@@ -170,5 +170,4 @@ To edit an existing Investor entry, edit the corresponding file at `collections/
 
 Acknowledgement
 --------------------
-This repository a hard fork from [
-chia-network.github.io](https://github.com/Chia-Network/chia-network.github.io).
+[chia-network.github.io](https://github.com/Chia-Network/chia-network.github.io).
