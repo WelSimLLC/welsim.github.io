@@ -1,7 +1,7 @@
 Welsim.com
 ========
 
-Website for the [WelSim](https://www.welsim.com/) simulation software.
+Official website for the [WelSim](https://www.welsim.com/) - engineering simulation software.
 
 Development
 -----------
@@ -168,7 +168,6 @@ order: 2                     # this is the second entry in the investors list
 
 To edit an existing Investor entry, edit the corresponding file at `collections/_investor_pics/<ORDER_WITHIN_PAGE>-<IDENTIFIER>.md`.
 
-Notes
+Acknowledgement
 --------------------
-This repository a hard fork from [
-chia-network.github.io](https://github.com/Chia-Network/chia-network.github.io).
+[chia-network.github.io](https://github.com/Chia-Network/chia-network.github.io).
