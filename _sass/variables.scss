@@ -27,11 +27,11 @@ $link-color-hover: $text-color;
 
 // Button Colors
 $primary-button-color: $chia-green;
-$primary-button-color-hover: lighten($chia-green, 8%);
+$primary-button-color-hover: lighten($chia-green, 9%);
 $primary-button-text-color: $white;
 $primary-button-text-color-hover: $white;
-$welsim-button-color: $welsim-yellow;
-$welsim-button-color-hover: lighten($welsim-yellow, 8%);
+$welsim-button-color:$welsim-yellow;  
+$welsim-button-color-hover: lighten($welsim-yellow, 9%);
 $welsim-button-text-color: $black;
 $welsim-button-text-color-hover: $black;
 

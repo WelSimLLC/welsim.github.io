@@ -122,17 +122,17 @@
 
 .full-width-button {
 	@extend .button;
-	background-color: $primary-button-color;
+	background-color: $welsim-button-color;
 	padding-left: rem(16);
 	padding-right: rem(16);
 	text-align: center;
 	width: 100%;
 	&:visited {
-		color: $primary-button-text-color;
+		color: $welsim-button-text-color;
 	}
 	&:hover {
-		background-color: $primary-button-color-hover;
-		color: $primary-button-text-color;
+		background-color: $welsim-button-color-hover;
+		color: $welsim-button-text-color;
 	}
 }
 
