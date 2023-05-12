@@ -7,21 +7,21 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
 
-ParaView is a powerful and open source 3D data visualization tool. Users can apply its features such as 3D interaction or batch processing to quickly create visualizations for data analysis. It supports various types of computers and clusters in the visualization and processing. There are a lot of practical applications in the field of scientific computing, especially post-processing.
+ParaView is a powerful and open source 3D data visualization tool. Users can apply its 3D interaction or batch processing features to quickly create visualizations for data analysis. Furthermore, Paraview supports various types of computers and clusters in terms of visualization and data processing. Paraview is prominently applied in the field of scientific computing, especially during the post-processing.
 
 <p align="center">
   <img src="\assets\blog\20221004\welsim_paraview_demo2.png" alt="welsim_paraview_demo2" />
 </p>
 
 
-ParaView supports a large number of input file formats, including well-known CGNS, UNV, NetCDF, VTK, TecPlot, as well as molecular dynamics software LAMMPS results and other formats. For engineering simulation result data those are solved by the finite element or finite volume method, the author believes that the most general and efficient format is its own ParaView Data (pvd) format, thus the latest version of WelSim supports the export of result data in pvd format. Essentially the pvd file is the entry file of multiple sub result files. The commonly used sub-files in the field of engineering simulation are pvtu and vtu files.
+ParaView supports a large number of input file formats, including the notable CGNS, UNV, NetCDF, VTK, TecPlot, as well as the molecular dynamics software: LAMMPS, and more. When simulation result data is solved using the finite element or finite volume method, the most general and exceptionally efficient format is ParaView Data (pvd), which is why the latest version of WelSim can export result data in pvd format. Essentially, the pvd file is the entry file of multiple sub result files, some commonly used sub-files are pvtu and vtu files.
 
 <p align="center">
   <img src="\assets\blog\20221004\paraview_open.png" alt="paraview_open" />
 </p>
 
 
-The vtu file is the main file for storing mesh and result data, and supports both ASCII and binary encoding. Here the letter u means unstructured mesh. WelSim has supported the export of results in vtu format for several years. Base on the vtu format, VTK provides the pvtu format for the scenario of parallel computing. When the files are reading and writing in the parallel mode, the multi-core mechanism is applied to improve the file processing efficiency. This feature is very meaningful for large simulation projects. Therefore, the author believes that the most general and efficient result file solution for engineering simulation is the pvd+pvtu+vtu method. WelSim also supports the export of pvd result data in the latest version. For complex transient analyses, users can easily export the results to ParaView for subsequent analysis and report generation. The relation between the pvd, pvtu, and vtu data formats is shown in the figure below:
+The vtu file, which and supports both ASCII and binary encoding, is the main file for storing the mesh generation and result data. Here the letter U means unstructured mesh. WelSim has provided exporting results in vtu format for several years. Based on the vtu format, VTK provides the pvtu format when parallel computing. While the computer is reading and generating the files in parallel mode, the multi-core parallelism is applied to improve the file processing efficiency. This feature is impactful for large simulation projects. As a result, this shows the pvd+pvtu+vtu method is one of the most versatile solutions for simulation engineering. WelSim also supports exporting pvd result data in the latest version. For complex transient analyses, users can easily export the results to ParaView for subsequent analysis and report generation. The relation between the pvd, pvtu, and vtu data formats is shown in the figure below:
 
 <p align="center">
   <img src="\assets\blog\20221004\pvd_layout.png" alt="pvd_layout" />
@@ -30,27 +30,27 @@ The vtu file is the main file for storing mesh and result data, and supports bot
 
 ### ParaView Data File Format
 
-ParaView data (pvd) file is an xml file built on the top of the VTK system. Chief among them is the time defined for each sub file, which can be used to display the result time in postprocessing. This is a necessary feature for transient analysis prost-processing.
+ParaView data (pvd) file is an xml file built on the top of the VTK system. Most vital is the defined time for each sub file, which can be used to display the result time in postprocessing. This is a necessary feature for transient analysis post-processing.
 
 Each property is defined as follows:
 
-Type: The type is “Collection”, which means containing a set of data files.
+**Type**: The type is “Collection”, which means containing a set of data files.
 
-Version: The version, currently the default is 0.1.
+**Version**: The version, currently the default is 0.1.
 
-Byte_order: For binary storage format, “BigEndian” or “LittleEndian” needs to be set. Depends on the endianness of the platform on which this file is written. Most consumer-level laptops and desktops use little endian; older clusters and supercomputers may use big endian.
+**Byte_order**: For binary storage format, “BigEndian” or “LittleEndian” needs to be set. Depends on the endianness of the platform on which this file is written. Most consumer-level laptops and desktops use little endian; older clusters and supercomputers may use big endian.
 
-Compressor: Optional. Set the compression method, such as “vtkZLibDataCompressor”.
+**Compressor**: Optional. Set the compression method, such as “vtkZLibDataCompressor”.
 
-Timestep: floating point value. Time points for transient datasets.
+**Timestep**: Floating point value. Time points for transient datasets.
 
-Group: Optional. Lists the unique assigned identifier of the source, reader, or filter that created this dataset.
+**Group**: Optional. Lists the unique assigned identifier of the source, reader, or filter that created this dataset.
 
-Part: The identification number of this part of the current dataset. is an integer value greater than or equal to 0.
+**Part**: The identification number of this part of the current dataset. is an integer value greater than or equal to 0.
 
-File: The name of the sub file in this dataset. relative path.
+**File**: The name of the sub file in this dataset. relative path.
 
-As shown in the figure, the following figure is the pvd file generated by WELSIM. Contains nine time steps in a transient analysis.
+As shown in the figure, the following figure is the pvd file generated by WELSIM. In this transient analysis, it contains nine time steps.
 
 <p align="center">
   <img src="\assets\blog\20221004\welsim_pvd_file.png" alt="welsim_pvd_file" />
@@ -58,7 +58,7 @@ As shown in the figure, the following figure is the pvd file generated by WELSIM
 
 
 
-The pvtu file is a parallel read and write extension based on the vtu file. When there is only one computing node for file reading and writing, pvtu will only contain one vtu file. When there are multiple nodes writing or reading files, multiple vtu files will be generated or loaded, and the mesh and result data in each vtu file is different. Integrating the data of all vtu files builds the complete analysis domain. The pvtu file defines some header file information, such as nodes, elements, and results. The detailed data is still stored in the vtu file.
+The pvtu file is a parallel read and write extension based on the vtu file. When there is only one computing node for file reading and writing, pvtu will only contain one vtu file. When there are multiple nodes writing or reading files, multiple vtu files will be generated or loaded, and the mesh and result data in each vtu file will be different. Integrating the data of all vtu files builds the complete analysis domain. The pvtu file defines some header file information, such as nodes, elements, and results. Still, the detailed data stays stored in the vtu file.
 
 As shown in the figure, the following figure is the pvtu file generated by WELSIM.
 
@@ -68,7 +68,7 @@ As shown in the figure, the following figure is the pvtu file generated by WELSI
 
 
 
-The vtu file is the major file of data storage, which contains all the information of nodes, elements, and values. Data can be stored in binary format to save read and write resources. It can also be stored in ASCII mode, which is human reading friendly. The image below is the binary vtu file generated by WELSIM.
+The vtu file is the major file of data storage, which contains all the information of nodes, elements, and values. Data can be stored in binary format to save the computer's resources for reading and generation. It can also be stored in ASCII mode, which is human comprehension friendly. The image below is the binary vtu file generated by WELSIM.
 
 <p align="center">
   <img src="\assets\blog\20221004\welsim_vtu_file.png" alt="welsim_vtu_file" />
@@ -77,20 +77,20 @@ The vtu file is the major file of data storage, which contains all the informati
 
 ### Export PVD from WELSIM
 
-Exporting pvd files in WELSIM is easy. When the solve is complete. Right mouse click the Answer object at tree list, the “Export All Results ” option will appear in the context menu.
+Exporting pvd files in WELSIM is easy. When the solve is complete, right mouse click the "Answers" object on the tree list, and the “Export All Results ” option will appear in the menu.
 
 <p align="center">
   <img src="\assets\blog\20221004\welsim_rmb_context_export_all_results.png" alt="welsim_rmb_context_export_all_results" />
 </p>
 
 
-After selecting Export All Results, you will be prompted to enter a file name, and you can choose whether the export format is ASCII or binary.
+After selecting "Export All Results", you will be prompted to enter a file name, and you can choose whether the export format is ASCII or binary.
 
 <p align="center">
   <img src="\assets\blog\20221004\welsim_export_all_results_ascii_bin.png" alt="welsim_export_all_results_ascii_bin" />
 </p>
 
-Then you can see the generated result files.
+Finally, you can see the generated result files.
 
 <p align="center">
   <img src="\assets\blog\20221004\welsim_export_pvd_files.png" alt="welsim_export_pvd_files" />
@@ -98,10 +98,10 @@ Then you can see the generated result files.
 
 ### Conclusion
 
-The ParaView data (pvd) format is a very versatile mesh and results file format. With the support of VTK and ParaView open source communities, it is gradually accepted and widely used by scientific computing and engineering simulation personnel. WelSim will maintain and enhance the export of pvd result files.
+The ParaView data (pvd) format is a multifaceted mesh and results file format. With the support of VTK and ParaView open source communities, it is being gradually accepted and used by scientific computing and engineering simulation personnel. WelSim will continue to maintain and enhance the export of pvd result files.
 
 <small>
-WelSim is not affiliated with the ParaView, or VTK team. ParaView and VTK are used only as nominative references to the open-source project and software developed and released by the ParaView, or VTK team.
+WelSim is not affiliated with the ParaView or VTK team. ParaView and VTK are used only as nominative references to the open-source project and software developed and released by the ParaView or VTK team.
 </small>
 
 ******
