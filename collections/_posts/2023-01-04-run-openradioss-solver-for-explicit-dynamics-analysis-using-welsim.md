@@ -51,7 +51,7 @@ By default, WELSIM will invoke the OpenRadioss solver from the installation dire
 </p>
 
 ## Generate OpenRadioss solver input files
-WelSim also provides a convenient solution for those users who only need OpenRadioss input scripts and prefer to solve the models within the WELSIM framework. After the mesh generation is completed and various conditions are defined, you can select **Tools -> Export OpenRadioss Scripts** in the menu to generate the corresponding solver input scripts in the specified directory.
+WelSim also provides a convenient solution for those users who only need OpenRadioss input scripts and prefer to solve the model without the WELSIM framework. After the mesh generation is completed and all conditions are defined, you can select **Tools -> Export OpenRadioss Scripts** in the menu to generate the corresponding solver input scripts in the specified directory.
 
 <p align="center">
   <img src="\assets\blog\20230104\welsim_export_openradioss.png" alt="welsim_export_openradioss" />
