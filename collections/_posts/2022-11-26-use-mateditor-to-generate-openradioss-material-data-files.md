@@ -6,8 +6,7 @@ date:   2022-11-26
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
-OpenRadioss is an open-source enterprise-grade explicit dynamics analysis software. Due to its powerful features and long history, OpenRadioss gained a lot of attention from
-the simulation community when this open-source project was announced in September 2022. However, as a console solver, OpenRadioss does not have an easy-to-use dedicated GUI front-end program yet. For new users, this causes OpenRadioss to have a relatively large learning curve. That's why an easy-to-use OpenRadioss GUI software is vital for the OpenRadioss, users with simulation needs, and even the entire simulation community.
+OpenRadioss is an open-source enterprise-grade explicit dynamics analysis software. Due to its powerful features and long history, OpenRadioss gained a lot of attention from the simulation community when this open-source project was announced in September 2022. However, as a console solver, OpenRadioss does not have an easy-to-use dedicated GUI front-end program yet. For new users, this causes OpenRadioss to have a relatively large learning curve. That's why an easy-to-use OpenRadioss GUI software is vital for the OpenRadioss, users with simulation needs, and even the entire simulation community.
 <p align="center">
   <img src="\assets\blog\20221126\welsim_openradioss_github.png" alt="welsim_openradioss_github" />
 </p>
