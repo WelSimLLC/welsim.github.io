@@ -1,5 +1,5 @@
 ---
 layout: about
 lang: en
-title: About - WELSIM Engineering Simulation Software
+title: About - WELSIM | Quantify the Uncertain
 ---

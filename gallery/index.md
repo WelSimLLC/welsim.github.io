@@ -1,5 +1,5 @@
 ---
 layout: gallery
 lang: en
-title: Gallery - WELSIM Engineering Simulation Software
+title: Gallery - WELSIM | Quantify the Uncertain
 ---

@@ -1,5 +1,5 @@
 ---
 layout: pricing
 lang: en
-title: Pricing - WELSIM Engineering Simulation Software
+title: Pricing - WELSIM | Quantify the Uncertain
 ---
