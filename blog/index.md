@@ -1,5 +1,5 @@
 ---
 layout: blog
 lang: en
-title: Blog - WELSIM Engineering Simulation Software
+title: Blog - WELSIM | Quantify the Uncertain
 ---
