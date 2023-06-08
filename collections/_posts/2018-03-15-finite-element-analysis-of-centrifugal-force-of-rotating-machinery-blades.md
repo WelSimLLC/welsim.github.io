@@ -10,7 +10,7 @@ There are various types rotating machinery in industrial practices, such as fans
 
 ### 1. Rotational machinery blade
 
-This is a machined and polished centrifugal rotating mechanical blade. The blades are welded on the disc, and the connection has been polished. The hole through the middle is used to link the shaft. Generall, this is used to connect drivers, like motors or turbines.
+This is a machined and polished centrifugal rotating mechanical blade. The blades are welded on the disc, and the connection has been polished. The hole through the middle is used to link the shaft. Generally, this is used to connect drivers, like motors or turbines.
 
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/800/1*YJ_pRdUEdx8v_IRtqv6MVw.jpeg"/>

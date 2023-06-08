@@ -15,7 +15,7 @@ plugins:
 # SEO settings
 title: WELSIM
 description: > # this means to ignore newlines until "baseurl:"
-  A better engineering simulation application which is faster, more affordable, and more secure.
+  engineering simulation software helps researchers and engineers conduct modeling studies and prototype virtual products.
 twitter:
   username: getWELSIM
   card: summary
