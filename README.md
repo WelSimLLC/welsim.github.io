@@ -1,7 +1,7 @@
 Welsim.com
 ========
 
-Official website for the [WelSim](https://www.welsim.com/) - #1 engineering simulation software for the open source community.
+Official website for the [WelSim](https://www.welsim.com/) - #1 engineering simulation software for the open-source community.
 
 Development
 -----------

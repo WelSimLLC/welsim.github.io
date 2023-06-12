@@ -15,7 +15,7 @@ plugins:
 # SEO settings
 title: WELSIM
 description: > # this means to ignore newlines until "baseurl:"
-  #1 engineering simulation software for the open source community.
+  #1 engineering simulation software for the open-source community.
 twitter:
   username: getWELSIM
   card: summary
