@@ -33,7 +33,7 @@ The operation is as follows:
   <img src="\assets\blog\20230728\curvefitter_johnson_cook.png" alt="curvefitter_johnson_cook" />
 </p>
 
-2. Import the plastic strain-stress test data in the table window on the right. After importing, the corresponding curve wil be displayed in the Chart window.
+2. Import the plastic strain-stress test data in the table window on the right. After importing, the corresponding curve will be displayed in the Chart window.
 <p align="center">
   <img src="\assets\blog\20230728\curvefitter_chart_johnson_cook.png" alt="curvefitter_chart_johnson_cook" />
 </p>
@@ -47,7 +47,7 @@ The operation is as follows:
 It's worth noting that curve fitting does not consider units. When using these parameters, it's vital to ensure that the stress units in the finite element software match those of the test data. Here, the test data uses MPa as the stress unit. Strain rate and temperature data are not considered in this fitting, so totally only three parameters are calculated (a, b, and n).
 
 
-## Johnson-Cook Failure Model
+## Johnson-Cook failure model
 In addition to the plasticity model, Johnson-Cook also has a corresponding failure model which evaluates the influence of stress, strain rate, and temperature. It is commonly used for ductile metals. The failure strain expression is as follows:
 <p align="center">
   <img src="\assets\blog\20230728\failure_johnson_cook_eqn.png" alt="failure_johnson_cook_eqn" />
