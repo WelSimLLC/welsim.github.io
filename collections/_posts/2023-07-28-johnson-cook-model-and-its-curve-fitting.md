@@ -25,7 +25,7 @@ Parameters **a**, **b**, and **n** can be obtained from smooth round bar tensile
 
 
 ## Parameter fitting for the Johnson-Cook model
-In practical applications, the Johnson-Cook parameters need to be obtained through parameter fitting based on the material test data. CurveFitter provides a curve-fitting formula for the Johnson-Cook plasticity model, where users simply input the plastic strain and stress values to obtain the fitted parameter values. For more details about CurveFitter, refer to the articles "(An easy-to-use and free curve fitting tool — CurveFitter)[https://welsim.com/2021/07/09/an-easy-to-use-and-free-curve-fitting-tool-curvefitter.html]" and "(The numerical methods applied in curve fitting and the updates of CurveFitter)[https://welsim.com/2022/08/11/the-numerical-methods-applied-in-curve-fitting-and-the-updates-of-CurveFitter.html]."
+In practical applications, the Johnson-Cook parameters need to be obtained through parameter fitting based on the material test data. CurveFitter provides a curve-fitting formula for the Johnson-Cook plasticity model, where users simply input the plastic strain and stress values to obtain the fitted parameter values. For more details about CurveFitter, refer to the articles [An easy-to-use and free curve fitting tool — CurveFitter](https://welsim.com/2021/07/09/an-easy-to-use-and-free-curve-fitting-tool-curvefitter.html) and [The numerical methods applied in curve fitting and the updates of CurveFitter](https://welsim.com/2022/08/11/the-numerical-methods-applied-in-curve-fitting-and-the-updates-of-CurveFitter.html).
 The operation is as follows:
 
 1. Select the Johnson-Cook equation from the list on the left.
