@@ -42,26 +42,27 @@ In practical applications, the Swift hardening model fits the flow stress to inc
 When dealing with the effects of strain rate and temperature, the strain rate and temperature components of the Johnson-Cook model can be directly introduced into the above models. For the effects of strain rate strengthening and temperature softening, you can refer to the article "[Johnson-Cook model and its curve fitting](https://welsim.com/2023/07/28/johnson-cook-model-and-its-curve-fitting.html)".
 
 
-## Swift-Voce Model Parameter Fitting
+## Fitting Swift-Voce Parameters 
 In practical applications, Swift-Voce parameters need to be obtained through parameter fitting based on material test data. CurveFitter provides curve-fitting formulas for the Swift-Voce plasticity model, requiring only input of true plastic strain and true stress values to obtain the fitted parameter values. For details about CurveFitter, refer to the articles "[An easy-to-use and free curve fitting tool - CurveFitter](https://welsim.com/2021/07/09/an-easy-to-use-and-free-curve-fitting-tool-curvefitter.html)" and "[The numerical methods applied in curve fitting and the updates of CurveFitter](https://welsim.com/2022/08/11/the-numerical-methods-applied-in-curve-fitting-and-the-updates-of-CurveFitter.html)".
 
 The procedure is as follows:
-1. Choose the Swift, Voce, or Swift-Voce curve equation from the left-side list. In this example, the Voce model is chosen.
+
+(1) Choose the Swift, Voce, or Swift-Voce curve equation from the left-side list. In this example, the Voce model is chosen.
 <p align="center">
   <img src="\assets\blog\20230808\welsim_curvefitter_nonlinear.png" alt="welsim_curvefitter_nonlinear" />
 </p>
 
-2. Import the curve data into the table window on the right. After importing, the stress-strain curve is displayed in the chart window.
+(2) Import the curve data into the table window on the right. After importing, the stress-strain curve is displayed in the chart window.
 <p align="center">
   <img src="\assets\blog\20230808\welsim_curvefitter_voce_chart.png" alt="welsim_curvefitter_voce_chart" />
 </p>
 
-3. Click the "Solve" button in the main window. This will provide the fitted parameters. For the given data, parameters K0=499.9, Q=1474.63, and B=0.7148 are obtained, with an almost negligible fitting error (R2=0.9988). The chart window simultaneously displays both the curve and test data, with the two curves closely aligned, indicating high fitting accuracy. The output window shows the solver's computational details for the curve fitting.
+(3) Click the "Solve" button in the main window. This will provide the fitted parameters. For the given data, parameters K0=499.9, Q=1474.63, and B=0.7148 are obtained, with an almost negligible fitting error (R2=0.9988). The chart window simultaneously displays both the curve and test data, with the two curves closely aligned, indicating high fitting accuracy. The output window shows the solver's computational details for the curve fitting.
 <p align="center">
   <img src="\assets\blog\20230808\welsim_curvefitter_voce_result.png" alt="welsim_curvefitter_voce_result" />
 </p>
 
-4. The curve fitting steps for Swift and Swift-Voce models are the same as those for the Voce model example.
+(4) The curve fitting steps for Swift and Swift-Voce models are the same as those for the Voce model example.
 
 It's important to note that the test data uses true plastic strain - true stress pairs. Curve fitting requires consistency in units. When applying these parameters, ensure that the stress unit in the finite element software matches the stress unit in the test data. Here, the test data is in MPa.
 
