@@ -119,7 +119,7 @@ WELSIM has open-sourced all its test cases and will maintain them long-term, con
 
 
 ## Conclusion
-From a technical perspective, an automated testing system is a combination of software macros and data persistence. However, developing an automated regression system for engineering simulation CAE software requires the understanding of underlying logic of user interface frameworks and a clear comprehension of various physical engineering analysis cases. Only with this knowledge can a comprehensive system be created and maintained successfully.
+From a technical perspective, an automated testing system is a combination of software macros and data persistence. However, developing an automated regression system for engineering simulation CAE software requires understanding of the underlying logic of user interface frameworks and a clear comprehension of various physical engineering analysis cases. Only with this knowledge can a comprehensive system be created and maintained successfully.
 
 
 Building upon years of dedicated CAE software development, WELSIM directly offers its automated testing system to users. Users can run a variety of tests on their local machines and create test cases that align with their interests. For developers working on solvers or grid generators, utilizing WELSIM to construct an automated testing system significantly reduces the time and resources required for developing their own testing systems. This has a positive impact on the entire engineering simulation community. At present, WELSIM seamlessly supports several well-known open-source solvers such as FrontISTR, OpenRadioss, SU2, among others. More open-source solvers are continually being supported.
