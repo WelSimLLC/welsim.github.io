@@ -31,7 +31,7 @@ The reasons for changes in CAE software are generally classified into four main 
 
 (3) Integration of features: In this scenario, regression testing ensures that the software product works seamlessly after integration with other products. For instance, when integrating the fluid-structure coupling functionality in CAE, new code might impact existing structural modules or fluid module features. Automated testing can promptly detect any issues.
 
-(4) Defect and issue fixes: This is the most frequent encountered situation. For large software like CAE, the developers' efforts to fix discovered bugs might inadvertently introduce more. Therefore, regression testing is crucial to maintain software quality.
+(4) Defect and issue fixes: This is the most frequently encountered situation. For large software like CAE, the developers' efforts to fix discovered bugs might inadvertently introduce more. Therefore, regression testing is crucial to maintain software quality.
 
 <p align="center">
   <img src="\assets\blog\20230822\welsim_regression_demo2.png" alt="welsim_regression_demo2" />
@@ -60,7 +60,7 @@ Unlike other types of software, engineering simulation CAE software places a hig
 
 
 ### Data Persistence Testing
-Data persistence testing is relatively difficult in the testing system, so it requires developers to have a deep understanding of the product. After continuous updates, it needs to be ensured the new project is compatibile with project files from older versions. Modern CAE software is updated frequently; therefore, guaranteeing that persistent project data from atleast the last three years can be read and converted is sufficient. From a maintenance cost reduction perspective, there is no need to support project files from a very long time ago.
+Data persistence testing is relatively difficult in the testing system, so it requires developers to have a deep understanding of the product. After continuous updates, it needs to be ensured the new project is compatible with project files from older versions. Modern CAE software is updated frequently; therefore, guaranteeing that persistent project data from at least the last three years can be read and converted is sufficient. From a maintenance cost reduction perspective, there is no need to support project files from a very long time ago.
 
 In addition to these, there are other essential testing aspects such as security testing, localization and globalization testing, memory stress testing, etc. Due to space limitations, these aspects are not elaborated here.
 
@@ -81,11 +81,11 @@ Maintaining the test cases is a substantial and long-term effort that requires s
 </p>
 
 
-## Test Report Generation System
-Test results need to be easily read for users. With the growth of CAE software's automated test cases over time and with added features, having thousands or tens of thousands of test cases is common. Test reports are generated automatically; they prominently list failed test cases while also providing an overall test pass rate. Test results are output in lightweight formats, like XML or JSON, for display on the user side or deployment in the cloud. This enables teams and clients to view the test results of the current software version. Test result files can include the machine name and time tags, also other information to help users access historical testing data.
+## Test Report Generation
+Test results need to be easily read for users. With the growth of CAE software's automated test cases over time and with added features, having thousands or tens of thousands of test cases is common. Test reports are generated automatically; they prominently list failed test cases while also providing an overall test pass rate. Test results are output in lightweight formats, like XML or JSON, for display on the user side or deployment in the cloud. This enables teams and clients to view the test results of the current software version. Test result files can include the machine name and time tags, as well as other information to help users access historical testing data.
 
 
-## Regression Test Execution
+## Running Regression Test
 Although automated testing is highly efficient and test case scripting can be refined, running automated regression tests can be costly. As the number of test cases increases, each test running requires more time and resources. The more tests you run, the higher the expense. When a product is about to be released, or when significant features are added or widespread changes are made, it's necessary to run regression tests intensively. Experienced programmers have a clear understanding of their code modifications. So, they can decide whether to run all test cases, run only a subset of quick tests, or skip regression testing altogether for specific changes.
 
 
@@ -119,7 +119,7 @@ WELSIM has open-sourced all its test cases and will maintain them long-term, con
 
 
 ## Conclusion
-From a technical perspective, an automated testing system is a combination of software macros and data persistence. However, developing an automated regression system for engineering simulation CAE software requires understanding of the underlying logic of user interface frameworks and a clear comprehension of various physical engineering analysis cases. Only with this knowledge can a comprehensive system be created and maintained successfully.
+From a technical perspective, an automated testing system is a combination of software macros and data persistence. However, developing an automated regression system for engineering simulation CAE software requires an understanding of the underlying logic of user interface frameworks and a clear comprehension of various physical engineering analysis cases. Only with this knowledge can a comprehensive system be created and maintained successfully.
 
 
 Building upon years of dedicated CAE software development, WELSIM directly offers its automated testing system to users. Users can run a variety of tests on their local machines and create test cases that align with their interests. For developers working on solvers or grid generators, utilizing WELSIM to construct an automated testing system significantly reduces the time and resources required for developing their own testing systems. This has a positive impact on the entire engineering simulation community. At present, WELSIM seamlessly supports several well-known open-source solvers such as FrontISTR, OpenRadioss, SU2, among others. More open-source solvers are continually being supported.
