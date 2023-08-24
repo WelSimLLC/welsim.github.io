@@ -7,7 +7,7 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
 
-With the rapid development of engineering simulation CAE software over the past few decades, it has become a highly complex and intricate product. Users' expectations for simulation CAE software have also risen accordingly. Not only does modern simulation software require strong computational capabilities and accurate results, but it also demands a graphical user interface (GUI) that is user-friendly, easy to learn, and intuitive. This presents steep challenges for small and medium-sized development teams. Due to a shortage of ongoing development resources, many outstanding simulation CAE projects end up attracting little to no attention. Similarly, some well-established and capable solvers struggle to expand their user base and community influence because they don't have a user-friendly GUI and an automated maintenance system for sustainable development. The lack of attention torward excellent solvers is undoubtedly a waste of computing resources.
+With the rapid development of engineering simulation CAE software over the past few decades, it has become a highly complex and intricate product. Users' expectations for simulation CAE software have also risen accordingly. Not only does modern simulation software require strong computational capabilities and accurate results, but it also demands a graphical user interface (GUI) that is user-friendly, easy to learn, and intuitive. This presents steep challenges for small and medium-sized development teams. Due to a shortage of ongoing development resources, many outstanding simulation CAE projects end up attracting little to no attention. Similarly, some well-established and capable solvers struggle to expand their user base and community influence because they don't have a user-friendly GUI and an automated maintenance system for sustainable development. The lack of attention toward excellent solvers is undoubtedly a waste of computing resources.
 <p align="center">
   <img src="\assets\blog\20230824\welsim_processors_demo.png" alt="welsim_processors_demo" />
 </p>
@@ -20,9 +20,9 @@ Through years of dedicated research and development, the engineering simulation 
 ## WELSIM is compatible with various solvers
 From its inception, WELSIM has been positioned as a general-purpose simulation software capable of supporting diverse physical fields and analysis types. It currently seamlessly integrates with several third-party open-source solvers and, with ongoing development, will extend support to even more exceptional open-source solvers.
 
-A user-friendly graphical user interface is an essential aspect of excellent pre- and post-processors. WELSIM already contains a comprehensive set of pre-and post-processing features.
+A user-friendly graphical user interface is an essential aspect of excellent pre- and post-processors. WELSIM already contains a comprehensive set of pre- and post-processing features.
 
-(1) It possesses a variety of user interaction windows, such as the project tree, properties, 3D graphics, output, table, chart, and more. For more details, refer to the article "Window design and development for general-purpose simulation software."
+(1) It possesses a variety of user interaction windows, such as the project tree, properties, 3D graphics, output, table, chart, and more. For more details, refer to the article "[Window design and development for general-purpose simulation software](https://welsim.com/2023/05/28/window-design-and-development-for-general-purpose-simulation-software.html)".
 <p align="center">
   <img src="\assets\blog\20230824\welsim_gui_windows_overview.png" alt="welsim_gui_windows_overview" />
 </p>
@@ -83,9 +83,9 @@ A user-friendly graphical user interface is an essential aspect of excellent pre
 
 ## Benefits of Using WELSIM as a Pre- and Post-Processor
 
-There are numerous benefits to using WELSIM as the pre-and post-processor for solvers.
+There are numerous benefits to using WELSIM as the pre- and post-processor for solvers.
 
-1. WELSIM significantly reduces development time by focusing development resources on the core solver. While simulation CAE software includes modules such as pre-and post-processing, solvers, and mesh generators, these modules have vastly different development approaches and tactics, often falling into entirely separate technology domains. Utilizing the WELSIM frontend eliminates the burdensome task of GUI development, allowing concentration on improving and enhancing the core solver, thereby enhancing the product.
+1. WELSIM significantly reduces development time by focusing development resources on the core solver. While simulation CAE software includes modules such as pre- and post-processing, solvers, and mesh generators, these modules have vastly different development approaches and tactics, often falling into entirely separate technology domains. Utilizing the WELSIM frontend eliminates the burdensome task of GUI development, allowing concentration on improving and enhancing the core solver, thereby enhancing the product.
 
 2. WELSIM comes with an automated regression testing system, so solver developers do not need to spend efforts on creating another regression system. Regardless of the numerical methods being used, such as finite element, finite volume, or other scientific computing approaches, CAE software requires extensive automated testing to ensure solver accuracy. Establishing such a testing system can be resource-intensive. Leveraging WELSIM's testing framework can save considerable development resources and time. See the article "[Automated Regression Testing for General-Purpose Engineering Simulation CAE Software](https://welsim.com/2023/08/22/automated-regression-testing-for-general-purpose-engineering-simulation-cae-software.html)".
 
@@ -95,7 +95,7 @@ There are numerous benefits to using WELSIM as the pre-and post-processor for so
 4. WELSIM is user and collaborator-friendly. The development needs of users and collaborators are prioritized, aiming for prompt and speedy fulfillment. 
 
 
-5. WELSIM has been long-term supported. Solver developers do not need to worry about the discontinuity of the WELSIM development and maintenance. 
+5. WELSIM has been long-term supported. Solver developers do not need to worry about the discontinuity of WELSIM development and maintenance. 
 
 
 6. WELSIM already encompasses a wide range of frontend features for general-purpose CAE software, applicable to nearly any type of simulation analysis. It can quickly adapt to various new solvers.
