@@ -1,8 +1,8 @@
 ---
 lang: en
 layout: post
-title:  "WELSIM released the 2023R3 version, quantify the computational uncertainty"
-date:   2023-08-01
+title:  "WELSIM released the 2023R3 version, quantifying the computational uncertainty"
+date:   2023-09-01
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
