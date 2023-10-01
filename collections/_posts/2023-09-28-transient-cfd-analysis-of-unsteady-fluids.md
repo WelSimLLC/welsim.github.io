@@ -7,14 +7,14 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
 
-In engineering, there are many unsteady fluid problems that cannot be simply solved using steady-state methods. Two factors primarily cause unsteady flows. One is due to internal fluid instability or the non-equilibrium initial state of the fluid, such as turbulence of various scales, shockwaves, convection, etc. The other is due to changing boundary conditions or source terms, such as pulsating flows or the rotation of rotor blades in machinery. For these unsteady flows, it is necessary to understand the state of the fluid and its solid contact surfaces through transient analysis methods.
+In engineering, there are many unsteady fluid problems that cannot be simply solved using steady-state methods. Unsteady flows are primarily caused by two factors. One is due to internal fluid instability or a non-equilibrium initial state of the fluid, such as turbulence of various scales, shockwaves, convection, etc. The other is due to changing boundary conditions or source terms, like pulsating flows or the rotation of rotor blades in machinery. For these unsteady flows, it is necessary to use transient analysis methods in order to understand the state of the fluid and its solid contact surfaces.
 <p align="center">
   <img src="\assets\blog\20230928\welsim_turbulence.png" alt="welsim_turbulence" />
 </p>
 
 
 
-Transient analysis involves calculating the flow field for multiple time steps, and the computational workload increases linearly with the duration of the simulation. Numerically, a common approach is to compute a steady state within a short time interval at each time step and use the results of this steady state as the initial conditions for the next time step’s calculation. Depending on the time solver used, the choice of time step may vary slightly, with implicit solvers typically allowing for larger time steps than explicit solvers. The well-known open-source multi-physics solver SU2 has been proven to work well for unsteady CFD problems. WELSIM also added support for SU2 in its 2023R3 release; for more details, refer to the article “[Generate SU2 solver scripts using WELSIM](https://welsim.com/2023/04/21/generate-su2-solver-scripts-using-welsim.html).”
+Transient analysis involves calculating the flow field for multiple time steps. The computational workload also increases linearly with the duration of the simulation. Therefore it is a common approach to compute a steady state within a short time interval at each time step, numerically. Then, the results of this steady state are used as the initial conditions for the next time step’s calculation. Depending on the time solver used, the choice of time step may vary slightly, with implicit solvers typically allowing for larger time steps than explicit solvers. The well-known open-source multi-physics solver SU2 has been proven to work well for unsteady CFD problems. WELSIM also added support for SU2 in its 2023R3 release; for more details, refer to the article “[Generate SU2 solver scripts using WELSIM](https://welsim.com/2023/04/21/generate-su2-solver-scripts-using-welsim.html).”
 
 Steps for Unsteady CFD Analysis
 Below is an example demonstrating how to perform transient CFD analysis:
@@ -72,7 +72,7 @@ Below is an example demonstrating how to perform transient CFD analysis:
 </p>
 
 
-Click the solve button. Since it’s a transient computation, it will require a significant amount of computational time based on the mesh density and duration. After the calculation is complete, add a Mach number result object and display contour plots. The images below show the Mach number in the flow field at 0.027 seconds and 0.597 seconds, respectively.
+Click the solve button. Since it is a transient computation, it will require a significant amount of computational time based on the mesh density and duration. After the calculation is complete, add a Mach number result object and display contour plots. The images below show the Mach number in the flow field at 0.027 seconds and 0.597 seconds, respectively.
 
 <p align="center">
   <img src="\assets\blog\20230928\welsim_cfd2d_sol1.jpeg" alt="welsim_cfd2d_sol1" />
@@ -95,7 +95,7 @@ Additionally, this case has been integrated into WELSIM’s automated regression
 
 
 ## WELSIM’s Support for SU2 Commands
-The config file of SU2 is the main solver input file, and currently, WELSIM, as a preprocessor, supports a significant number of core commands. SU2 version 7.5.1 includes a total of 671 commands, and WELSIM already supports 134 commands, accounting for 20% of all commands. The supported commands are listed below.
+The config file of SU2 is the main solver input file, and currently, WELSIM as a preprocessor supports a significant number of core commands. SU2 version 7.5.1 includes a total of 671 commands, and WELSIM already supports 134 commands, accounting for 20% of the total. The supported commands are listed below.
 
 * SOLVER
 * MATH_PROBLEM
@@ -228,7 +228,7 @@ The config file of SU2 is the main solver input file, and currently, WELSIM, as 
 
 
 ## Conclusion
-SU2 is an excellent open-source CFD solver known for its performance and user-friendly licensing, capable of rapidly solving unsteady fluid problems involving turbulence. With its user-friendly graphical interface, WELSIM makes working with SU2 easier. WELSIM seamlessly integrates with SU2 for solving and displaying results, as well as generating SU2 computation input scripts as needed. Currently, WELSIM is recognized as the leading pre- and post-processing software worldwide for supporting SU2.
+SU2 is an excellent open-source CFD solver known for its performance and accessible licensing. It is capable of rapidly solving unsteady fluid problems involving turbulence. With its user-friendly graphical interface, WELSIM makes working with SU2 easier. WELSIM seamlessly integrates with SU2 for solving and displaying results, as well as generating SU2 computation input scripts as needed. Currently, WELSIM is recognized as the leading pre- and post-processing software worldwide for supporting SU2.
 
 
 <small>
