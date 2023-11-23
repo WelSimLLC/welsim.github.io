@@ -22,14 +22,14 @@ Palace provides the Superbuild compilation method with CMake, which automaticall
 </p>
 
 
-## System and Dependency Libraries
-**Operating System**: Windows 10, 64-bit
+## System and dependency libraries
+**Operating system**: Windows 10, 64-bit
 
 **Compiler**: Visual Studio 2022 Community, C++17. Intel Fortran Compiler 2022.
 
-**Palace Version**: 0.11.2
+**Palace version**: 0.11.2
 
-**Dependency Libraries**:
+**Dependency libraries**:
 * Intel MKL: A popular linear algebra solver, using oneAPI 2022.2.0, consistent with the version of Fortran compiler.
 * METIS: A mesh partitioning tool for parallel computing, version 5.3.
 * Hypre: Computational package, version 2.52.
