@@ -11,7 +11,7 @@ In three-dimensional CAE simulation analysis, it is often necessary to select in
   <img src="\assets\blog\20231219\welsim_selection_layer_demo.jpg" alt="welsim_selection_layer_demo" />
 </p>
 
-Currently, a common approach in the industry is to add a selection layer view in a small region within the 3D graphics window. This feature displays the selection layers after clicking on a geometric body, enabling the user to modify the desired surfaces. This method is simple, intuitive, and provides a good user experience. However, this service adds extra software development work, as it requires incorporating an additional viewport in the 3D window. When implementing a selection layer view, the impact the feature has on the overall software performance must also be payed attention to.
+Currently, a common approach in the industry is to add a selection layer view in a small region within the 3D graphics window. This feature displays the selection layers after clicking on a geometric body, enabling the user to modify the desired surfaces. This method is simple, intuitive, and provides a good user experience. However, this service adds extra software development work, as it requires incorporating an additional viewport in the 3D window. When implementing a selection layer view, the impact the feature has on the overall software performance must also be paid attention to.
 
 ## Selection layer view
 
