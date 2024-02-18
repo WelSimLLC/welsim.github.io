@@ -7,21 +7,21 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
 
-Modern CAE software not only possesses powerful analysis capabilities but also features excellent graphical user interfaces. However, there are occasions when it is necessary to perform a large number of repetitive calculations for a specific type of model, namely, batch processing computation that do not require user's intervention. This type of computing often involves making slight changes to a parameter, calculating the corresponding results, and obtaining optimal parameters, such as the geometric details, material parameters, or boundary condition values. Batch processing calculations enable quick conclusions, thereby enhancing the efficiency of CAE software users.
+Modern CAE software not only possess powerful analysis capabilities but also feature excellent graphical user interfaces. However, there are occasions when a large number of repetitive calculations for a specific type of model need to perform, that do not require user intervention. Namely, batch processing computation. This type of computing often involves making slight changes to a parameter, calculating the corresponding results, and obtaining optimal parameters, such as the geometric details, material parameters, or boundary condition values. Batch processing calculations produce fast conclusions, thereby enhancing the efficiency of CAE software users.
 <p align="center">
   <img src="\assets\blog\20240214\welsim_batch_processing.png" alt="welsim_batch_processing" />
 </p>
 
 
-Batch processing requests higher demands on the functionality of CAE software. Currently, the general-purpose simulation software WELSIM provides two batch processing methods. Method 1 involves automatic computation through XML scripts. Method 2 allows for the creation of multiple analysis projects in the GUI and the execution of batch processing calculations. This article describes the both processes.
+Batch processing places high demands on the functionality of CAE software. Currently, the general-purpose simulation software WELSIM provides two batch processing methods. Method 1 involves automatic computation through XML scripts. Method 2 allows for the creation of multiple analysis projects in the GUI, and the execution of batch processing calculations. This article will describe both processes.
 
 
 ## Method 1: Script Batch Processing
-Leading CAE software already supports script batch processing capabilities. Since automated testing and script batch processing share the same essential nature of data persistent macro commands, CAE software that supports automated testing will undoubtedly possess the capabilities of script batch processing.
+Leading CAE software currently support script batch processing capabilities. Since automated testing and script batch processing share the same essential nature of data persistent macro commands, CAE software that possess automated testing will definitely support script batch processing.
 
 
 
-Firstly, in the XML script, setup a WELSIM model workflow.
+First in the XML script, setup a WELSIM model workflow.
 
 Clear the target folder.
 ```
@@ -95,18 +95,18 @@ Save the project as *p1.wsdb*. Simultaneously, close the current project.
 <wsevent object="mainWindow/menuBar/&amp;File" command="activate" arguments="Fem_CloseAllDocs" />
 ```
 
-At this point, one cycle of computing setup is complete. When another new cycle of computation is needed, simply copy and paste the above code, modify the imported geometry name and the project file's name for export, and execute to achieve batch processing. The geometry of this test case is relatively uniform, with only slight differences in length, so there is no need to modify the names of surface entity in the boundary conditions. If there are significant differences in geometry, it is essential to ensure that the surface of boundary condition  settings refer to the correct face names.
+At this point, one cycle of computing setup is complete. When a new cycle of computation is needed, simply copy and paste the above code, modify the imported geometry name and the project file name for export, and execute to achieve batch processing. The geometry of this test case is relatively uniform, with only slight differences in length, so there is no need to modify the names of the surface entity in the boundary conditions. If there are significant differences in geometry, it's essential to ensure that the surface of boundary condition settings refer to the correct face names.
 The test script is named *11018_save_multi_structural_projects.xml* and is open source, saved as one of the WELSIM test cases on GitHub.
 
 
 ## Method 2: Graphical Project File Batch Processing
-WELSIM supports the multiple FEM projects in the project tree. As shown in the figure below, three FEM projects have been created.
+WELSIM supports multiple FEM projects in the project tree. As shown in the figure below, three FEM projects have been created.
 <p align="center">
   <img src="\assets\blog\20240214\welsim_create_multi_project.png" alt="welsim_create_multi_project" />
 </p>
 
 
-After setting all materials, contacts, boundary conditions, etc., you can click the *Mesh & Solve All* button in the menu to perform batch processing calculations for all projects. This feature automatically calculates the next project after one project's computation is completed, without user's intervention in between. For computationally intensive large models, this method effectively saves analysis personnel's time.
+After setting all materials, contacts, boundary conditions, etc., click the *Mesh & Solve All* button in the menu to perform batch processing calculations for all projects. This feature automatically calculates the next project after one project's computation is completed, without user intervention in between. For computationally intensive large models, this method effectively saves analysis personnel's time.
 <p align="center">
   <img src="\assets\blog\20240214\welsim_mesh_solve_all.png" alt="welsim_mesh_solve_all" />
 </p>
