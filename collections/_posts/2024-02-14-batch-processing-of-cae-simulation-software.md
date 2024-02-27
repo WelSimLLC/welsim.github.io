@@ -106,7 +106,7 @@ WELSIM supports multiple FEM projects in the project tree. As shown in the figur
 </p>
 
 
-After setting all materials, contacts, boundary conditions, etc., click the *Mesh & Solve All* button in the menu to perform batch processing calculations for all projects. This feature automatically calculates the next project after one project's computation is completed, without user intervention in between. For computationally intensive large models, this method effectively saves analysis personnel's time.
+After setting all materials, contacts, boundary conditions, etc., click the **Mesh & Solve All** button in the menu to perform batch processing calculations for all projects. This feature automatically calculates the next project after one project's computation is completed, without user intervention in between. For computationally intensive large models, this method effectively saves analysis personnel's time.
 <p align="center">
   <img src="\assets\blog\20240214\welsim_mesh_solve_all.png" alt="welsim_mesh_solve_all" />
 </p>
