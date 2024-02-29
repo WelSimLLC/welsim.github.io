@@ -11,7 +11,7 @@ For users conducting CAE analysis, material definition can be complex process. I
 
 This article uses examples to demonstrate the method of script-based creation of a large dataset of materials in WELSIM.
 
-1. Build a single material data through GUI. (If familiar with XML syntax, you can also refer to existing XML test files and write your own). Then, click Record Test.
+1) Build a single material data through GUI. (If familiar with XML syntax, you can also refer to existing XML test files and write your own). Then, click Record Test.
 <p align="center">
   <img src="\assets\blog\20240226\welsim_mat_script_record_tests.png" alt="welsim_mat_script_record_tests" />
 </p>
@@ -29,7 +29,7 @@ Input the relevant parameters. After completing the editing operations, the mate
 </p>
 
 
-2. Test a single material data file.
+2) Test a single material data file.
 
 Click the stop recording button, and the macro command for graphical operations is recorded which generates the script. Open the recorded XML file with a text editor, make slight modifications, delete redundant lines, and obtain the script for a single material. In the figure below, the green-boxed part indicates the modifications for other materials, expanding to derive additional materials. These include the material object's position in the project tree window, material name, material object ID, and material property parameters.
 <p align="center">
@@ -37,7 +37,7 @@ Click the stop recording button, and the macro command for graphical operations 
 </p>
 
 
-3. Copy and paste a single material, making the necessary modifications.
+3) Copy and paste a single material, making the necessary modifications.
 
 Copy and paste the text from the figure, modifying the green-boxed parts to create a new material. This article creates a total of 21 materials. The parameters for material properties, all using bilinear isotropic hardening plasticity, are listed in the table below.
 <p align="center">
@@ -45,7 +45,7 @@ Copy and paste the text from the figure, modifying the green-boxed parts to crea
 </p>
 
 
-4. Complete the script, run, and debug.
+4) Complete the script, run, and debug.
 
 With the script editing completed, it can be run and tested. After running it, proceed directly to the subsequent simulation analysis tasks. Alternatively, material data can be exported for use in other software. The materials exported from WELSIM can be opened in MatEditor, as shown in the figure below.
 <p align="center">
@@ -64,6 +64,7 @@ The script file used in this example is open-source and saved in the WELSIM publ
 Using scripts to effectively establish material datasets saves editing time, reduces errors, and is easy to maintain. Scripts can be easily modified for use in other material datasets, which displays strong adaptability. It is the ideal method for creating and maintaining large material datasets.
 
 The script language for material definition may vary depending on the CAE software. In this example, XML is used. Other CAE software may use different languages, such as Python or JavaScript.
+
 
 
 ---
