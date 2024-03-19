@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<!-- {% include navigation.html active="test"%} -->
+<!-- {% assign strings = site.data.strings[page.lang] %} -->
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=24);">
+            <h2>SIMPLE SWIPER</h2>
+        </div>
+        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=53);">
+            <h2>HELLO WORLD</h2>
+        </div>
+        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=52);">
+            <h2>Random Text 1</h2>
+        </div>
+        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=21);">
+        </div>
+        <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=53);">
+        </div>
+    </div>
+
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var Swipes = new Swiper('.swiper-container', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+</script>
+
