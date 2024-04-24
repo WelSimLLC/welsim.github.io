@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="pqWidgetEventTranslator.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.72515432"
+     inkscape:cx="370.95552"
+     inkscape:cy="528.16344"
+     inkscape:window-width="1920"
+     inkscape:window-height="1010"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="4.4785104"
+     y="126.00182"
+     id="text2"><tspan
+       sodipodi:role="line"
+       id="tspan2"
+       style="stroke-width:1.32244"
+       x="4.4785104"
+       y="126.00182">pqWidgetEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="16.655815"
+     y="93.341919"
+     id="text2-7"><tspan
+       sodipodi:role="line"
+       id="tspan2-5"
+       style="stroke-width:1.32244"
+       x="16.655815"
+       y="93.341919">pqEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="31.39996"
+     y="61.852005"
+     id="text2-7-9"><tspan
+       sodipodi:role="line"
+       id="tspan2-5-3"
+       style="stroke-width:1.32244"
+       x="31.39996"
+       y="61.852005">Qt App.</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="95.418427"
+     y="55.365322"
+     id="text3"><tspan
+       sodipodi:role="line"
+       id="tspan3"
+       style="stroke-width:1.32244"
+       x="95.418427"
+       y="55.365322">pq3DViewEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="95.114494"
+     y="66.00341"
+     id="text4"><tspan
+       sodipodi:role="line"
+       id="tspan4"
+       style="stroke-width:1.32244"
+       x="95.114494"
+       y="66.00341">pqAbstractButtonEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="95.114487"
+     y="76.033607"
+     id="text5"><tspan
+       sodipodi:role="line"
+       id="tspan5"
+       style="stroke-width:1.32244"
+       x="95.114487"
+       y="76.033607">pqAbstractItemViewEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="85.759857"
+     id="text6"><tspan
+       sodipodi:role="line"
+       id="tspan6"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="85.759857">pqAbstractItemViewEventTranslatorBase</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="94.878212"
+     id="text7"><tspan
+       sodipodi:role="line"
+       id="tspan7"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="94.878212">pqAbstractSliderEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="104.30051"
+     id="text8"><tspan
+       sodipodi:role="line"
+       id="tspan8"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="104.30051">pqBasicWidgetEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="113.72282"
+     id="text9"><tspan
+       sodipodi:role="line"
+       id="tspan9"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="113.72282">pqComboBoxEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="123.14513"
+     id="text10"><tspan
+       sodipodi:role="line"
+       id="tspan10"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="123.14513">pqDoubleSpinBoxEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="132.87137"
+     id="text11"><tspan
+       sodipodi:role="line"
+       id="tspan11"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="132.87137">pqLabelEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810539"
+     y="142.29367"
+     id="text12"><tspan
+       sodipodi:role="line"
+       id="tspan12"
+       style="stroke-width:1.32244"
+       x="94.810539"
+       y="142.29367">pqLineEditEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="152.32388"
+     id="text13"><tspan
+       sodipodi:role="line"
+       id="tspan13"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="152.32388">pqMenuEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810539"
+     y="162.05014"
+     id="text14"><tspan
+       sodipodi:role="line"
+       id="tspan14"
+       style="stroke-width:1.32244"
+       x="94.810539"
+       y="162.05014">pqNativeFileDialogEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="171.47244"
+     id="text15"><tspan
+       sodipodi:role="line"
+       id="tspan15"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="171.47244">pqSpinBoxEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="94.810547"
+     y="181.19867"
+     id="text16"><tspan
+       sodipodi:role="line"
+       id="tspan16"
+       style="stroke-width:1.32244"
+       x="94.810547"
+       y="181.19867">pqTabBarEventTranslator</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.87753px;fill:#000000;stroke-width:1.32244"
+     x="95.114487"
+     y="191.83676"
+     id="text17"><tspan
+       sodipodi:role="line"
+       id="tspan17"
+       style="stroke-width:1.32244"
+       x="95.114487"
+       y="191.83676">pqToolBoxEventTranslator</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="M 92.682923,53.237702 H 85.084291 V 191.83677 h 8.206523"
+     id="path17" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 75.380277,124.68185 h 9.241637"
+     id="path18" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 84.836838,64.288824 h 7.522259"
+     id="path19" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.084774,74.999201 h 7.522259"
+     id="path19-3" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.299697,84.614839 h 7.522259"
+     id="path19-5" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.410382,93.750276 h 7.52226"
+     id="path19-34" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.156082,103.01188 h 7.522259"
+     id="path19-36" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.380985,112.51889 h 7.522259"
+     id="path19-1" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.296723,121.44588 h 7.52226"
+     id="path19-52" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.470278,131.54172 h 7.522259"
+     id="path19-0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.448344,140.82175 h 7.522259"
+     id="path19-8" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.288268,150.70267 h 7.522259"
+     id="path19-9" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.327662,161.20093 h 7.522259"
+     id="path19-93" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.377028,170.50839 h 7.522259"
+     id="path19-7" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.833035;stroke-dasharray:none;stroke-opacity:1"
+     d="m 85.299247,180.75783 h 7.52226"
+     id="path19-6" />
+  <text
+     xml:space="preserve"
+     style="font-size:7.05556px;fill:none;stroke:#000000;stroke-width:1"
+     x="18.243244"
+     y="87.567566"
+     id="text1"><tspan
+       sodipodi:role="line"
+       id="tspan1"
+       style="stroke-width:1"></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:7.05556px;fill:none;stroke:#000000;stroke-width:1"
+     x="17.513514"
+     y="98.87838"
+     id="text18"><tspan
+       sodipodi:role="line"
+       id="tspan18"
+       style="stroke-width:1"></tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1"
+     d="M 40.864864,65.675676 V 83.918919"
+     id="path20" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1"
+     d="M 40.798817,99.120213 V 117.36346"
+     id="path20-1" />
+</svg>
