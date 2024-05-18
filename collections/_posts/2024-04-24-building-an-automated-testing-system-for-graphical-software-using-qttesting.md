@@ -6,13 +6,13 @@ date:   2024-04-24
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
-Automated testing is an essential component of modern large-scale software. High amounts of automated test cases are used to maintain the stability of large software products. For the software with a graphical user interface (GUI), establishing an automated testing system can be challenging due to limited resources. Previously, the author has written articles on automated testing for engineering simulation CAE software, see "Automated Testing for General-Purpose Engineering Simulation CAE Software", "Quickly Create Regression Test Cases for WELSIM", and "Automated Regression Testing for General-Purpose Engineering Simulation CAE Software". This article presents how to use QtTesting to quickly implement an automated testing system for graphical software from a software development perspective.
+Automated testing is an essential component of modern large-scale software. High amounts of automated test cases are used to maintain the stability of large software products. For the software with a graphical user interface (GUI), establishing an automated testing system can be challenging due to limited resources. Previously, the author has written articles on automated testing for engineering simulation CAE software, see "[Automated Testing for General-Purpose Engineering Simulation CAE Software](https://welsim.com/2024/01/30/automated-testing-for-general-purpose-engineering-simulation-cae-software.html)", "[Quickly Create Regression Test Cases for WELSIM](https://welsim.com/2023/08/29/quickly-create-regression-test-cases-for-welsim.html)", and "[Automated Regression Testing for General-Purpose Engineering Simulation CAE Software](https://welsim.com/2023/08/22/automated-regression-testing-for-general-purpose-engineering-simulation-cae-software.html)". This article presents how to use QtTesting to quickly implement an automated testing system for graphical software from a software development perspective.
 <p align="center">
   <img src="\assets\blog\20240424\welsim_qt_gui.png" alt="welsim_qt_gui" />
 </p>
 
 
-QtTesting is an open-source testing framework with a friendly license, similar to BSD3, and can be used for commercial products. It has been applied in practical instances for large-scale software such as VTK, ParaView, Slider3D, and WELSIM, proving to be an effective and user-friendly testing framework. As long as the software utilizes QT as its GUI framework, QtTesting can be used as the foundational component for the testing system. The source code of QtTesting can be directly downloaded from https://gitlab.kitware.com/paraview/qttesting or https://github.com/Kitware/QtTesting.
+QtTesting is an open-source testing framework with a friendly license, similar to BSD3, and can be used for commercial products. It has been applied in practical instances for large-scale software such as VTK, ParaView, Slider3D, and WELSIM, proving to be an effective and user-friendly testing framework. As long as the software utilizes QT as its GUI framework, QtTesting can be used as the foundational component for the testing system. The source code of QtTesting can be directly downloaded from [https://gitlab.kitware.com/paraview/qttesting](https://gitlab.kitware.com/paraview/qttesting) or [https://github.com/Kitware/QtTesting](https://github.com/Kitware/QtTesting).
 
 
 QtTesting is officially endorsed for UI testing. Although, in practical use, it not only can test GUI, but also can test any other functionalities of a product through the properties provided by the GUI, such as the accuracy of calculation results. Many of the numerical results in WELSIM can be validated through the functionality of QtTesting.
@@ -38,7 +38,7 @@ During program execution, pqEventTranslator receives every Qt event that occurs 
 </p>
 
 
-The translator module can also record check events, such as verifying a property. During the check, an overlay will be drawn on the widget where the mouse hovers. A green overlay indicates that the widget can be checked; if the overlay is red, it indicates otherwise. When clicking on the widget for checking, a check event will be recorded, and a related QString value will output. This feature is an crucial part when verifying numerical results in WELSIM automated testing.
+The translator module can also record check events, such as verifying a property. During the check, an overlay will be drawn on the widget where the mouse hovers. A green overlay indicates that the widget can be checked; if the overlay is red, it indicates otherwise. When clicking on the widget for checking, a check event will be recorded, and a related QString value will be output. This feature is a crucial part when verifying numerical results in WELSIM automated testing.
 <p align="center">
   <img src="\assets\blog\20240424\welsim_regression_check.png" alt="welsim_regression_check" />
 </p>
@@ -69,7 +69,7 @@ Sometimes translator and player classes will correspond one-to-one. Developers c
 
 
 ## Running Tests
-The source code of QtTesting is easy to compile, provided with a CMake program, which allows quick compilation into a static or dynamic library. Since this testing module is called in only a few places in the product, compiliation into a static library is appropriate.
+The source code of QtTesting is easy to compile, provided with a CMake program, which allows quick compilation into a static or dynamic library. Since this testing module is called in only a few places in the product, compilation into a static library is appropriate.
 
 QtTesting has been successfully applied in software such as VTK, ParaView, but no test cases are available publicly. Fortunately, the general-purpose engineering simulation software WELSIM not only uses QtTesting as the GUI testing framework, but also open-sourced all test cases. Users can download WELSIM and the test cases to experience automated testing based on QtTesting.
 <p align="center">
