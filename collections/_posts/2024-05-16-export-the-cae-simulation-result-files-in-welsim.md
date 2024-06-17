@@ -62,7 +62,7 @@ WELSIM provides mainstream result file formats. For time-based transient analysi
 
 All exported files contain the mesh data of nodes and elements.
 
-With continuance of new updated versions, WELSIM will support more types of result files.
+With the continuance of new updated versions, WELSIM will support more types of result files.
 
 ---
 <small>
