@@ -17,7 +17,7 @@ On the basis of existing electrostatic and magnetostatic field analysis function
 
 <p align="center">
   <img src="\assets\blog\20240104\welsim_em_analysis_type.png" alt="welsim_em_analysis_type" />
-</p>
+</p> 
 
 A free compiled Windows-version of the open-source electromagnetic solver Palace is provided. Now, Palace users do not need to compile it themselves, and they can utilize Palace for large-scale electromagnetic field computation on Windows. This product can be obtained in the palace.exe executable file from the WELSIM installation package, or be downloaded it from the WelSim GitHub page.
 

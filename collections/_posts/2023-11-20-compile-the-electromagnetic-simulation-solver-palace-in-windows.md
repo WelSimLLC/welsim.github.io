@@ -13,7 +13,7 @@ Palace is an open-source, large-scale computational electromagnetic software pac
 </p>
 
 Although Palace is powerful, being a scientific computing program developed based on Linux, the official support for the Windows operating system is not complete. We have conducted research on the feasibility of running Palace on Windows, compiled Palace using Visual Studio, and generated a native Windows application with simulation results.
-
+ 
 
 Palace provides the Superbuild compilation method with CMake, which automatically downloads all required libraries and compiles them completely. It compiles effortlessly on Linux. However, on Windows, many core libraries such as PETSc, SLEPc, libCEED, MUMPS, and others require manual compilation. Therefore, the Superbuild mode provided officially cannot compile as smoothly on Windows. Users need to apply the manual method of establishing Visual Studio projects to complete the building.
 

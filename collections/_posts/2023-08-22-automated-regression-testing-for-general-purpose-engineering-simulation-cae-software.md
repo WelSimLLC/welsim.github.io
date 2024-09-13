@@ -7,7 +7,7 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
 
-
+ 
 An Automated Regression Testing System is a vital component for all large software products. It's used to verify the software will continue to function properly even after the source code has been modified. It is a critical part of the software development and testing lifecycle, allowing developers to continuously enhance the software without compromising its functionality. Engineering simulation software, also called Computer Aided Engineering (CAE) software, is characterized by its large scale, wide scope, and lengthy lifetime. The necessity of a comprehensive automated regression testing system is dictated by these attributes to ensure the stability and accuracy of the product.
 <p align="center">
   <img src="\assets\blog\20230822\welsim_regression_demo.png" alt="welsim_regression_demo" />

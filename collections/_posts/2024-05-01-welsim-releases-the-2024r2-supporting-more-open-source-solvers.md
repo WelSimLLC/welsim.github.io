@@ -22,7 +22,7 @@ The new 2024R2 version adds a pre-processing module for the CalculiX solver, all
 Currently, 60 commands are supported, which accounts for 42% of all CalculiX commands. All of which are core commands, capable of common analysis needs.
 <p align="center">
   <img src="\assets\blog\20240501\welsim_solver_calculix.png" alt="welsim_solver_calculix" />
-</p>
+</p> 
 
 
 ## Added support for Elmer FEM

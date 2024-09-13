@@ -12,7 +12,7 @@ GDS is a universal 2D CAD electronic layout format widely used in the integrated
 </p>
 
 The structure of GDS files can include seven elements: Boundary, Path, SREF, AREF, Text, Node, and Box. Details can be found in the article "GDSII, the data format for chip and integrated circuit design." Among them, Text, Node, and Box do not contain actual geometric information. Therefore, when reading GDS files, the focus is on Boundary, Path, SREF, and AREF content. This information is then converted into geometric models. WELSIM can quickly read GDS files and generate models for simulation analysis.
-
+ 
 
 ## Import GDS file
 In WELSIM, after opening the software and creating a new project, click on "Import Geometry" to open the file dialog.

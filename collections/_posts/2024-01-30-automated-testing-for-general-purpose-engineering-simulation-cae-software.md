@@ -10,7 +10,7 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 The automated testing system is an essential facility for modern large-scale software. Given that the computational results of general-purpose CAE simulation software have complex functionality, long term maintenance, and high requirements, it's necessary to have an automated testing system to maintain the robustness and accuracy of the product. In addition to the testing system, a vast amount of test cases is  another crucial intelligent asset, which require a significant investment of development resources. The author has previously detailed information on the automated testing of CAE software, as seen in the articles "[Automated Regression Testing for General-Purpose Engineering Simulation CAE Software](https://welsim.com/2023/08/22/automated-regression-testing-for-general-purpose-engineering-simulation-cae-software.html)" and "[Quickly Create Regression Test Cases for WELSIM](https://welsim.com/2023/08/22/automated-regression-testing-for-general-purpose-engineering-simulation-cae-software.html)". This article focuses on the running tests for engineering simulation CAE software.
 <p align="center">
   <img src="\assets\blog\20240130\welsim_cae_tip_of_iceburg.jpg" alt="welsim_cae_tip_of_iceburg" />
-</p>
+</p> 
 
 
 Currently, major CAE software on the market do not publicly disclose their automated testing systems; they are only provided for internal development use. End-users do not have access the testing systems. In this day and age, WELSIM is the only general-purpose CAE software that opens up its automated testing system and discloses open-source test cases worldwide. Therefore, the only software this article can use for demonstration is WELSIM.
