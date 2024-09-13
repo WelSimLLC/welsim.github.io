@@ -11,7 +11,7 @@ With the rapid development of engineering simulation CAE software over the past 
 <p align="center">
   <img src="\assets\blog\20230824\welsim_processors_demo.png" alt="welsim_processors_demo" />
 </p>
-
+ 
 
 Through years of dedicated research and development, the engineering simulation software WELSIM has acquired the capability to address these industry issues. Developers of exceptional solvers, particularly those working on open-source solvers, can focus on advancing their solver's core features while entrusting the pre- and post-processing tasks to WELSIM. Additionally, WELSIM enables the establishment of an automated regression testing system, ensuring the precision of solvers. This approach significantly conserves development resources and time.
 

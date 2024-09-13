@@ -22,7 +22,7 @@ For transient analysis, the results will contain data from multiple time steps. 
 To achieve this, find the "Export All Results" command in the right-click context menu of the solution node and click it.
 <p align="center">
   <img src="\assets\blog\20240516\welsim_export_all_results.png" alt="welsim_export_all_results" />
-</p>
+</p> 
 
 
 After selecting "Export All Results," a dialog box will prompt you to enter a file name. Here you can choose to export in ASCII or binary format.

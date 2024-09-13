@@ -19,7 +19,7 @@ To better support the open-source and simulation community, WELSIM recently adde
 <p align="center">
   <img src="\assets\blog\20240405\welsim_export_elmer_scripts.png" alt="welsim_export_elmer_scripts" />
 </p>
-
+ 
 
 Upon successful export, a solver input script named elmer_welsim.sif is generated along with four mesh files named mesh.header, mesh.nodes, mesh.elements, and mesh.boundary.
 <p align="center">

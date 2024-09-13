@@ -14,7 +14,7 @@ This article uses examples to demonstrate the method of script-based creation of
 1) Build a single material data through GUI. (If familiar with XML syntax, you can also refer to existing XML test files and write your own). Then, click Record Test.
 <p align="center">
   <img src="\assets\blog\20240226\welsim_mat_script_record_tests.png" alt="welsim_mat_script_record_tests" />
-</p>
+</p> 
 
 
 Create a new material object, naming it Mat001. Next, open the material editing panel and sequentially add density, isotropic elasticity, and bilinear isotropic hardening properties. These properties are commonly used in elastic-plastic models.

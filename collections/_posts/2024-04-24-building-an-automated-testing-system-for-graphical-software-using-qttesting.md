@@ -13,7 +13,7 @@ Automated testing is an essential component of modern large-scale software. High
 
 
 QtTesting is an open-source testing framework with a friendly license, similar to BSD3, and can be used for commercial products. It has been applied in practical instances for large-scale software such as VTK, ParaView, Slider3D, and WELSIM, proving to be an effective and user-friendly testing framework. As long as the software utilizes QT as its GUI framework, QtTesting can be used as the foundational component for the testing system. The source code of QtTesting can be directly downloaded from [https://gitlab.kitware.com/paraview/qttesting](https://gitlab.kitware.com/paraview/qttesting) or [https://github.com/Kitware/QtTesting](https://github.com/Kitware/QtTesting).
-
+ 
 
 QtTesting is officially endorsed for UI testing. Although, in practical use, it not only can test GUI, but also can test any other functionalities of a product through the properties provided by the GUI, such as the accuracy of calculation results. Many of the numerical results in WELSIM can be validated through the functionality of QtTesting.
 <p align="center">

@@ -5,7 +5,7 @@ title:  "Multi-step and time-varying settings in dynamics simulation"
 date:   2023-04-28
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
-
+ 
 Nowadays, it is often vital to set multi-step conditions and time-varying boundary conditions when modeling real engineering problems. These requirements bring challenges to simulation softwares. Not only does the solver needs to support multiple steps, but the graphical user interface also should provide convenient and easy input methods. WELSIM started supporting multi-step analysis as early as 2019. For details, please refer to the article “[Multi-step quasi-static structural finite element analysis](https://welsim.com/2019/07/17/multi-step-quasi-static-structural-finite-element-analysis.html)”. Recently, with the support of the explicit dynamic analysis software, OpenRadioss, multi-step analysis related features have gained more attention. This article discusses the multi-step and time-varying boundary condition features in WELSIM with a real-world engineering example.
 <p align="center">
   <img src="\assets\blog\20230428\engineers_with_computer.jpg" alt="engineers_with_computer" />
