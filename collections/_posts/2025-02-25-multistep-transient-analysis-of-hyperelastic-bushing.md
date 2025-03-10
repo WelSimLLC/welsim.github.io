@@ -76,7 +76,7 @@ Double-click the Study Settings object to see the time settings for each load st
 </p>
 
 
-12.Add the displacement results and evalute them.
+12.Add the displacement results and evaluate them.
 <p align="center">
   <img src="\assets\blog\20250225\welsim_bushing_result_displacement.png" alt="welsim_bushing_result_displacement" />
 </p>
