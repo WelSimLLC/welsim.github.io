@@ -7,13 +7,13 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
 
-In modern structural analysis, multi-layer composite materials are often encountered. These composites frequently appear as a complete shell structure, made up of multiple layers stacked on top of each other. The angles, thicknesses, and materials of the layers may all vary. For the analysis of such composite materials, simulation software needs to provide relevant features, with users inputting data based on the actual materials.
+In modern structural analysis, multi-layer composite materials are frequently encountered. These composites often appear as a complete shell structure, consisting of multiple layers stacked on top of each other. The angles, materials, and thicknesses of the each layer may vary. For the analysis of such composite materials, simulation software needs to provide relevant features, so users can input data based on the actual materials.
 <p align="center">
   <img src="\assets\blog\20250310\welsim_multilayer_composite.png" alt="welsim_multilayer_composite" />
 </p>
 
 
-The WELSIM composite parameter input provides a simplified method. This article introduces the steps to define composites.
+The WELSIM composite parameter input provides a simplified approach. This article will introduce the steps to define composites.
 
 1.Create a new FEM project.
 
@@ -22,12 +22,12 @@ The WELSIM composite parameter input provides a simplified method. This article 
   <img src="\assets\blog\20250310\welsim_multilayer_shell_materials.png" alt="welsim_multilayer_shell_materials" />
 </p>
 
-3.Double-click the Glass material object to enter the editing mode. Enter the initial density of 2.5e-6 kg/mm³, Young's modulus of 70 GPa, Poisson's ratio of 0.2, plastic yield stress of 80 MPa, hardening parameter of 500 MPa, and hardening exponent of 0.8. Add Orthotropic Brittle Failure properties with the default parameters set to 0.
+3.Double-click the Glass material object to enter editing mode. Set the initial density to 2.5e-6 kg/mm³, Young's modulus to 70 GPa, Poisson's ratio to 0.2, plastic yield stress to 80 MPa, hardening parameter to 500 MPa, and hardening exponent to 0.8. Add Orthotropic Brittle Failure properties with the default parameters set to 0.
 <p align="center">
   <img src="\assets\blog\20250310\welsim_multilayer_shell_mat_glass.png" alt="welsim_multilayer_shell_mat_glass" />
 </p>
 
-4.Double-click the Plastic Film material object to enter the editing mode. Enter the initial density of 2.5e-6 kg/mm³, Young's modulus of 100 MPa, Poisson's ratio of 0.2, plastic yield stress of 10 MPa, hardening parameter of 20 MPa, and hardening exponent of 0.5. Add orthotropic brittle failure properties with strain at the beginning of tensile failure set to 0.6, maximum tensile strain set to 0.7, and the maximum tensile strain for element deletion set to 0.8.
+4.Double-click the Plastic Film material object to enter editing mode. Set the initial density to 2.5e-6 kg/mm³, Young's modulus to 100 MPa, Poisson's ratio to 0.2, plastic yield stress to 10 MPa, hardening parameter to 20 MPa, and hardening exponent to 0.5. Add Orthotropic Brittle Failure properties with strain at the beginning of Tensile Failure set to 0.6, Maximum Tensile Strain set to 0.7, and the Maximum Tensile Strain for Element Deletion set to 0.8.
 <p align="center">
   <img src="\assets\blog\20250310\welsim_multilayer_shell_mat_plastic_film.png" alt="welsim_multilayer_shell_mat_plastic_film" />
 </p>
@@ -42,7 +42,7 @@ The WELSIM composite parameter input provides a simplified method. This article 
   <img src="\assets\blog\20250310\welsim_multilayer_shell_edit_layers.png" alt="welsim_multilayer_shell_edit_layers" />
 </p>
 
-7.At this point, the multi-layer shell structure is defined and ready for subsequent analysis and computation. For example, an OpenRadioss input script can be generated to view the input layer data. As shown in the picture below, the material information and multi-layer shell structure properties are fully defined for solver.
+7.At this point, the multi-layer shell structure is defined and ready for subsequent analysis and computation. For example, an OpenRadioss input script can be generated to view the input layer data. As shown below, the material information and multi-layer shell structure properties are fully defined for the solver.
 <p align="center">
   <img src="\assets\blog\20250310\welsim_multilayer_shell_radioss_script_mat.png" alt="welsim_multilayer_shell_radioss_script_mat" />
 </p>
@@ -51,7 +51,7 @@ The WELSIM composite parameter input provides a simplified method. This article 
 </p>
 
 ## Conclusion
-This blog  demonstrates the definition of a multi-layer shell structure and the associated material properties. This is the first step in composite material analysis. WELSIM makes it easy and quick to define multi-layer structures. This feature has been implemented in the 2025R2 development version and will continue to be optimized in future versions.
+This blog demonstrates how to define a multi-layer shell structure and its associated material properties in WELSIM. This is the first step in composite material analysis. WELSIM makes it quick and easy to define multi-layer structures with its prowess. This feature has been implemented in the 2025R2 development version and will continue to be optimized in future versions.
 
 ---
 <small>

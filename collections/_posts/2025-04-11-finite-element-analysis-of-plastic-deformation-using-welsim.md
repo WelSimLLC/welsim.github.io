@@ -7,17 +7,17 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
 
-Plastic deformation refers to the process in which a structure, under a certain external force, experiences stress beyond the yield limit, transitioning from elastic deformation to plastic deformation. This entire process is also referred to as elastoplastic deformation. Plastic deformation is commonly seen in industrial applications, such as forming of various metal sheet and die-casting of automobile bodies. Besides, in many working conditions, engineers aim to avoid plastic deformation in structures to prevent material failure. As a result, plastic analysis is very common in structural finite element analysis.
-The general-purpose engineering simulation software WELSIM already supports plastic analysis. This article gives a brief overview of the plastic analysis features in the current version from a practical software usage perspective.
+Plastic deformation refers to the process in which a structure experiences external stress beyond its yield limit, transitioning from elastic deformation to plastic deformation. This process is also referred to as elastoplastic deformation. Plastic deformation is commonly seen in industrial applications, such as the formation of various sheet metal and die casting of automobile bodies. In a professional engineering context, engineers aim to avoid plastic deformation in structures to prevent material failure. As a result, plastic analysis is very common in structural finite element analysis.
+The general-purpose engineering simulation software WELSIM already supports plastic analysis. This article gives an overview of the plastic analysis features in the current version from a practical software usage perspective.
 <p align="center">
   <img src="\assets\blog\20250411\welsim_material_plasiticity_casting.jpg" alt="welsim_material_plasiticity_casting" />
 </p>
 
 
-From a computational point of view, plastic deformation is a nonlinear process in a material's constitutive relationship. Therefore, the software must have capabilities for solving nonlinear problems. WELSIM uses FrontISTR as its implicit solver and OpenRadioss as its explicit solver. Users can also use other solvers such as CalculiX and Elmer, which will be covered in future articles. This article focuses on using the FrontISTR and OpenRadioss solvers.
+From a computational standpoint, plastic deformation is a nonlinear process in a material's constitutive relationship. Therefore, the software must have the capabilities to solve nonlinear problems. WELSIM uses FrontISTR as its implicit solver and OpenRadioss as its explicit solver. Users can also use other solvers such as CalculiX and Elmer, which will be covered in future articles. This article focuses on the FrontISTR and OpenRadioss solvers.
 
 
-Because most of the complexity in plastic deformation lies in the material behavior, considerable effort is required for material data input and editing. With the diversity of plastic models, the front-end interface also needs to be robust. WELSIM provides a user-friendly material editor and a fully consistent, free standalone material software called MatEditor. Currently, 25 plastic-related and 12 creep-related material properties are supported. Each property has its own parameters and editing method.
+Most of the complexity in plastic deformation lies in the material behavior. Therefore, considerable effort is required for the material data input and editing. With the diversity of plastic models, the front-end interface also needs to be robust. WELSIM provides a user-friendly material editor and a fully consistent, free standalone material software called MatEditor. Currently, 25 plastic-related and 12 creep-related material properties are supported. Each property has its own parameters and editing method.
 <p align="center">
   <img src="\assets\blog\20250411\welsim_material_build_plasticity.png" alt="welsim_material_build_plasticity" />
 </p>
@@ -49,9 +49,9 @@ Because plastic deformation is a nonlinear process, multiple sub-steps can be se
 </p>
 
 
-Other analysis settings are almost identical to those in elastic analysis.
+The other analysis settings are almost identical to those in elastic analysis.
 
-After setting boundary conditions and running the simulation, you can obtain common results like stress and displacement. For simple models, the stress results can also reflect the plasticity.
+After setting boundary conditions and running the simulation, you will obtain common results like stress and displacement. For simple models, the stress results can also reflect the plasticity.
 <p align="center">
   <img src="\assets\blog\20250411\welsim_analysis_plasiticity_result1.png" alt="welsim_analysis_plasiticity_result1" />
 </p>
@@ -65,7 +65,7 @@ WELSIM uses FrontISTR as the default solver for static structural analysis. Supp
 * Kinematic Hardening
 
 ## Transient elastoplastic analysis
-For WELSIM's transient structural analysis, it is recommended to use explicit method, with OpenRadioss as the solver. OpenRadioss is an excellent open source solver for structural dynamics, known for reliable results, and it supports a wide variety of plastic models.
+For WELSIM's transient structural analysis, it is recommended to use explicit method with OpenRadioss as the solver. OpenRadioss is an excellent open source solver for structural dynamics, known for reliable results, and it supports a wide variety of plastic models.
 
 In the project settings, set the analysis type to "Transient" and enable "Explicit" analysis.
 <p align="center">
