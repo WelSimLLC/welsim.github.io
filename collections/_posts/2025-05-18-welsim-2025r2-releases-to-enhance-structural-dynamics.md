@@ -22,7 +22,7 @@ In the material editing module, new material properties applicable to OpenRadios
 
 
 ## Open source WelSim's documentation
-All help documents of WelSim are open source now. This is another open source intelligent asset of WelSim, after the official website and automated testing cases. Not only can users can submit document updates about WelSim, but they can also use this framework to build online help documents for their own products. The documents are currently open source on GitHub at [GitHub](https://github.com/WelSimLLC/welsim-docs.github.io)
+All help documents of WelSim are open source now. This is another open source intelligent asset of WelSim, after the official website and automated testing cases. Not only can users can submit document updates about WelSim, but they can also use this framework to build online help documents for their own products. The documents are currently open source on GitHub at [https://github.com/WelSimLLC/welsim-docs.github.io](https://github.com/WelSimLLC/welsim-docs.github.io)
 <p align="center">
   <img src="\assets\blog\20250518\welsim_docs_screen_capture.png" alt="welsim_docs_screen_capture" />
 </p>
