@@ -2,7 +2,7 @@
 lang: en
 layout: post
 title:  "Running OpenGL-based applications in a sandbox/virtual machine"
-date:   2025-06-28
+date:   2025-07-01
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
@@ -18,12 +18,12 @@ When running OpenGL-based software in the sandbox, display issues may arise. Thi
 
 The fix is straightforward—simply add the OpenGL libraries to MatEditor.
 
-1.Download the Mesa OpenGL library from GitHub. The project name is mesa-dist-win.
+1.Download the Mesa OpenGL library from GitHub. The project name is *mesa-dist-win*.
 <p align="center">
   <img src="\assets\blog\20250701\welsim_sandbox_mesa_win_dist.png" alt="welsim_sandbox_mesa_win_dist" />
 </p>
 
-2.Choose the appropriate version for your operating system and build type. In this case, the release-msvc version is selected.
+2.Choose the appropriate version for your operating system and build type. In this case, the *release-msvc* version is selected.
 <p align="center">
   <img src="\assets\blog\20250701\welsim_sandbox_mesa_download.png" alt="welsim_sandbox_mesa_download" />
 </p>
