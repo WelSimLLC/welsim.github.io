@@ -37,6 +37,7 @@ For shell elements, Lankford parameters are used to determine the Hill parameter
 
 * r₀₀: tensile direction aligned with the orthotropic axis 1.
 * r₉₀: tensile direction perpendicular to the orthotropic axis 1.
+
 Once r₀₀, r₄₅, r₉₀ are measured, the Hill parameters can be calculated. Higher Lankford values indicate better formability.
 
 Most finite element analysis software requires the user to input either R values or Lankford parameters for the Hill model. Once these are specified, the Hill yield criterion equation can be fully determined.
