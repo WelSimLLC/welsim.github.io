@@ -7,7 +7,7 @@ author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
 
-Modern engineering simulation software is not only capable of analyzing continuous domains—for instance, using the finite element method (FEM) to compute structures, fluids, or electromagnetic fields—but it also has enough computational prowess for discontinuous particle systems. Examples include pure particle molecular dynamics, discrete element methods (DEM), smoothed particle hydrodynamics (SPH), and coupled simulations with FEM. The primary prerequisite to compute particle systems is having the ability to generate particles within a model, including data of the particle positions, shapes, and volumes. This is similar to how in finite element analysis, a mesh containing nodes and element information must first be created.
+Modern engineering simulation software is not only capable of analyzing continuous domains, for instance, using the finite element method (FEM) to compute structures, fluids, or electromagnetic fields, but it also has enough computational process for discontinuous particle systems. Examples include pure particle molecular dynamics, discrete element methods (DEM), smoothed particle hydrodynamics (SPH), and coupled simulations with FEM. The primary prerequisite to compute particle systems is having the ability to generate particles within a model, including data of the particle positions, shapes, and volumes. This is similar to how in finite element analysis, a mesh containing nodes and element information must first be created.
 <p align="center">
   <img src="\assets\blog\20250820\welsim_sph_analysis.png" alt="welsim_sph_analysis" />
 </p>
