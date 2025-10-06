@@ -58,7 +58,7 @@ Now, a larger number of particles can be seen — 16,060 in total. WELSIM thus a
 
 5. Export the Particles
 
-Once particle generation is complete, export the particle file. Right-click the Mesh objectand select Export Particles from the context menu.
+Once particle generation is complete, export the particle file. Right-click the Mesh object and select Export Particles from the context menu.
 <p align="center">
   <img src="\assets\blog\20250929\welsim_sph_export_particles.png" alt="welsim_sph_export_particles" />
 </p>
