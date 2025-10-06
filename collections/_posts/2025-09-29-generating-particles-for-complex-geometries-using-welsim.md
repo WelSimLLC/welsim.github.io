@@ -18,7 +18,7 @@ As a result of this increased complexity, the demands on particle simulation are
 
 Generating particles for simple geometric models, like cubes, is not difficult. However, when the geometry becomes more complex, particle generation becomes challenging, so currently there are not many software solutions on the market that can generate particles for arbitrary shapes. WELSIM is already capable of handling complex geometry and can even export particles as external files for use in other software. This article provides a brief introduction on how to generate particles in WELSIM.
 
-1. Open WELSIM and Import a STEP Geometry Model
+1.Open WELSIM and Import a STEP Geometry Model
 
 In this example, a cylindrical model with a circular hole is imported. Set the geometry’s Create Particles property to True.
 <p align="center">
@@ -26,7 +26,7 @@ In this example, a cylindrical model with a circular hole is imported. Set the g
 </p>
 
 
-2. Click the Meshing Button to Automatically Generate Particles
+2.Click the Meshing Button to Automatically Generate Particles
 
 In this setup, 441 particles are generated.
 <p align="center">
@@ -34,7 +34,7 @@ In this setup, 441 particles are generated.
 </p>
 
 
-3. Increase Particle Density
+3.Increase Particle Density
 
 Modify the Maximum Size value in the Mesh Settings. When set to 0.01 m, the particle density increases.
 <p align="center">
@@ -43,7 +43,7 @@ Modify the Maximum Size value in the Mesh Settings. When set to 0.01 m, the part
 
 
 
-4. Adjust Particle Display Size for Clarity
+4.Adjust Particle Display Size for Clarity
 
 When the number of particles increases, it helps to reduce their display size for better visibility. In the 3D View of the mesh object, set the Particle Size value. Here, it is set to 0.001.
 <p align="center">
@@ -56,7 +56,7 @@ Now, a larger number of particles can be seen — 16,060 in total. Easy and effi
   <img src="\assets\blog\20250929\welsim_sph_generate_particles_mesh_denser.png" alt="welsim_sph_generate_particles_mesh_denser" />
 </p>
 
-5. Export the Particles
+5.Export the Particles
 
 Once particle generation is complete, export the particle file. Right-click the Mesh object and select Export Particles from the context menu.
 <p align="center">
@@ -64,7 +64,7 @@ Once particle generation is complete, export the particle file. Right-click the 
 </p>
 
 
-6. Once in the Export Dialog
+6.Once in the Export Dialog
 
 Enter the file name and select the export format. WELSIM currently supports the VTK PolyData format; more formats will be included in future versions.
 <p align="center">
