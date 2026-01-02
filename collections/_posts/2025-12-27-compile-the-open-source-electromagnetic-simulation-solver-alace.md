@@ -15,12 +15,12 @@ Palace is a parallel finite element solver developed by AWS Labs for full-wave 3
 
 The author previously published a brief article introducing how to compile Palace on Windows, titled [Compile the electromagnetic simulation solver Palace in Windows](https://welsim.com/2023/11/20/compile-the-electromagnetic-simulation-solver-palace-in-windows.html). Expanding upon that earlier work, this article details the compilation process more in-depth, with a particular focus on the compilation of dependent libraries. The dependent libraries discussed in this article are as follows:
 
-* **Hypre**: A large-scale linear algebra matrix computation library, using version 2.30.
-* **MUMPS**: An open-source software library for solving large-scale sparse linear systems of equations.
-* **ARPACK-NG**: A library that supports complex linear matrix computations and is used for eigenvalue computation. Primarily written in Fortran, it can be compiled independently without relying on PETSc.
+* **Hypre**: A large-scale linear algebra matrix computation library, using version 2.33.
+* **MUMPS**: An open-source software library for solving large-scale sparse linear systems of equations. This example uses version 5.8.1.
+* **ARPACK-NG**: A library that supports complex linear matrix computations and is used for eigenvalue computation. Primarily written in Fortran, it can be compiled independently. It is necessary to manually modify parts of the source code by using the diff files provided by Palace.
 * **GSLib**: Used for interpolation computations in high-order spectral elements.
-* **libCEED**: A linear algebra computation management framework that supports parallel computing across various CPUs, GPUs, and clusters.
-* **MFEM**: A flexible, efficient, and scalable finite element discretization framework used as the core solving dependency library for Palace.
+* **libCEED**: A linear algebra computation management framework that supports parallel computing across various CPUs, GPUs, and clusters. This example uses version 0.12.
+* **MFEM**: A flexible, efficient, and scalable finite element discretization framework used as the core solving dependency library for Palace. This example uses version 4.8.1.It is necessary to manually modify parts of the source code by using the diff files provided by Palace.
 
 
 ### System Environment and Compilers
@@ -76,7 +76,7 @@ Once the Visual Studio project files are generated, compile the project to produ
 </p>
 
 ## Compiling ARPACK
-For eigenvalue-related computations (e.g., eigenmode calculations), Palace requires a complex-number eigenvalue solver such as SLEPc or ARPACK. Since SLEPc depends on PETSc, which has a rather complex compilation on Windows, ARPACK is selected as the complex-number solver for Palace.
+For eigenvalue-related computations (e.g., eigenmode calculations), Palace requires a complex-number eigenvalue solver such as SLEPc or ARPACK. In this example, ARPACK is selected as the complex-number solver for Palace.
 
 ARPACK is an open-source library for large-scale eigenvalue and eigenvector computations, co-developed by institutions including Rice University and Sandia National Laboratories. Its core objective is to efficiently compute a subset of eigenvalues and their corresponding eigenvectors for large sparse matrices. Unlike libraries such as Hypre and MUMPS, which are designed to solve linear systems of equations (Ax=b), ARPACK focuses specifically on tackling eigenvalue problems (Ax=λx or Ax=λBx).
 
@@ -84,16 +84,13 @@ ARPACK is an open-source library for large-scale eigenvalue and eigenvector comp
   <img src="\assets\blog\20251227\welsim_arpack.png" alt="welsim_arpack" />
 </p>
 
-Download ARPACK-NG from GitHub and use its built-in CMake build configuration. Set the following parameters in CMake:
+Download ARPACK-NG from GitHub and use its built-in CMake build configuration. Ensure that the environment variable contains the entry `MKLTOOL=C:\Program Files (x86)\Intel\oneAPI\mkl\latest`; this allows CMake to automatically locate the BLAS and LAPACK libraries within MKL. Set the following parameters in CMake:
 ```
 ICE = ON
 Eigen = ON
 Build_SHARED_LIBS = OFF
 ```
-
-Meanwhile, ensure that the environment variable contains the entry `MKLTOOL=C:\Program Files (x86)\Intel\oneAPI\mkl\latest`; this allows CMake to automatically locate the BLAS and LAPACK libraries within MKL.
-
-After generating the Visual Studio project files, you can directly compile the project to obtain the ARPACK static library.
+Meanwhile, you need to make corresponding modifications to the source files based on the diff files located in the extern/patch/arpack-ng folder under the Palace directory. After generating the Visual Studio project files, you can directly compile the project to obtain the ARPACK static library.
 
 ## Compiling GSLib
 GSLIB is an open-source parallel sparse communication library designed to efficiently support sparse data gather/scatter communication and operators in parallel numerical simulation scenarios, such as the finite element method, spectral element method, and finite difference method. It greatly simplifies the development of parallel sparse communication and lowers the barrier to distributed memory programming. Its adaptive algorithms ensure efficient communication in large-scale parallel computing, satisfying ultra-large-scale simulation requirements.
@@ -126,6 +123,7 @@ potentially uninitialized local pointer variable 'h' used
 ```
 
 You will need to modify the code and initialize the pointer with a NULL value.
+
 If you receive a prompt indicating that the `fgs_free` function has been defined redundantly, simply comment out the `fgs_setup`, `fgs_free`, and `fgs_unique` functions.
 
 ## Compiling libCEEM
@@ -192,6 +190,7 @@ Modified code:
 ```
 
 Visual Studio does not support the `__restrict__` keyword and requires it to be changed to `__restrict`.
+
 Other minor modifications need to be made, such as replacing popen with `_popen` and pclose with `_pclose`. Additionally, there is an environment variable setting: `setenv("RUST_TOOLCHAIN", "nightly", 0)`, which needs to be modified as follows:
 
 ```
@@ -232,7 +231,7 @@ MFEM_THREAD_SAFE = ON
 MFEM_USE_MUMPS = ON
 ```
 
-Generate the Visual Studio project files and compile them directly to obtain the MFEM static library.
+Meanwhile, you need to make corresponding modifications to the source files based on the diff files located in the extern/patch/mfem folder under the Palace directory. Since there are quite a few source files to be modified, you should proceed with patience and care. Alternatively, you can first compile the code on Linux, then copy and overwrite the automatically modified mfem folder to the mfem directory that needs to be compiled on Windows. Generate the Visual Studio project files and compile them directly to obtain the MFEM static library.
 
 ## Compiling Palace
 At this point, all complex dependent libraries have been successfully compiled. Proceed to the final step of this project: use the built-in CMake configuration file to generate Visual Studio project files and compile Palace. Note that you should select the CMakeLists.txt file located in the palace subdirectory instead of the one in the root directory, as the latter is used for generating the SuperBuild.
