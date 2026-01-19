@@ -6,14 +6,15 @@ date:   2026-01-16
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
-CalculiX is a well-known open-source Finite Element Analysis software, focusing on structural mechanics (static, dynamic, nonlinear) and thermal analysis. It is suitable for scientific research, teaching, and small-to-medium engineering scenarios. 
+CalculiX is a well-known open-source Finite Element Analysis software that focuses on structural mechanics (static, dynamic, nonlinear) and thermal analysis. It is suitable for scientific research, teaching, and small-to-medium engineering scenarios. 
 
 The core advantages of CalculiX are as follows: 
-Open-Source and Free. It is licensed under the GNU General Public License (GPL), allowing individuals, enterprises, and research institutions to freely use, modify, and distribute the source code. 
 
-INP File Format Compatibility. It supports the INP input file format used by Abaqus. Most Abaqus models can be directly imported into CalculiX for solving, which shortens the learning curve for users. 
+Open-Source and Free. It is licensed under the GNU General Public License (GPL) which allows individuals, enterprises, and research institutions to freely use, modify, and distribute the source code. 
 
-Lightweight Solver. The solver features streamlined code and has lower hardware resource requirements compared to commercial software, making it ideal for fast computation of small-to-medium scale models. 
+INP File Format Compatibility. It supports the INP input file format used by Abaqus. Most Abaqus models can be directly imported into CalculiX for solving, which lessens the learning curve for users. 
+
+Lightweight Solver. The solver features streamlined code and requires less hardware resources compared to commercial software, making it ideal for fast computation of small-to-medium scale models. 
 
 Seamless Third-Party Integration. It offers excellent compatibility with third-party preprocessors and postprocessors, facilitating the integration of pre/post-processing tools with the solver.
 
@@ -21,15 +22,15 @@ Seamless Third-Party Integration. It offers excellent compatibility with third-p
   <img src="\assets\blog\20260116\welsim_finite_element_thermal_exhaust_manifold.png" alt="welsim_finite_element_thermal_exhaust_manifold" />
 </p>
 
-In a previous article titled Generate CalculiX solver files using WELSIM, the author introduced methods to quickly generate CalculiX input scripts. Currently, WELSIM can serve as a robust preprocessor for CalculiX to generate input files, greatly simplifying the process of performing finite element analysis with CalculiX. This article elaborates on the commands for generating contact and boundary conditions in greater detail.
+In a previous article titled "Generate CalculiX solver files using WELSIM", the author introduced methods to quickly generate CalculiX input scripts. Currently, WELSIM serves as a robust preprocessor to generate input files for CalculiX and greatly simplifies the process of performing finite element analysis with CalculiX. This article elaborates on the commands for generating contact and boundary conditions.
 
 ## Contact
 In the finite element structural analysis of multi-body systems, contact setup is an essential step. This section describes the generation of two common contact types: bonded contact and separable contact.
 
 ### Bonded Contact
-Bonded contact is a contact condition used to simulate a fully rigid connection between multiple bodies. It is applicable to scenarios where there is no relative sliding, separation, or gap between components (e.g., welded joints, adhesive bonds, cured interference fits, and rigid bolted connections). Bonded contact enforces identical nodal displacements across the contact interface, essentially "fusing" multiple independent components into a single integrated structure.
+Bonded contact is a contact condition used to simulate a fully rigid connection between multiple bodies. It is applicable to scenarios where there is no relative sliding, separation, or gaps between components (e.g., welded joints, adhesive bonds, cured interference fits, and rigid bolted connections). Bonded contact enforces identical nodal displacements across the contact interface, essentially "fusing" multiple independent components into a single integrated structure.
 
-The setup interface for bonded contact is shown in the figure below.
+The setup for bonded contact in WELSIM is shown in the figure below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_contact_bonded.png" alt="welsim_calculix_contact_bonded" />
 </p>
@@ -52,12 +53,12 @@ The surface elements defined in the mesh file are as follows:
 ### Separable Contact
 Separable contact is a nonlinear contact condition used to simulate three interface states between multiple bodies: contact, sliding, and separation. Its core characteristic is that the contact interface only transmits normal pressure (no tensile forces) and allows free sliding or sticking in the tangential direction. It is suitable for scenarios involving dynamic contact and separation between components (e.g., gear engagement, sheet metal forming, bearing rolling, and mechanical impact). Based on friction assumptions, it can be further grouped into frictionless contact and frictional contact.
 
-The contact setup interface in WELSIM is shown in the figure below.
+The setup for seperable contact in WELSIM is shown in the figure below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_contact_frictional.png" alt="welsim_calculix_contact_frictional" />
 </p>
 
-When converting to CalculiX commands, the *CONTACT keyword is used. It is important to note that CalculiX specifies that the master surface (also known as the independent surface) must be defined using elements. The slave surface (also known as the dependent surface) can be defined using either elements or nodes.
+When converting to CalculiX commands, the *CONTACT keyword is used. It is important to note that CalculiX requires that the master surface (also known as the independent surface) is defined using elements. The slave surface (also known as the dependent surface) can be defined using either elements or nodes.
 
 The corresponding generated CalculiX commands are as follows:
 ```
@@ -73,7 +74,10 @@ Target_Surface_15, Master_Surface_15
 Setting boundary conditions is a critical step in finite element analysis and a key function of preprocessing software for generating solver commands. WELSIM supports a wide range of CalculiX boundary conditions. This section demonstrates how a preprocessor generates boundary conditions for structural analysis and presents the corresponding solver commands.
 
 ### Constraints or Displacement
-Displacement boundary conditions are essential (Dirichlet) boundary conditions used to constrain the nodal displacement degrees of freedom (DOFs) of a model. Their role is to restrict the rigid-body motion of the structure and simulate real-world support constraints (e.g., fixed supports, pin supports), serving as the foundational conditions for static and dynamic structural analysis. For 3D models: For solid elements, translational DOFs in the X/Y/Z directions (Ux/Uy/Uz) can be constrained.
+Displacement boundary conditions are essential (Dirichlet) boundary conditions used to constrain the nodal displacement degrees of freedom (DOFs) of a model. Their role is to restrict the rigid-body motion of the structure and simulate real-world support constraints (e.g., fixed supports, pin supports), serving as the foundational conditions for static and dynamic structural analysis. In regards to 3D models: 
+
+For solid elements, translational DOFs in the X/Y/Z directions (Ux/Uy/Uz) can be constrained.
+
 For shell elements, additional rotational DOFs about the X/Y/Z axes (Rx/Ry/Rz) can be constrained.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_bc_displacement.png" alt="welsim_calculix_bc_displacement" />
@@ -91,7 +95,7 @@ The corresponding generated CalculiX solver commands are as follows:
 ### Pressure
 Pressure boundary conditions are surface loads applied to structural surfaces, classified as distributed loads. Their essence is to simulate engineering scenarios involving fluid pressure, contact pressure, gas loads, etc., by specifying the normal force per unit area (e.g., internal pressure in pressure vessels, wind loads, lateral soil pressure).
 
-Pressure is one of the most common boundary conditions in structural finite element analysis. The sign convention for pressure determines the load direction: Positive Pressure: The load direction points toward the interior of the surface, causing a compressive effect on the structure (e.g., internal pressure in pressure vessels). Negative Pressure: The load direction points away from the exterior of the surface, causing a tensile effect on the structure (e.g., atmospheric pressure on the outer wall of a vacuum vessel). 
+Pressure is one of the most common boundary conditions in structural finite element analysis. The sign convention for pressure determines the load direction. Positive Pressure: The load direction points toward the interior of the surface, causing a compressive effect on the structure (e.g., internal pressure in pressure vessels). Negative Pressure: The load direction points away from the exterior of the surface, causing a tensile effect on the structure (e.g., atmospheric pressure on the outer wall of a vacuum vessel). 
 
 The pressure boundary condition setup is shown in the figure below.
 <p align="center">
@@ -107,9 +111,9 @@ The corresponding generated solver commands are as follows:
 ### Force
 Force boundary conditions are loads applied to geometric key points, edges, or surfaces, used to simulate localized loading scenarios in engineering (e.g., bolt preload, lifting eye tension, pin forces). Force is one of the most fundamental boundary conditions in structural mechanics.
 
-However, applying force on geometric surfaces in the finite element numerical method is non-trivial. It typically involves coupling the DOFs of multiple nodes to a single reference node, which is often used to distribute a concentrated load across a group of nodes (e.g., applying the force to the reference node, which is then automatically distributed to the coupled group).
+However, applying force on geometric surfaces in the finite element numerical method is non-trivial. It typically involves coupling the DOFs of multiple nodes to a single reference node, which then used to distribute a concentrated load across a group of nodes (e.g., applying the force to the reference node, which is then automatically distributed to the coupled group).
 
-As shown in the figure, in the force setup interface of the preprocessor, the user can select surfaces, edges, or points of the geometry and specify the force magnitudes in the three coordinate directions.
+As shown in the figure, in the force setup of WELSIM, the user can select surfaces, edges, or points of the geometry and specify the force magnitudes in the three coordinate directions.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_bc_force.png" alt="welsim_calculix_bc_force" />
 </p>
@@ -125,7 +129,7 @@ The generated solver commands for the force are as follows:
 ```
 
 ### Nodal Force
-Nodal force boundary conditions are concentrated load applied directly to single or multiple nodes. They represent the most fundamental form of load application after meshing. Nodal forces are more oriented toward direct post-meshing operations, making them suitable for refined load control or special scenario simulations.
+Nodal force boundary conditions are concentrated loads applied directly to single or multiple nodes. They represent the most fundamental form of load application after meshing. Nodal forces are more oriented toward direct post-meshing operations, making them suitable for refined load control or special scenario simulations.
 
 Nodal forces are loads applied directly to the mesh nodes. The total applied force is the superposition of forces based on the number of nodes selected.
 <p align="center">
@@ -147,7 +151,7 @@ The generated solver commands are straightforward, using *CLOAD to apply loads b
 ### Gravity
 Gravity boundary conditions fall under the category of body forces, used to simulate the effect of the Earth's gravitational field on the structure. They work by assigning an inertial force proportional to the mass to each element of the model. Gravity is applicable to almost all structural analyses involving self-weight effects (e.g., building beams and slabs, mechanical components, ground-based spacecraft conditions).
 
-Gravity is essentially a body force induced by acceleration, and its magnitude is directly proportional to the mass of the elements. The preprocessor setup is shown in the figure below.
+Gravity is essentially a body force induced by acceleration, and its magnitude is directly proportional to the mass of the elements. The setup in WELSIM is shown in the figure below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_dc_gravity.png" alt="welsim_calculix_dc_gravity" />
 </p>
@@ -161,7 +165,7 @@ The generated solver commands are as follows:
 ### Rotational Velocity
 Rotational velocity boundary conditions are used to simulate the scenario where a structure rotates uniformly around an axis. This condition induces centrifugal forces and Coriolis forces (which need to be considered for high-speed rotation) within the structure. Classified as inertial loads, they are widely applied in the analysis of rotating machinery (e.g., flywheels, impellers, centrifuges, turbine rotors).
 
-The input parameters include the axis of rotation, the origin of rotation, and the magnitude of the rotational velocity. The input interface is shown in the figure below.
+The input parameters include the axis of rotation, the origin of rotation, and the magnitude of the rotational velocity. The input setup is shown in the figure below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_dc_rotationalvelocity.png" alt="welsim_calculix_dc_rotationalvelocity" />
 </p>
@@ -176,7 +180,7 @@ The generated solver commands are as follows:
 ### Temperature
 In finite element thermal analysis, temperature boundary conditions are essential (Dirichlet) boundary conditions that directly define the temperature values of specific regions of the model. They are suitable for scenarios where the surface or nodal temperatures are known (e.g., the wall of a constant-temperature water tank, components in contact with a large heat source, temperature-controlled surfaces of thermal equipment).
 
-In the heat conduction governing equation, temperature boundary conditions act as enforced constraints, directly fixing the temperature DOFs of the boundary nodes. The solver prioritizes satisfying these constraints before calculating the internal temperature field distribution. The preprocessor setup is shown in the figure below.
+In the heat conduction governing equation, temperature boundary conditions act as enforced constraints, directly fixing the temperature DOFs of the boundary nodes. The solver prioritizes satisfying these constraints before calculating the internal temperature field distribution. The setup for WELSIM is shown in the figure below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_bc_temperature.png" alt="welsim_calculix_bc_temperature" />
 </p>
@@ -190,7 +194,7 @@ The generated CalculiX solver commands are as follows,
 ### Heat Flux
 The heat flux boundary condition is a thermal load that directly defines the heat flow rate per unit area across a solid surface. It is suitable for scenarios where the heat input or output on a surface is known (e.g., the surface of an electric heater, solar collectors, walls subjected to high-temperature gas impingement).
 
-Heat flux is a core parameter, with the positive direction indicating heat flowing into the solid and the negative direction indicating heat flowing out of the solid. The input interface is shown below.
+Heat flux is a core parameter where a positive direction indicates heat flowing into the solid, and a negative direction indicates heat flowing out of the solid. The input interface is shown below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_bc_heatflux.png" alt="welsim_calculix_bc_heatflux" />
 </p>
@@ -202,9 +206,9 @@ The generated CalculiX solver commands are as follows:
 
 
 ### Body Heat Flux
-Body heat flux is a volumetric thermal load used to simulate heat generation or dissipation from internal heat sources within a solid. Unlike surface heat flux boundary conditions that act on surfaces, body heat flux is applied directly to the volume elements of the model, making it suitable for temperature field analysis driven by internal heat sources.
+Body heat flux is a volumetric thermal load used to simulate heat generation or dissipation from internal heat sources within a solid. Unlike surface heat flux boundary conditions, body heat flux is applied directly to the volume elements of the model instead of acting on surfaces, making it suitable for temperature field analysis driven by internal heat sources.
 
-The unit of body heat flux in the SI system is W/m³, where positive values indicate heat generation and negative values indicate heat absorption. The user input interface is shown below.
+The unit of body heat flux in the SI system is W/m³, where positive values indicate heat generation, and negative values indicate heat absorption. The user input interface is shown below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_dc_heat_generation.png" alt="welsim_calculix_dc_heat_generation" />
 </p>
@@ -218,7 +222,7 @@ ID_31,BF,10.
 ### Convection
 Convection boundary conditions, also known as film boundary conditions, are used to simulate convective heat transfer between a solid surface and the adjacent fluid (gas or liquid). They are one of the most commonly used boundary conditions in engineering thermal analysis, with applications in electronic device cooling, pipe heat exchange, automotive engine cooling, and other scenarios.
 
-The convection heat transfer coefficient is the core parameter characterizing the intensity of convective heat transfer, while the ambient temperature parameter refers to the temperature of the mainstream fluid far from the solid surface. The input interface in the preprocessor is shown below.
+The convection heat transfer coefficient is the core parameter characterizing the intensity of convective heat transfer, while the ambient temperature parameter refers to the temperature of the mainstream fluid far from the solid surface. The input interface in WELSIM is shown below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_bc_convection.png" alt="welsim_calculix_bc_convection" />
 </p>
@@ -234,7 +238,7 @@ ID_29_S4, F4, 80, 123
 ```
 
 ### Thermal radiation
-The radiation boundary condition is used to simulate heat transfer between a solid surface and the surrounding environment (or other solid surfaces) via thermal radiation. It is fundamentally governed by the Stefan–Boltzmann law and is suitable for heat exchange scenarios in media such as vacuum or gas (e.g., spacecraft thermal control, heat dissipation from high-temperature equipment). As a nonlinear boundary condition, the heat flux is proportional to the fourth power of the temperature, requiring iterative calculations for solution.
+The radiation boundary condition is used to simulate heat transfer between a solid surface and the surrounding environment (potentially other solid surfaces) via thermal radiation. It is fundamentally governed by the Stefan–Boltzmann law and is suitable for heat exchange scenarios in media such as vacuum or gas (e.g., spacecraft thermal control, heat dissipation from high-temperature equipment). As a nonlinear boundary condition, the heat flux is proportional to the fourth power of the temperature, requiring iterative calculations for solution.
 
 Users are required to input two parameters: emissivity (a value between 0 and 1) and the ambient temperature. The input interface is shown below.
 <p align="center">
@@ -252,13 +256,13 @@ ID_30_S4, R4, 30, 0.9
 ```
 
 ## Conclusion
-In finite element analysis, there is a wide variety of boundary conditions, which involve not only the parameters of the conditions themselves but also the selected elements or nodes. For preprocessing software, generating commands for various boundary conditions is a complex undertaking.
+In finite element analysis, there is a wide variety of boundary conditions that involve not only the parameters of the conditions themselves, but also the selected elements or nodes. For preprocessing software, generating commands for various boundary conditions is a complex undertaking.
 
-WELSIM is capable of setting up a comprehensive range of boundary conditions and can quickly generate the input files required by the CalculiX solver, which can be directly used for computations. Users can leverage WELSIM as a preprocessor for CalculiX. 
+WELSIM is capable of establishing a comprehensive range of boundary conditions and can quickly generate any input files required by the CalculiX solver, which can be directly used for computation. Users can leverage WELSIM as a preprocessor for CalculiX.
 
-CalculiX also supports a small number of additional boundary conditions, such as *CONSTRAINT and *EQUATION. These were not discussed in this article as they are less frequently used in standard analyses.
+CalculiX also supports some additional boundary conditions such as *CONSTRAINT and *EQUATION. These were not discussed in this article as they are less frequently used in standard analyses.
 
-The input file format of CalculiX is highly similar to that of Abaqus. Therefore, the content described in this article can also be applied to the Abaqus solver.
+The input file format of CalculiX is highly similar to that of Abaqus; therefore, the content described in this article can also be applied to the Abaqus solver.
 
 ---
 
