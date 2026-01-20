@@ -22,7 +22,7 @@ Seamless Third-Party Integration. It offers excellent compatibility with third-p
   <img src="\assets\blog\20260116\welsim_finite_element_thermal_exhaust_manifold.png" alt="welsim_finite_element_thermal_exhaust_manifold" />
 </p>
 
-In a previous article titled "Generate CalculiX solver files using WELSIM", the author introduced methods to quickly generate CalculiX input scripts. Currently, WELSIM serves as a robust preprocessor to generate input files for CalculiX and greatly simplifies the process of performing finite element analysis with CalculiX. This article elaborates on the commands for generating contact and boundary conditions.
+In a previous article titled [Generate CalculiX solver files using WELSIM](https://welsim.com/2024/03/19/generate_calculix_solver_files_using_welsim.html), the author introduced methods to quickly generate CalculiX input scripts. Currently, WELSIM serves as a robust preprocessor to generate input files for CalculiX and greatly simplifies the process of performing finite element analysis with CalculiX. This article elaborates on the commands for generating contact and boundary conditions.
 
 ## Contact
 In the finite element structural analysis of multi-body systems, contact setup is an essential step. This section describes the generation of two common contact types: bonded contact and separable contact.
@@ -53,7 +53,7 @@ The surface elements defined in the mesh file are as follows:
 ### Separable Contact
 Separable contact is a nonlinear contact condition used to simulate three interface states between multiple bodies: contact, sliding, and separation. Its core characteristic is that the contact interface only transmits normal pressure (no tensile forces) and allows free sliding or sticking in the tangential direction. It is suitable for scenarios involving dynamic contact and separation between components (e.g., gear engagement, sheet metal forming, bearing rolling, and mechanical impact). Based on friction assumptions, it can be further grouped into frictionless contact and frictional contact.
 
-The setup for seperable contact in WELSIM is shown in the figure below.
+The setup for separable contact in WELSIM is shown in the figure below.
 <p align="center">
   <img src="\assets\blog\20260116\welsim_calculix_contact_frictional.png" alt="welsim_calculix_contact_frictional" />
 </p>
