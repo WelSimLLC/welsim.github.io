@@ -2,7 +2,7 @@
 lang: en
 layout: post
 title:  "Parameters in hyperelastic model curve fitting"
-date:   2026-01-31
+date:   2026-02-01
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
