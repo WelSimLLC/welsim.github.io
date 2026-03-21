@@ -9,10 +9,11 @@ Development
 To set up your environment and run the server locally:
 
 ```bash
-gem install bundler
+gem install tainted bigdecimal csv jekyll bundler
 git clone --depth 1 https://github.com/WelSimLLC/welsim.github.io.git
 cd welsim.github.io
 bundle install
+bundle update jekyll
 bundle exec jekyll serve
 ```
 
