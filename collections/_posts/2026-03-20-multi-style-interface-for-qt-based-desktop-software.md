@@ -21,7 +21,7 @@ There are several established solutions for implementing and dynamically switchi
 </p>
 
 ### Setting QStyle in C++/Python Source Code
-This is the classic approach. Developers define different themes directly in the source code, with customized colors for each theme, and apply the themes to the QApplication via the setStyle and setPalette functions. The advantage of this method is its simplicity, speed, and ease of maintenance as developers manage styles alongside other Qt code. However, because user-defined styles require access to the source code, this technique has weak scalability. For large commercial software, especially engineering software, users rarely customize interface styles anyways, making direct QStyle configuration in source code an efficient solution. The general-purpose engineering simulation software WELSIM also adopts this approach.
+This is the classic approach. Developers define different themes directly in the source code, with customized colors for each theme, and apply the themes to the QApplication via the setStyle and setPalette functions. The advantage of this method is its simplicity, speed, and ease of maintenance as developers manage styles alongside other Qt code. However, because user-defined styles require access to the source code, this technique has limited scalability. For large commercial software, especially engineering software, users rarely customize interface styles anyways, making direct QStyle configuration in source code an efficient solution. The general-purpose engineering simulation software WELSIM also adopts this approach.
 
 
 ### Setting QStyleSheet via QSS
@@ -38,7 +38,7 @@ Many developers mistakenly believe dark mode is a simple color inversion. In rea
 
 ### Dark Theme
 **Background**: Avoid pure black (#000000); use dark gray (e.g., #121212 or #1E1E1E) for depth through shadows.
-**Layout**: Follow the "lighter is closer" principle for persepective. The base background is darkest, while pop-ups or floating panels should be slightly lighter.
+**Layout**: Follow the "lighter is closer" principle for persepective. The base background is darkest, while pop-ups or floating dialogs should be slightly lighter.
 **Text**: Avoid pure white (#FFFFFF); use off-white or light gray (e.g., #E0E0E0) to reduce glare.
 
 ### Light Theme
@@ -82,8 +82,8 @@ Place updateIcon() in the changeEvent(QEvent *e) slot function. Capture system t
 
 ## OpenGL Rendering Widgets
 Many large applications include OpenGL-based rendering widgets where Qt's default QWidget theme settings do not automatically apply. Manual synchronization is required:
-Set the renderer's background color to match the QWidget background.
-Configure canvas background and drawing colors.
+* Set the renderer's background color to match the QWidget background.
+* Configure canvas background and drawing colors.
 
 <p align="center">
   <img src="\assets\blog\20260320\welsim_qt_chart_light_dark.png" alt="welsim_qt_chart_light_dark" />
