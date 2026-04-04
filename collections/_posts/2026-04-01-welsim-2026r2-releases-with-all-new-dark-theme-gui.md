@@ -1,11 +1,10 @@
 ---
 lang: en
 layout: post
-title:  "WELSIM releases with all new dark theme GUI"
+title:  "WELSIM 2026R2 releases with all new dark theme GUI"
 date:   2026-04-01
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
-
 
 WELSIM, a general-purpose engineering simulation and analysis software, has released its latest 2026R2 version (internal version 3.3). Compared to the previous release, version 2026R2 introduces a majorly upgraded underlying framework alongside a new dark theme, improving the graphical user interface.
 <p align="center">
@@ -31,7 +30,7 @@ Upgrading both core frameworks across major versions has improved WELSIM's stabi
 
 
 ## Other Improvements and Upgrades
-The new release optimizes and advances existing features and adds more automated test cases, delivering a better user experience in WELSIM .
+The new release optimizes and advances existing features and adds more automated test cases, delivering a better user experience in WELSIM.
 
 ---
 
