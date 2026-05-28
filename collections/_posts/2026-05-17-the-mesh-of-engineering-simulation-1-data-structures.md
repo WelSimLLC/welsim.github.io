@@ -12,7 +12,7 @@ Modern engineering simulation software is feature-rich. Being the first stage of
   <img src="\assets\blog\20260517\welsim_mesh_bracket_generator.png" alt="welsim_mesh_bracket_generator" />
 </p>
 
-## Data structures of finite element meshes
+## Data structures of finite element mesh
 Finite element software connects CAD software to solvers; it takes in geometric topology data from upstream CAD models and generates meshes for downstream solvers. Thus, finite element mesh data structure must bridge the gap between the two by incorporating information from both fields. On top of that, it must support 3D mesh visualization, requiring developers to meticulously develop the underlying data structures. The most common approach is to anchor the design in geometric topology, having each geometric entity contain its lower-level constituents along with the associated finite element node and element information.
 <p align="center">
   <img src="\assets\blog\20260517\welsim_mesh_db_diagram.png" alt="welsim_mesh_db_diagram" />
