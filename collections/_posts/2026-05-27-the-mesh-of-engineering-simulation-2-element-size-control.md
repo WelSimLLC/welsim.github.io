@@ -1,7 +1,7 @@
 ---
 lang: en
 layout: post
-title:  "The mesh of engineering simulation 1: element size control"
+title:  "The mesh of engineering simulation 2: element size control"
 date:   2026-05-27
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
