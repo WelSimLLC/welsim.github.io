@@ -1,7 +1,7 @@
 ---
 lang: en
 layout: post
-title:  "The mesh of engineering simulation 2: element quality"
+title:  "The mesh of engineering simulation 3: element quality"
 date:   2026-07-20
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
