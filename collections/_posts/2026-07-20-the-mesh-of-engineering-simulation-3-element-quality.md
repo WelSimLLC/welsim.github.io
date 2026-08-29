@@ -26,6 +26,7 @@ The numerical methods for calculating aspect ratios are straightforward. For tri
 The Jacobian ratio is the ratio of the minimum Jacobian determinant to the maximum Jacobian determinant within an element. The Jacobian uniformity metric reflects distortion gradients and measures how uniform the mapping is across the element. It is specifically designed to capture nodal distortion and local contraction or expansion in high-order elements, serving as a core quality control indicator for higher-order elements. The value ranges from -1 to 1. A ratio of 1 indicates a uniform, undistorted element, while values ​​closer to zero indicate significant distortion. The empirical standards are as follows:
 
 | Jacobian Ratio | 0.3–1.0 | 0.1–0.3 | 0–0.1 | ≤ 0 |
+| --- | --- | --- | --- | --- |
 | Element Quality | High-quality element; stable solution | Distorted; reduced stress accuracy; prone to oscillation | Severely distorted; not recommended for high-precision calculations | Negative Jacobian / Degenerate; solver error | 
 
 There are two standards for calculating the Jacobian ratio that are based on Gaussian points and corner nodes, respectively. The Gaussian point method aligns with the integration locations of the solver's stiffness matrix, making it a reliable mesh metric for the finite element method. The corner node method only checks geometric vertices; while computationally efficient, it may fail to detect cases where vertices are positive but integration points are negative, so it is typically used for a precursory geometric screening.
@@ -36,6 +37,7 @@ There are two standards for calculating the Jacobian ratio that are based on Gau
 
 
 For linear elements, the Jacobian determinant is constant throughout the element, so the Jacobian ratio remains 1; this fails to reflect the element's quality. In this case, the element's Jacobian determinant should be compared against that of an ideal element in order to yield a Jacobian ratio that is not always 1. Additionally, since the Jacobian determinant is constant within the element, the calculation only needs to be performed once per linear element, without iterating through all nodes or Gaussian points.
+
 For nonlinear elements, such as second-order elements with midside nodes or higher-order elements, shape functions are of higher degree. Consequently, the Jacobian matrix varies across different integration points within the element, requiring dynamic calculation by substituting coordinates at each integration point.
 
 
@@ -78,6 +80,7 @@ The metric is determined as follows: For 2D quadrilateral or triangular elements
 For 3D elements, the calculation uses the ratio of the element volume to the square root of the cube of the sum of the squares of the edge lengths: Q = C * (V / (ΣL²)^1.5). The volume of a 3D element can be obtained by calculating the determinant of the element's Jacobian matrix. The value of constant C depends on the element type, as specified below:
 
 | Element | Triangle | Quadrilateral | Tetrahedron | Hexahedron | Wedge | Pyramid |
+| --- | --- | --- | --- | --- | --- | --- | 
 | Constant Value | 6.928 | 4.0 | 124.70 | 41.57 | 62.354 | 96 |
 
 In element quality assessment, a quality value greater than 0.7 indicates an acceptable element. For elements in stress concentration zones, a value greater than 0.8 is desirable. Elements with values ​​below 0.05 are considered severely defective and must be repaired.
