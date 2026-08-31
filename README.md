@@ -14,6 +14,7 @@ git clone --depth 1 https://github.com/WelSimLLC/welsim.github.io.git
 cd welsim.github.io
 bundle install
 bundle update jekyll
+bundle config set force_ruby_platform true
 bundle exec jekyll serve
 ```
 
