@@ -14,13 +14,13 @@ After finite element mesh generation, a process called node renumbering can be a
 
 From both practical development and application perspectives, this article discusses two established node renumbering algorithms: the Reverse Cuthill-McKee (RCM) algorithm and the Hilbert Space-Filling Curve algorithm. Each method has distinct advantages, making them suitable for different types of matrix computations. Their key features and trade-offs are summarized in the table below:
 
-| Algorithm | Reverse Cuthill-McKee (RCM) | Hilbert |
+| Algorithm | RCM | Hilbert |
 | --- | --- | --- |
 | Input Information | Topological connectivity (no coordinates required) | XYZ geometric coordinates (no element connectivity used) |
 | Optimization Target | Minimum matrix bandwidth / profile | Spatial locality, CPU/GPU cache |
-| Target Solvers | Direct sparse solvers (SPARSELU, MUMPS) | Iterative solvers (CG, GMRES), GPU FE |
+| Target Solvers | Direct sparse solvers (SPARSELU, MUMPS) | Iterative solvers (CG, GMRES), GPU |
 | Multi-Disjoint-Component Performance | Robust | Degrades when components are far apart |
-| Computational Overhead | BFS graph traversal (moderate) | Coordinate transformation + large array sorting (typically faster) |
+| Computational Overhead | BFS graph traversal (moderate) | Coordinate transformation and large array sorting (typically faster) |
 | Matrix Bandwidth | Excellent | Average, often larger |
 | Spatial Locality | No guarantee | Excellent |
 
@@ -37,6 +37,9 @@ RCM is a classic graph reordering algorithm. When applied to FEA node renumberin
 * Graph Filtering & Component Decomposition: Construct the graph using solid mesh nodes only, ignoring isolated nodes. The graph should be undirected, where edges represent vertices sharing at least one element. Decompose the graph into connected components; if a model consists of multiple disconnected segments, process each connected component independently.
 * Pseudo-Peripheral Node Search: The search for pseudo-peripheral nodes utilizes iterative BFS passes rather than a strict computation of the graph diameter. This engineering approximation significantly improves search traversal efficiency.
 * Element Compatibility: RCM performs well on hybrid tetrahedral and hexahedral meshes. It yields optimal results for continuum meshes with high topological connectivity, but performance deteriorates on highly disconnected models with multiple separate components.
+<p align="center">
+  <img src="\assets\blog\20260828\welsim_mesh_renumbering_1.png" alt="welsim_mesh_renumbering_1" />
+</p>
 
 ## Hilbert Space-Filling Curve Algorithm
 Sorting nodes via a 3D Hilbert space-filling curve allows for geographically adjacent nodes to remain close in memory layout. This improves sparse matrix processing by optimizing CPU L1/L2 cache hit rates and memory bandwidth -noticeably improving performance for iterative solvers and large-scale unstructured meshes. The Hilbert method incurs minimal memory overhead; it avoids building massive node-adjacency graphs and requires only node pointers and a small recursion stack.
