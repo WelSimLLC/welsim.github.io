@@ -20,7 +20,7 @@ STL has a vast range of use cases. For example, in 3D printing and additive manu
 
 
 # Mesh Generation Algorithms
-STL surface mesh data cannot be directly used for finite element computation, as it needs to be remeshed into high-quality volumetric meshes. Typically, there are two classical methods: the Direct Method and the Surface Classification Method. The main difference between these two methods is whether facet clustering is performed on the STL data. The Direct Method has a simpler workflow, performs no sharp-edge recognition, and does not repair geometric defects, but the watertightness of the STL data follows more stringent requirements. The Surface Classfication Method supports more flexible human-computer graphic interaction operations while simultaneously splitting multiple geometric faces to support more complex models.
+STL surface mesh data cannot be directly used for finite element computation, as it needs to be remeshed into high-quality volumetric meshes. Typically, there are two classical methods: the Direct Method and the Facet Classification Method. The main difference between these two methods is whether facet clustering is performed on the STL data. The Direct Method has a simpler workflow, performs no sharp-edge recognition, and does not repair geometric defects, but the watertightness of the STL data follows more stringent requirements. The Facet Classification Method supports more flexible human-computer graphic interaction operations while simultaneously splitting multiple geometric faces to support more complex models.
 <p align="center">
   <img src="\assets\blog\20260916\wlesim_stl_bracket2.png" alt="wlesim_stl_bracket2" />
 </p>
