@@ -52,7 +52,7 @@ en: # English
   download_amzlinux_button: "Install Amazon Linux"
   about_title: "About Us"
   about_description: |
-    WELSIM is the #1 engineering simulation software for the open source community.
+    WELSIM is a general-purpose Graphical User Interface (GUI) for open source simulation solvers.
 
     WelSimulation LLC (WelSim) is a dedicated and independent simulation technology provider. Founded in Greater Pittsburgh, PA, by innovators. WelSim was born out of a vision to create a company that could successfully combine the disciplines of physics-based simulation, scientific computing, and software product.
 

@@ -129,5 +129,5 @@ This article primarily focuses on describing automated regression testing for CA
 ---
 
 <small>
-WELSIM is the #1 engineering simulation software for the open-source community.
+WELSIM is a general-purpose Graphical User Interface (GUI) for open source simulation solvers.
 </small>

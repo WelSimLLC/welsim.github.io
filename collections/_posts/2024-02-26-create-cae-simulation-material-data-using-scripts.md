@@ -69,5 +69,5 @@ The script language for material definition may vary depending on the CAE softwa
 
 ---
 <small>
-WELSIM is the #1 engineering simulation software for the open-source community.
+WELSIM is a general-purpose Graphical User Interface (GUI) for open source simulation solvers.
 </small>

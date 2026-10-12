@@ -81,5 +81,5 @@ Quantities and units are essential modules in engineering simulation CAE softwar
 ---
 
 <small>
-WELSIM is the #1 engineering simulation software for the open-source community.
+WELSIM is a general-purpose Graphical User Interface (GUI) for open source simulation solvers.
 </small>
