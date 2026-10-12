@@ -6,15 +6,14 @@ date:   2026-10-10
 author: "[SimLet](https://twitter.com/getwelsim)"
 ---
 
-
-On October 1, 2026, OpenRadioss officially canceled its open-source project, taking down its website and deleting its code repository on GitHub. The original open-source project URL is no longer directly accessible. This comes approximately four years after it was initially open-sourced by Altair in 2022.
+On October 1, 2026, OpenRadioss officially discontinued its open-source project, taking down its website and deleting its code repository on GitHub. The original open-source project URL is no longer directly accessible. This comes approximately four years after it was initially open-sourced by Altair in 2022.
 <p align="center">
   <img src="\assets\blog\20261010\welsim_open_radioss_screen.png" alt="welsim_open_radioss_screen" />
 </p>
 
 
 ## Current Alternative Software
-Although the official code repository and binary files have been removed, the open-source community has already established a new alternative version. Based on the original OpenRadioss repository, the open-source community has created OpenCourant as the official community continuation project. This project preserves the full Git commit history and has rebuilt a completely new CI/CD build pipeline that does not rely on commercial infrastructure. The official website for OpenCourant is opencourant.org.
+Although the official code repository and binary files have been removed, the open-source community has already established a new alternative version. Based on the original OpenRadioss repository, the open-source community has created OpenCourant as the official community continuation project. This project preserves the full Git commit history and has rebuilt a completely new CI/CD build pipeline that does not rely on commercial infrastructure. The official website for OpenCourant is [opencourant.org](https://welsim.com).
 
 <p align="center">
   <img src="\assets\blog\20261010\welsim_opencourant.png" alt="welsim_opencourant" />

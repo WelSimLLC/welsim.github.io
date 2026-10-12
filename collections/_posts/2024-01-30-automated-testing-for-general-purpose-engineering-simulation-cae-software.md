@@ -87,5 +87,5 @@ The current WELSIM testing framework does not save test results, but future vers
 ---
 
 <small>
-_WELSIM is the #1 engineering simulation software for the open-source community._
+_WELSIM is a general-purpose Graphical User Interface (GUI) for open source simulation solvers._
 </small>

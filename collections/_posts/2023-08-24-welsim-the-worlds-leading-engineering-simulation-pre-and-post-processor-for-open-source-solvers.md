@@ -107,5 +107,5 @@ WELSIM offers world-leading engineering simulation CAE pre- and post-processing 
 ---
 
 <small>
-WELSIM is the #1 engineering simulation software for the open-source community.
+WELSIM is a general-purpose Graphical User Interface (GUI) for open source simulation solvers.
 </small>

@@ -46,5 +46,5 @@ The layer view is a new feature introduced in the WELSIM 2024R1 version, primari
 
 
 <small>
-_WELSIM is the #1 engineering simulation software for the open-source community._
+WELSIM is a general-purpose Graphical User Interface (GUI) for open source simulation solvers.
 </small>
