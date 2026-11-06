@@ -11,6 +11,7 @@ url: "https://welsim.com" # the base hostname & protocol for your site
 plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # SEO settings
 title: WELSIM
@@ -57,3 +58,17 @@ collections:
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
+  quiet_assets: true
+
+# never ship these with the site
+exclude:
+  - README.md
+  - build_local.bat
+  - crowdin.yml
+  - Gemfile
+  - Gemfile.lock
+  - "**/*.bak"
+  - "**/*.tmp"
+  - "**/~$*"
