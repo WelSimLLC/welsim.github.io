@@ -25,7 +25,7 @@ WELSIM already supports the implicit solver of OpenRadioss. It can not only gene
   <img src="\assets\blog\20261017\welsim_radioss_project_property.png" alt="welsim_radioss_project_property" />
 </p>
 
-3.Configure solver settings: In the Study object properties, configure the solver options. Select the OpenRadioss solver and set the direct method MUMPS as the linear algebra solver, which generates the corresponding /IMPL/SOLVER/2 command. Select the BFGS Quasi-Newton solver as the nonlinear solver, which corresponds to the /IMPL/NONLIN/2 command. Enable the Arc-Length method, which corresponds to the /IMPL/DT2 or /IMPL/DT3 commands. It is worth noting that for an analysis without contact or nonlinear materials, the Large Deflection option must be turned on to generate the /IMPL/NONLIN command; otherwise, the /IMPL/LINEAR command will be generated.
+3.Configure solver settings: In the Study object properties, configure the solver options. Select the OpenRadioss solver and set the direct method MUMPS as the linear algebra solver, which generates the corresponding /IMPL/SOLVER/2 command. Select the BFGS Quasi-Newton solver as the nonlinear solver, which corresponds to the /IMPL/NONLIN/2 command. Enable the Arc-Length method, which corresponds to the /IMPL/DT/2 or /IMPL/DT/3 commands. It is worth noting that for an analysis without contact or nonlinear materials, the Large Deflection option must be turned on to generate the /IMPL/NONLIN command; otherwise, the /IMPL/LINEAR command will be generated.
 <p align="center">
   <img src="\assets\blog\20261017\welsim_radioss_study.png" alt="welsim_radioss_study" />
 </p>
