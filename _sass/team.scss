@@ -37,6 +37,17 @@
     }
 }
 
+/* download page "Previous Versions" block */
+.download-versions {
+    .team-name {
+        color: $link-color; // 2026R2's name is a plain span; make it match the linked names
+    }
+    a:hover .team-title,
+    a:hover .team-name {
+        text-decoration: underline;
+    }
+}
+
 /*--------------------------------------------------------------
 # Team Stat Item
 --------------------------------------------------------------*/
