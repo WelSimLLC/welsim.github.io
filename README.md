@@ -1,7 +1,7 @@
 Welsim.com
 ========
 
-Official website for the [WelSim](https://www.welsim.com/) - A general-purpose Graphical User Interface (GUI) for open source simulation solvers.
+Official website for the [WelSim](https://www.welsim.com/) - A graphical user & AI interface for general-purpose physical simulation.
 
 Development
 -----------
